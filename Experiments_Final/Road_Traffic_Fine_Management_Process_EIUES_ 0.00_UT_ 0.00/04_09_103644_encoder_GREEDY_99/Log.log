@@ -1,0 +1,1422 @@
+-----------------------------------------------------------------------------------------
+Parameter Settings:
+EIUES:                            0
+Ratio uncertain traces:           0
+
+Type:                             encoder_GREEDY
+No. warmup steps:                 4000
+LR factor                         0.9805468608595045 
+Embedding dimension:              256
+Dimension of feedforward network: 1024
+Number of transformer layers:     1
+Number of attentions heads:       8
+Dropout:                          0.21872521386493116
+Total number of epochs:           150
+-----------------------------------------------------------------------------------------
+| epoch   0 |     9/  319 batches | lr_step  10 | lr  0.000002 |acc  0.000%| ms/batch 285.94 | loss 1.1761934 
+| epoch   0 |    19/  319 batches | lr_step  20 | lr  0.000005 |acc  0.000%| ms/batch 281.41 | loss 1.1489256 
+| epoch   0 |    29/  319 batches | lr_step  30 | lr  0.000007 |acc  0.000%| ms/batch 281.45 | loss 1.0655381 
+| epoch   0 |    39/  319 batches | lr_step  40 | lr  0.000010 |acc  0.000%| ms/batch 286.44 | loss 0.9629491 
+| epoch   0 |    49/  319 batches | lr_step  50 | lr  0.000012 |acc  0.000%| ms/batch 290.22 | loss 0.8371115 
+| epoch   0 |    59/  319 batches | lr_step  60 | lr  0.000015 |acc  0.117%| ms/batch 291.05 | loss 0.7165527 
+| epoch   0 |    69/  319 batches | lr_step  70 | lr  0.000017 |acc  0.996%| ms/batch 293.16 | loss 0.5828238 
+| epoch   0 |    79/  319 batches | lr_step  80 | lr  0.000019 |acc  4.512%| ms/batch 290.71 | loss 0.4764685 
+| epoch   0 |    89/  319 batches | lr_step  90 | lr  0.000022 |acc  17.637%| ms/batch 297.91 | loss 0.3643393 
+| epoch   0 |    99/  319 batches | lr_step  100 | lr  0.000024 |acc  34.531%| ms/batch 294.52 | loss 0.2997212 
+| epoch   0 |   109/  319 batches | lr_step  110 | lr  0.000027 |acc  46.074%| ms/batch 295.71 | loss 0.2741303 
+| epoch   0 |   119/  319 batches | lr_step  120 | lr  0.000029 |acc  52.793%| ms/batch 294.28 | loss 0.2401645 
+| epoch   0 |   129/  319 batches | lr_step  130 | lr  0.000031 |acc  59.941%| ms/batch 296.06 | loss 0.2126270 
+| epoch   0 |   139/  319 batches | lr_step  140 | lr  0.000034 |acc  65.156%| ms/batch 295.91 | loss 0.2012145 
+| epoch   0 |   149/  319 batches | lr_step  150 | lr  0.000036 |acc  69.375%| ms/batch 297.92 | loss 0.1803523 
+| epoch   0 |   159/  319 batches | lr_step  160 | lr  0.000039 |acc  71.230%| ms/batch 310.09 | loss 0.1698984 
+| epoch   0 |   169/  319 batches | lr_step  170 | lr  0.000041 |acc  72.246%| ms/batch 301.70 | loss 0.1727565 
+| epoch   0 |   179/  319 batches | lr_step  180 | lr  0.000044 |acc  73.867%| ms/batch 302.89 | loss 0.1560476 
+| epoch   0 |   189/  319 batches | lr_step  190 | lr  0.000046 |acc  74.863%| ms/batch 299.60 | loss 0.1525833 
+| epoch   0 |   199/  319 batches | lr_step  200 | lr  0.000048 |acc  75.664%| ms/batch 302.99 | loss 0.1403223 
+| epoch   0 |   209/  319 batches | lr_step  210 | lr  0.000051 |acc  76.133%| ms/batch 301.30 | loss 0.1403203 
+| epoch   0 |   219/  319 batches | lr_step  220 | lr  0.000053 |acc  76.836%| ms/batch 299.10 | loss 0.1416192 
+| epoch   0 |   229/  319 batches | lr_step  230 | lr  0.000056 |acc  77.109%| ms/batch 301.79 | loss 0.1315488 
+| epoch   0 |   239/  319 batches | lr_step  240 | lr  0.000058 |acc  77.266%| ms/batch 301.43 | loss 0.1322820 
+| epoch   0 |   249/  319 batches | lr_step  250 | lr  0.000061 |acc  77.246%| ms/batch 309.93 | loss 0.1278405 
+| epoch   0 |   259/  319 batches | lr_step  260 | lr  0.000063 |acc  77.090%| ms/batch 300.41 | loss 0.1244096 
+| epoch   0 |   269/  319 batches | lr_step  270 | lr  0.000065 |acc  79.062%| ms/batch 305.01 | loss 0.1184767 
+| epoch   0 |   279/  319 batches | lr_step  280 | lr  0.000068 |acc  78.613%| ms/batch 299.23 | loss 0.1127391 
+| epoch   0 |   289/  319 batches | lr_step  290 | lr  0.000070 |acc  78.965%| ms/batch 299.71 | loss 0.1117262 
+| epoch   0 |   299/  319 batches | lr_step  300 | lr  0.000073 |acc  78.438%| ms/batch 304.19 | loss 0.1135531 
+| epoch   0 |   309/  319 batches | lr_step  310 | lr  0.000075 |acc  80.801%| ms/batch 329.17 | loss 0.1035919 
+| epoch   0 |   319/  319 batches | lr_step  320 | lr  0.000078 |acc  101.872%| ms/batch 300.90 | loss 0.1028156 
+Pred: tensor([ 6,  7,  8,  9, 11,  0,  0,  0]) and tensor([ 6,  7,  8,  9, 10,  0,  0,  0]), tensor([ 6, 11,  0,  0,  0,  0,  0,  0])
+Tar: tensor([[ 6,  7,  8,  9, 11,  0,  0,  0],
+        [ 6,  7,  8,  9, 10,  0,  0,  0],
+        [ 6, 11,  0,  0,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch   0 | time: 98.08s | valid acc 98.167%| Best Model from Epoch 0 with  -inf%
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| end of epoch   0 | time: 98.08s | valid acc 98.167%| 
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| epoch   1 |     9/  319 batches | lr_step  330 | lr  0.000080 |acc  79.551%| ms/batch 313.66 | loss 0.1010311 
+| epoch   1 |    19/  319 batches | lr_step  340 | lr  0.000082 |acc  80.605%| ms/batch 307.18 | loss 0.0952149 
+| epoch   1 |    29/  319 batches | lr_step  350 | lr  0.000085 |acc  80.898%| ms/batch 307.68 | loss 0.0968592 
+| epoch   1 |    39/  319 batches | lr_step  360 | lr  0.000087 |acc  80.996%| ms/batch 303.09 | loss 0.0951029 
+| epoch   1 |    49/  319 batches | lr_step  370 | lr  0.000090 |acc  79.961%| ms/batch 307.48 | loss 0.0943802 
+| epoch   1 |    59/  319 batches | lr_step  380 | lr  0.000092 |acc  80.879%| ms/batch 314.24 | loss 0.0905024 
+| epoch   1 |    69/  319 batches | lr_step  390 | lr  0.000094 |acc  80.879%| ms/batch 307.28 | loss 0.0881182 
+| epoch   1 |    79/  319 batches | lr_step  400 | lr  0.000097 |acc  81.250%| ms/batch 310.37 | loss 0.0892241 
+| epoch   1 |    89/  319 batches | lr_step  410 | lr  0.000099 |acc  80.723%| ms/batch 329.82 | loss 0.0886046 
+| epoch   1 |    99/  319 batches | lr_step  420 | lr  0.000102 |acc  81.445%| ms/batch 331.02 | loss 0.0840202 
+| epoch   1 |   109/  319 batches | lr_step  430 | lr  0.000104 |acc  82.988%| ms/batch 312.77 | loss 0.0750079 
+| epoch   1 |   119/  319 batches | lr_step  440 | lr  0.000107 |acc  82.051%| ms/batch 327.03 | loss 0.0778401 
+| epoch   1 |   129/  319 batches | lr_step  450 | lr  0.000109 |acc  82.598%| ms/batch 310.27 | loss 0.0777449 
+| epoch   1 |   139/  319 batches | lr_step  460 | lr  0.000111 |acc  82.637%| ms/batch 308.28 | loss 0.0758520 
+| epoch   1 |   149/  319 batches | lr_step  470 | lr  0.000114 |acc  83.750%| ms/batch 323.04 | loss 0.0706359 
+| epoch   1 |   159/  319 batches | lr_step  480 | lr  0.000116 |acc  83.613%| ms/batch 330.47 | loss 0.0731130 
+| epoch   1 |   169/  319 batches | lr_step  490 | lr  0.000119 |acc  82.637%| ms/batch 370.69 | loss 0.0758924 
+| epoch   1 |   179/  319 batches | lr_step  500 | lr  0.000121 |acc  82.578%| ms/batch 359.36 | loss 0.0764062 
+| epoch   1 |   189/  319 batches | lr_step  510 | lr  0.000124 |acc  82.656%| ms/batch 329.65 | loss 0.0765716 
+| epoch   1 |   199/  319 batches | lr_step  520 | lr  0.000126 |acc  83.477%| ms/batch 337.73 | loss 0.0723197 
+| epoch   1 |   209/  319 batches | lr_step  530 | lr  0.000128 |acc  83.984%| ms/batch 345.88 | loss 0.0657431 
+| epoch   1 |   219/  319 batches | lr_step  540 | lr  0.000131 |acc  85.098%| ms/batch 309.87 | loss 0.0626195 
+| epoch   1 |   229/  319 batches | lr_step  550 | lr  0.000133 |acc  84.746%| ms/batch 314.80 | loss 0.0651086 
+| epoch   1 |   239/  319 batches | lr_step  560 | lr  0.000136 |acc  83.203%| ms/batch 309.67 | loss 0.0695607 
+| epoch   1 |   249/  319 batches | lr_step  570 | lr  0.000138 |acc  84.258%| ms/batch 305.72 | loss 0.0656413 
+| epoch   1 |   259/  319 batches | lr_step  580 | lr  0.000141 |acc  85.234%| ms/batch 333.01 | loss 0.0642452 
+| epoch   1 |   269/  319 batches | lr_step  590 | lr  0.000143 |acc  85.176%| ms/batch 306.18 | loss 0.0640988 
+| epoch   1 |   279/  319 batches | lr_step  600 | lr  0.000145 |acc  84.902%| ms/batch 309.81 | loss 0.0610150 
+| epoch   1 |   289/  319 batches | lr_step  610 | lr  0.000148 |acc  85.566%| ms/batch 311.20 | loss 0.0573508 
+| epoch   1 |   299/  319 batches | lr_step  620 | lr  0.000150 |acc  84.805%| ms/batch 321.54 | loss 0.0627635 
+| epoch   1 |   309/  319 batches | lr_step  630 | lr  0.000153 |acc  85.137%| ms/batch 310.75 | loss 0.0628770 
+| epoch   1 |   319/  319 batches | lr_step  640 | lr  0.000155 |acc  110.077%| ms/batch 339.52 | loss 0.0568368 
+Pred: tensor([ 6,  7,  8,  9, 11,  0,  0,  0]) and tensor([ 6, 11,  0,  0,  0,  0,  0,  0]), tensor([ 6, 11,  0,  0,  0,  0,  0,  0])
+Tar: tensor([[ 6,  7,  8,  9, 11,  0,  0,  0],
+        [ 6, 11,  0,  0,  0,  0,  0,  0],
+        [ 6, 11,  0,  0,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch   1 | time: 105.36s | valid acc 98.058%| Best Model from Epoch 0 with 98.167%
+-----------------------------------------------------------------------------------------
+| epoch   2 |     9/  319 batches | lr_step  650 | lr  0.000157 |acc  86.172%| ms/batch 307.88 | loss 0.0572238 
+| epoch   2 |    19/  319 batches | lr_step  660 | lr  0.000160 |acc  85.898%| ms/batch 303.39 | loss 0.0593221 
+| epoch   2 |    29/  319 batches | lr_step  670 | lr  0.000162 |acc  85.977%| ms/batch 305.60 | loss 0.0555582 
+| epoch   2 |    39/  319 batches | lr_step  680 | lr  0.000165 |acc  87.598%| ms/batch 310.98 | loss 0.0525756 
+| epoch   2 |    49/  319 batches | lr_step  690 | lr  0.000167 |acc  86.816%| ms/batch 300.77 | loss 0.0546586 
+| epoch   2 |    59/  319 batches | lr_step  700 | lr  0.000170 |acc  86.543%| ms/batch 301.59 | loss 0.0534792 
+| epoch   2 |    69/  319 batches | lr_step  710 | lr  0.000172 |acc  87.266%| ms/batch 303.82 | loss 0.0516783 
+| epoch   2 |    79/  319 batches | lr_step  720 | lr  0.000174 |acc  87.266%| ms/batch 302.40 | loss 0.0539882 
+| epoch   2 |    89/  319 batches | lr_step  730 | lr  0.000177 |acc  87.207%| ms/batch 309.77 | loss 0.0534847 
+| epoch   2 |    99/  319 batches | lr_step  740 | lr  0.000179 |acc  87.051%| ms/batch 301.41 | loss 0.0532992 
+| epoch   2 |   109/  319 batches | lr_step  750 | lr  0.000182 |acc  87.559%| ms/batch 299.55 | loss 0.0507303 
+| epoch   2 |   119/  319 batches | lr_step  760 | lr  0.000184 |acc  88.262%| ms/batch 301.99 | loss 0.0481834 
+| epoch   2 |   129/  319 batches | lr_step  770 | lr  0.000187 |acc  87.852%| ms/batch 314.19 | loss 0.0511987 
+| epoch   2 |   139/  319 batches | lr_step  780 | lr  0.000189 |acc  87.910%| ms/batch 321.74 | loss 0.0481690 
+| epoch   2 |   149/  319 batches | lr_step  790 | lr  0.000191 |acc  87.539%| ms/batch 303.11 | loss 0.0492657 
+| epoch   2 |   159/  319 batches | lr_step  800 | lr  0.000194 |acc  88.828%| ms/batch 303.59 | loss 0.0458610 
+| epoch   2 |   169/  319 batches | lr_step  810 | lr  0.000196 |acc  89.453%| ms/batch 309.67 | loss 0.0436175 
+| epoch   2 |   179/  319 batches | lr_step  820 | lr  0.000199 |acc  88.203%| ms/batch 317.95 | loss 0.0473076 
+| epoch   2 |   189/  319 batches | lr_step  830 | lr  0.000201 |acc  89.023%| ms/batch 309.89 | loss 0.0456564 
+| epoch   2 |   199/  319 batches | lr_step  840 | lr  0.000203 |acc  88.066%| ms/batch 308.62 | loss 0.0458079 
+| epoch   2 |   209/  319 batches | lr_step  850 | lr  0.000206 |acc  89.277%| ms/batch 299.80 | loss 0.0429254 
+| epoch   2 |   219/  319 batches | lr_step  860 | lr  0.000208 |acc  89.141%| ms/batch 303.69 | loss 0.0464229 
+| epoch   2 |   229/  319 batches | lr_step  870 | lr  0.000211 |acc  88.906%| ms/batch 302.19 | loss 0.0423667 
+| epoch   2 |   239/  319 batches | lr_step  880 | lr  0.000213 |acc  89.375%| ms/batch 306.68 | loss 0.0414097 
+| epoch   2 |   249/  319 batches | lr_step  890 | lr  0.000216 |acc  89.883%| ms/batch 306.08 | loss 0.0416137 
+| epoch   2 |   259/  319 batches | lr_step  900 | lr  0.000218 |acc  89.258%| ms/batch 307.68 | loss 0.0431977 
+| epoch   2 |   269/  319 batches | lr_step  910 | lr  0.000220 |acc  89.492%| ms/batch 310.52 | loss 0.0431700 
+| epoch   2 |   279/  319 batches | lr_step  920 | lr  0.000223 |acc  89.766%| ms/batch 310.61 | loss 0.0414216 
+| epoch   2 |   289/  319 batches | lr_step  930 | lr  0.000225 |acc  90.566%| ms/batch 428.82 | loss 0.0351575 
+| epoch   2 |   299/  319 batches | lr_step  940 | lr  0.000228 |acc  90.137%| ms/batch 345.99 | loss 0.0396126 
+| epoch   2 |   309/  319 batches | lr_step  950 | lr  0.000230 |acc  89.883%| ms/batch 358.54 | loss 0.0400504 
+| epoch   2 |   319/  319 batches | lr_step  960 | lr  0.000233 |acc  115.590%| ms/batch 327.38 | loss 0.0385730 
+Pred: tensor([ 6,  7,  8,  9, 10,  0]) and tensor([ 6,  7,  8,  9, 10,  0]), tensor([ 6, 11,  0,  0,  0,  0])
+Tar: tensor([[ 6,  7,  8,  9, 10,  0],
+        [ 6,  7,  8,  9, 10,  0],
+        [ 6, 11,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch   2 | time: 103.40s | valid acc 98.189%| Best Model from Epoch 0 with 98.167%
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| end of epoch   2 | time: 103.40s | valid acc 98.189%| 
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| epoch   3 |     9/  319 batches | lr_step  970 | lr  0.000235 |acc  90.410%| ms/batch 323.44 | loss 0.0381698 
+| epoch   3 |    19/  319 batches | lr_step  980 | lr  0.000237 |acc  90.078%| ms/batch 314.06 | loss 0.0377595 
+| epoch   3 |    29/  319 batches | lr_step  990 | lr  0.000240 |acc  90.645%| ms/batch 311.97 | loss 0.0360344 
+| epoch   3 |    39/  319 batches | lr_step  1000 | lr  0.000242 |acc  90.625%| ms/batch 322.04 | loss 0.0349553 
+| epoch   3 |    49/  319 batches | lr_step  1010 | lr  0.000245 |acc  90.078%| ms/batch 307.51 | loss 0.0405382 
+| epoch   3 |    59/  319 batches | lr_step  1020 | lr  0.000247 |acc  90.430%| ms/batch 308.76 | loss 0.0367836 
+| epoch   3 |    69/  319 batches | lr_step  1030 | lr  0.000250 |acc  90.762%| ms/batch 303.29 | loss 0.0360598 
+| epoch   3 |    79/  319 batches | lr_step  1040 | lr  0.000252 |acc  90.410%| ms/batch 312.17 | loss 0.0387982 
+| epoch   3 |    89/  319 batches | lr_step  1050 | lr  0.000254 |acc  90.566%| ms/batch 362.33 | loss 0.0341926 
+| epoch   3 |    99/  319 batches | lr_step  1060 | lr  0.000257 |acc  90.977%| ms/batch 339.48 | loss 0.0344414 
+| epoch   3 |   109/  319 batches | lr_step  1070 | lr  0.000259 |acc  91.230%| ms/batch 303.14 | loss 0.0342073 
+| epoch   3 |   119/  319 batches | lr_step  1080 | lr  0.000262 |acc  90.859%| ms/batch 302.41 | loss 0.0339789 
+| epoch   3 |   129/  319 batches | lr_step  1090 | lr  0.000264 |acc  91.270%| ms/batch 298.80 | loss 0.0334465 
+| epoch   3 |   139/  319 batches | lr_step  1100 | lr  0.000266 |acc  91.934%| ms/batch 300.61 | loss 0.0312965 
+| epoch   3 |   149/  319 batches | lr_step  1110 | lr  0.000269 |acc  92.051%| ms/batch 300.10 | loss 0.0315915 
+| epoch   3 |   159/  319 batches | lr_step  1120 | lr  0.000271 |acc  91.270%| ms/batch 297.91 | loss 0.0333852 
+| epoch   3 |   169/  319 batches | lr_step  1130 | lr  0.000274 |acc  91.035%| ms/batch 298.61 | loss 0.0327005 
+| epoch   3 |   179/  319 batches | lr_step  1140 | lr  0.000276 |acc  91.914%| ms/batch 308.60 | loss 0.0304579 
+| epoch   3 |   189/  319 batches | lr_step  1150 | lr  0.000279 |acc  91.855%| ms/batch 302.69 | loss 0.0294216 
+| epoch   3 |   199/  319 batches | lr_step  1160 | lr  0.000281 |acc  91.406%| ms/batch 314.61 | loss 0.0319861 
+| epoch   3 |   209/  319 batches | lr_step  1170 | lr  0.000283 |acc  92.168%| ms/batch 303.92 | loss 0.0290421 
+| epoch   3 |   219/  319 batches | lr_step  1180 | lr  0.000286 |acc  92.109%| ms/batch 319.16 | loss 0.0291804 
+| epoch   3 |   229/  319 batches | lr_step  1190 | lr  0.000288 |acc  91.719%| ms/batch 324.73 | loss 0.0304751 
+| epoch   3 |   239/  319 batches | lr_step  1200 | lr  0.000291 |acc  91.777%| ms/batch 301.50 | loss 0.0296417 
+| epoch   3 |   249/  319 batches | lr_step  1210 | lr  0.000293 |acc  92.168%| ms/batch 298.96 | loss 0.0289946 
+| epoch   3 |   259/  319 batches | lr_step  1220 | lr  0.000296 |acc  92.090%| ms/batch 302.79 | loss 0.0289785 
+| epoch   3 |   269/  319 batches | lr_step  1230 | lr  0.000298 |acc  91.934%| ms/batch 309.17 | loss 0.0290221 
+| epoch   3 |   279/  319 batches | lr_step  1240 | lr  0.000300 |acc  92.148%| ms/batch 299.26 | loss 0.0291176 
+| epoch   3 |   289/  319 batches | lr_step  1250 | lr  0.000303 |acc  93.340%| ms/batch 299.80 | loss 0.0255430 
+| epoch   3 |   299/  319 batches | lr_step  1260 | lr  0.000305 |acc  92.461%| ms/batch 305.33 | loss 0.0266917 
+| epoch   3 |   309/  319 batches | lr_step  1270 | lr  0.000308 |acc  92.461%| ms/batch 301.10 | loss 0.0287653 
+| epoch   3 |   319/  319 batches | lr_step  1280 | lr  0.000310 |acc  118.154%| ms/batch 293.37 | loss 0.0279902 
+Pred: tensor([ 6,  7,  8,  9, 10,  0]) and tensor([ 6,  7,  8,  9, 10,  0]), tensor([ 6,  7,  8,  9, 10,  0])
+Tar: tensor([[ 6,  7,  8,  9, 10,  0],
+        [ 6,  7,  8,  9, 10,  0],
+        [ 6,  7,  8,  9, 10,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch   3 | time: 101.53s | valid acc 98.581%| Best Model from Epoch 2 with 98.189%
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| end of epoch   3 | time: 101.53s | valid acc 98.581%| 
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| epoch   4 |     9/  319 batches | lr_step  1290 | lr  0.000312 |acc  92.305%| ms/batch 306.92 | loss 0.0281849 
+| epoch   4 |    19/  319 batches | lr_step  1300 | lr  0.000315 |acc  93.027%| ms/batch 306.28 | loss 0.0248422 
+| epoch   4 |    29/  319 batches | lr_step  1310 | lr  0.000317 |acc  92.617%| ms/batch 311.37 | loss 0.0255565 
+| epoch   4 |    39/  319 batches | lr_step  1320 | lr  0.000320 |acc  92.852%| ms/batch 300.80 | loss 0.0262613 
+| epoch   4 |    49/  319 batches | lr_step  1330 | lr  0.000322 |acc  93.242%| ms/batch 304.99 | loss 0.0251185 
+| epoch   4 |    59/  319 batches | lr_step  1340 | lr  0.000325 |acc  92.754%| ms/batch 302.19 | loss 0.0256178 
+| epoch   4 |    69/  319 batches | lr_step  1350 | lr  0.000327 |acc  92.773%| ms/batch 309.07 | loss 0.0251036 
+| epoch   4 |    79/  319 batches | lr_step  1360 | lr  0.000329 |acc  93.496%| ms/batch 297.80 | loss 0.0233304 
+| epoch   4 |    89/  319 batches | lr_step  1370 | lr  0.000332 |acc  93.828%| ms/batch 394.56 | loss 0.0223853 
+| epoch   4 |    99/  319 batches | lr_step  1380 | lr  0.000334 |acc  93.301%| ms/batch 302.96 | loss 0.0229321 
+| epoch   4 |   109/  319 batches | lr_step  1390 | lr  0.000337 |acc  93.574%| ms/batch 332.71 | loss 0.0232619 
+| epoch   4 |   119/  319 batches | lr_step  1400 | lr  0.000339 |acc  93.164%| ms/batch 318.65 | loss 0.0237500 
+| epoch   4 |   129/  319 batches | lr_step  1410 | lr  0.000342 |acc  93.398%| ms/batch 304.39 | loss 0.0231491 
+| epoch   4 |   139/  319 batches | lr_step  1420 | lr  0.000344 |acc  93.320%| ms/batch 311.17 | loss 0.0234694 
+| epoch   4 |   149/  319 batches | lr_step  1430 | lr  0.000346 |acc  93.965%| ms/batch 302.29 | loss 0.0216163 
+| epoch   4 |   159/  319 batches | lr_step  1440 | lr  0.000349 |acc  93.145%| ms/batch 298.62 | loss 0.0234653 
+| epoch   4 |   169/  319 batches | lr_step  1450 | lr  0.000351 |acc  93.613%| ms/batch 293.62 | loss 0.0236155 
+| epoch   4 |   179/  319 batches | lr_step  1460 | lr  0.000354 |acc  94.336%| ms/batch 297.13 | loss 0.0203259 
+| epoch   4 |   189/  319 batches | lr_step  1470 | lr  0.000356 |acc  93.633%| ms/batch 295.01 | loss 0.0227656 
+| epoch   4 |   199/  319 batches | lr_step  1480 | lr  0.000359 |acc  93.945%| ms/batch 297.71 | loss 0.0220569 
+| epoch   4 |   209/  319 batches | lr_step  1490 | lr  0.000361 |acc  92.910%| ms/batch 294.62 | loss 0.0242866 
+| epoch   4 |   219/  319 batches | lr_step  1500 | lr  0.000363 |acc  93.691%| ms/batch 299.90 | loss 0.0215543 
+| epoch   4 |   229/  319 batches | lr_step  1510 | lr  0.000366 |acc  94.160%| ms/batch 299.85 | loss 0.0202837 
+| epoch   4 |   239/  319 batches | lr_step  1520 | lr  0.000368 |acc  94.316%| ms/batch 296.81 | loss 0.0204576 
+| epoch   4 |   249/  319 batches | lr_step  1530 | lr  0.000371 |acc  93.711%| ms/batch 295.65 | loss 0.0217315 
+| epoch   4 |   259/  319 batches | lr_step  1540 | lr  0.000373 |acc  93.457%| ms/batch 295.89 | loss 0.0214032 
+| epoch   4 |   269/  319 batches | lr_step  1550 | lr  0.000375 |acc  94.004%| ms/batch 296.52 | loss 0.0195513 
+| epoch   4 |   279/  319 batches | lr_step  1560 | lr  0.000378 |acc  93.809%| ms/batch 296.64 | loss 0.0211712 
+| epoch   4 |   289/  319 batches | lr_step  1570 | lr  0.000380 |acc  94.707%| ms/batch 306.39 | loss 0.0194305 
+| epoch   4 |   299/  319 batches | lr_step  1580 | lr  0.000383 |acc  93.770%| ms/batch 297.66 | loss 0.0203393 
+| epoch   4 |   309/  319 batches | lr_step  1590 | lr  0.000385 |acc  94.023%| ms/batch 297.60 | loss 0.0202405 
+| epoch   4 |   319/  319 batches | lr_step  1600 | lr  0.000388 |acc  120.667%| ms/batch 295.45 | loss 0.0195472 
+Pred: tensor([ 6,  7,  8,  9, 11,  0,  0]) and tensor([ 6, 11,  0,  0,  0,  0,  0]), tensor([ 6,  7,  8, 11,  9, 10,  0])
+Tar: tensor([[ 6,  7,  8,  9, 11,  0,  0],
+        [ 6, 11,  0,  0,  0,  0,  0],
+        [ 6,  7,  8, 11,  9, 10,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch   4 | time: 100.23s | valid acc 98.560%| Best Model from Epoch 3 with 98.581%
+-----------------------------------------------------------------------------------------
+| epoch   5 |     9/  319 batches | lr_step  1610 | lr  0.000390 |acc  94.258%| ms/batch 298.80 | loss 0.0192036 
+| epoch   5 |    19/  319 batches | lr_step  1620 | lr  0.000392 |acc  94.648%| ms/batch 294.43 | loss 0.0180576 
+| epoch   5 |    29/  319 batches | lr_step  1630 | lr  0.000395 |acc  93.945%| ms/batch 299.75 | loss 0.0190497 
+| epoch   5 |    39/  319 batches | lr_step  1640 | lr  0.000397 |acc  94.766%| ms/batch 297.04 | loss 0.0176496 
+| epoch   5 |    49/  319 batches | lr_step  1650 | lr  0.000400 |acc  94.688%| ms/batch 299.99 | loss 0.0197693 
+| epoch   5 |    59/  319 batches | lr_step  1660 | lr  0.000402 |acc  94.102%| ms/batch 299.10 | loss 0.0191817 
+| epoch   5 |    69/  319 batches | lr_step  1670 | lr  0.000405 |acc  94.414%| ms/batch 303.30 | loss 0.0172003 
+| epoch   5 |    79/  319 batches | lr_step  1680 | lr  0.000407 |acc  94.629%| ms/batch 299.70 | loss 0.0172735 
+| epoch   5 |    89/  319 batches | lr_step  1690 | lr  0.000409 |acc  94.668%| ms/batch 298.60 | loss 0.0180228 
+| epoch   5 |    99/  319 batches | lr_step  1700 | lr  0.000412 |acc  94.531%| ms/batch 296.83 | loss 0.0187889 
+| epoch   5 |   109/  319 batches | lr_step  1710 | lr  0.000414 |acc  94.941%| ms/batch 296.31 | loss 0.0169914 
+| epoch   5 |   119/  319 batches | lr_step  1720 | lr  0.000417 |acc  94.980%| ms/batch 311.37 | loss 0.0159072 
+| epoch   5 |   129/  319 batches | lr_step  1730 | lr  0.000419 |acc  94.434%| ms/batch 296.61 | loss 0.0181591 
+| epoch   5 |   139/  319 batches | lr_step  1740 | lr  0.000422 |acc  95.156%| ms/batch 295.01 | loss 0.0161047 
+| epoch   5 |   149/  319 batches | lr_step  1750 | lr  0.000424 |acc  95.254%| ms/batch 296.31 | loss 0.0165312 
+| epoch   5 |   159/  319 batches | lr_step  1760 | lr  0.000426 |acc  95.117%| ms/batch 299.51 | loss 0.0159010 
+| epoch   5 |   169/  319 batches | lr_step  1770 | lr  0.000429 |acc  94.707%| ms/batch 298.22 | loss 0.0171665 
+| epoch   5 |   179/  319 batches | lr_step  1780 | lr  0.000431 |acc  95.156%| ms/batch 296.75 | loss 0.0158063 
+| epoch   5 |   189/  319 batches | lr_step  1790 | lr  0.000434 |acc  94.922%| ms/batch 295.61 | loss 0.0161331 
+| epoch   5 |   199/  319 batches | lr_step  1800 | lr  0.000436 |acc  94.766%| ms/batch 297.09 | loss 0.0170717 
+| epoch   5 |   209/  319 batches | lr_step  1810 | lr  0.000438 |acc  94.746%| ms/batch 303.29 | loss 0.0171941 
+| epoch   5 |   219/  319 batches | lr_step  1820 | lr  0.000441 |acc  94.785%| ms/batch 322.94 | loss 0.0159393 
+| epoch   5 |   229/  319 batches | lr_step  1830 | lr  0.000443 |acc  94.824%| ms/batch 314.86 | loss 0.0167817 
+| epoch   5 |   239/  319 batches | lr_step  1840 | lr  0.000446 |acc  95.625%| ms/batch 296.05 | loss 0.0135309 
+| epoch   5 |   249/  319 batches | lr_step  1850 | lr  0.000448 |acc  95.352%| ms/batch 296.01 | loss 0.0154892 
+| epoch   5 |   259/  319 batches | lr_step  1860 | lr  0.000451 |acc  94.609%| ms/batch 295.69 | loss 0.0163150 
+| epoch   5 |   269/  319 batches | lr_step  1870 | lr  0.000453 |acc  95.000%| ms/batch 298.75 | loss 0.0164932 
+| epoch   5 |   279/  319 batches | lr_step  1880 | lr  0.000455 |acc  95.312%| ms/batch 292.90 | loss 0.0155144 
+| epoch   5 |   289/  319 batches | lr_step  1890 | lr  0.000458 |acc  94.902%| ms/batch 295.51 | loss 0.0157054 
+| epoch   5 |   299/  319 batches | lr_step  1900 | lr  0.000460 |acc  95.391%| ms/batch 290.53 | loss 0.0145645 
+| epoch   5 |   309/  319 batches | lr_step  1910 | lr  0.000463 |acc  95.195%| ms/batch 293.41 | loss 0.0152001 
+| epoch   5 |   319/  319 batches | lr_step  1920 | lr  0.000465 |acc  122.128%| ms/batch 288.73 | loss 0.0162473 
+Pred: tensor([ 6, 11,  0,  0,  0,  0,  0,  0]) and tensor([ 6, 11,  0,  0,  0,  0,  0,  0]), tensor([ 6, 11,  0,  0,  0,  0,  0,  0])
+Tar: tensor([[ 6, 11,  0,  0,  0,  0,  0,  0],
+        [ 6, 11,  0,  0,  0,  0,  0,  0],
+        [ 6, 11,  0,  0,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch   5 | time: 98.18s | valid acc 98.625%| Best Model from Epoch 3 with 98.581%
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| end of epoch   5 | time: 98.18s | valid acc 98.625%| 
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| epoch   6 |     9/  319 batches | lr_step  1930 | lr  0.000468 |acc  95.449%| ms/batch 298.69 | loss 0.0139574 
+| epoch   6 |    19/  319 batches | lr_step  1940 | lr  0.000470 |acc  95.430%| ms/batch 293.62 | loss 0.0142140 
+| epoch   6 |    29/  319 batches | lr_step  1950 | lr  0.000472 |acc  95.273%| ms/batch 299.50 | loss 0.0141250 
+| epoch   6 |    39/  319 batches | lr_step  1960 | lr  0.000475 |acc  94.727%| ms/batch 301.41 | loss 0.0167055 
+| epoch   6 |    49/  319 batches | lr_step  1970 | lr  0.000477 |acc  94.824%| ms/batch 293.46 | loss 0.0153396 
+| epoch   6 |    59/  319 batches | lr_step  1980 | lr  0.000480 |acc  95.762%| ms/batch 295.81 | loss 0.0134186 
+| epoch   6 |    69/  319 batches | lr_step  1990 | lr  0.000482 |acc  95.742%| ms/batch 294.25 | loss 0.0134909 
+| epoch   6 |    79/  319 batches | lr_step  2000 | lr  0.000484 |acc  95.508%| ms/batch 292.56 | loss 0.0139819 
+| epoch   6 |    89/  319 batches | lr_step  2010 | lr  0.000487 |acc  95.840%| ms/batch 296.94 | loss 0.0134824 
+| epoch   6 |    99/  319 batches | lr_step  2020 | lr  0.000489 |acc  95.039%| ms/batch 295.02 | loss 0.0150872 
+| epoch   6 |   109/  319 batches | lr_step  2030 | lr  0.000492 |acc  95.312%| ms/batch 307.33 | loss 0.0138292 
+| epoch   6 |   119/  319 batches | lr_step  2040 | lr  0.000494 |acc  95.000%| ms/batch 301.20 | loss 0.0148104 
+| epoch   6 |   129/  319 batches | lr_step  2050 | lr  0.000497 |acc  95.586%| ms/batch 297.61 | loss 0.0138286 
+| epoch   6 |   139/  319 batches | lr_step  2060 | lr  0.000499 |acc  95.684%| ms/batch 297.60 | loss 0.0138703 
+| epoch   6 |   149/  319 batches | lr_step  2070 | lr  0.000501 |acc  95.527%| ms/batch 295.31 | loss 0.0139773 
+| epoch   6 |   159/  319 batches | lr_step  2080 | lr  0.000504 |acc  95.820%| ms/batch 293.08 | loss 0.0135553 
+| epoch   6 |   169/  319 batches | lr_step  2090 | lr  0.000506 |acc  95.547%| ms/batch 294.91 | loss 0.0132714 
+| epoch   6 |   179/  319 batches | lr_step  2100 | lr  0.000509 |acc  95.645%| ms/batch 295.91 | loss 0.0135107 
+| epoch   6 |   189/  319 batches | lr_step  2110 | lr  0.000511 |acc  95.781%| ms/batch 295.65 | loss 0.0134354 
+| epoch   6 |   199/  319 batches | lr_step  2120 | lr  0.000514 |acc  95.332%| ms/batch 303.32 | loss 0.0138617 
+| epoch   6 |   209/  319 batches | lr_step  2130 | lr  0.000516 |acc  95.039%| ms/batch 298.61 | loss 0.0146485 
+| epoch   6 |   219/  319 batches | lr_step  2140 | lr  0.000518 |acc  95.840%| ms/batch 295.21 | loss 0.0118267 
+| epoch   6 |   229/  319 batches | lr_step  2150 | lr  0.000521 |acc  95.176%| ms/batch 299.01 | loss 0.0129258 
+| epoch   6 |   239/  319 batches | lr_step  2160 | lr  0.000523 |acc  95.449%| ms/batch 302.53 | loss 0.0129532 
+| epoch   6 |   249/  319 batches | lr_step  2170 | lr  0.000526 |acc  95.781%| ms/batch 295.32 | loss 0.0120213 
+| epoch   6 |   259/  319 batches | lr_step  2180 | lr  0.000528 |acc  95.469%| ms/batch 291.14 | loss 0.0137702 
+| epoch   6 |   269/  319 batches | lr_step  2190 | lr  0.000531 |acc  95.449%| ms/batch 294.82 | loss 0.0135099 
+| epoch   6 |   279/  319 batches | lr_step  2200 | lr  0.000533 |acc  95.273%| ms/batch 299.00 | loss 0.0144483 
+| epoch   6 |   289/  319 batches | lr_step  2210 | lr  0.000535 |acc  95.742%| ms/batch 298.75 | loss 0.0128986 
+| epoch   6 |   299/  319 batches | lr_step  2220 | lr  0.000538 |acc  95.527%| ms/batch 294.51 | loss 0.0127271 
+| epoch   6 |   309/  319 batches | lr_step  2230 | lr  0.000540 |acc  95.684%| ms/batch 297.02 | loss 0.0129602 
+| epoch   6 |   319/  319 batches | lr_step  2240 | lr  0.000543 |acc  122.051%| ms/batch 288.62 | loss 0.0139570 
+Pred: tensor([11,  6,  0,  0,  0,  0,  0,  0,  0]) and tensor([11,  6,  0,  0,  0,  0,  0,  0,  0]), tensor([11,  6,  0,  0,  0,  0,  0,  0,  0])
+Tar: tensor([[ 6, 11,  0,  0,  0,  0,  0,  0,  0],
+        [ 6, 11,  0,  0,  0,  0,  0,  0,  0],
+        [ 6, 11,  0,  0,  0,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch   6 | time: 97.56s | valid acc 37.233%| Best Model from Epoch 5 with 98.625%
+-----------------------------------------------------------------------------------------
+| epoch   7 |     9/  319 batches | lr_step  2250 | lr  0.000545 |acc  95.820%| ms/batch 299.06 | loss 0.0123005 
+| epoch   7 |    19/  319 batches | lr_step  2260 | lr  0.000547 |acc  95.801%| ms/batch 296.14 | loss 0.0125165 
+| epoch   7 |    29/  319 batches | lr_step  2270 | lr  0.000550 |acc  96.484%| ms/batch 297.42 | loss 0.0103431 
+| epoch   7 |    39/  319 batches | lr_step  2280 | lr  0.000552 |acc  95.605%| ms/batch 295.92 | loss 0.0128704 
+| epoch   7 |    49/  319 batches | lr_step  2290 | lr  0.000555 |acc  95.527%| ms/batch 294.71 | loss 0.0127514 
+| epoch   7 |    59/  319 batches | lr_step  2300 | lr  0.000557 |acc  95.645%| ms/batch 297.21 | loss 0.0131805 
+| epoch   7 |    69/  319 batches | lr_step  2310 | lr  0.000560 |acc  95.996%| ms/batch 293.32 | loss 0.0123749 
+| epoch   7 |    79/  319 batches | lr_step  2320 | lr  0.000562 |acc  96.035%| ms/batch 296.61 | loss 0.0113190 
+| epoch   7 |    89/  319 batches | lr_step  2330 | lr  0.000564 |acc  95.664%| ms/batch 298.61 | loss 0.0125647 
+| epoch   7 |    99/  319 batches | lr_step  2340 | lr  0.000567 |acc  96.094%| ms/batch 296.03 | loss 0.0116549 
+| epoch   7 |   109/  319 batches | lr_step  2350 | lr  0.000569 |acc  95.723%| ms/batch 304.29 | loss 0.0129639 
+| epoch   7 |   119/  319 batches | lr_step  2360 | lr  0.000572 |acc  95.664%| ms/batch 295.31 | loss 0.0136719 
+| epoch   7 |   129/  319 batches | lr_step  2370 | lr  0.000574 |acc  95.898%| ms/batch 295.01 | loss 0.0118804 
+| epoch   7 |   139/  319 batches | lr_step  2380 | lr  0.000577 |acc  95.840%| ms/batch 295.30 | loss 0.0124136 
+| epoch   7 |   149/  319 batches | lr_step  2390 | lr  0.000579 |acc  95.977%| ms/batch 294.84 | loss 0.0119411 
+| epoch   7 |   159/  319 batches | lr_step  2400 | lr  0.000581 |acc  96.387%| ms/batch 292.82 | loss 0.0112749 
+| epoch   7 |   169/  319 batches | lr_step  2410 | lr  0.000584 |acc  96.309%| ms/batch 296.50 | loss 0.0110401 
+| epoch   7 |   179/  319 batches | lr_step  2420 | lr  0.000586 |acc  95.703%| ms/batch 302.51 | loss 0.0121567 
+| epoch   7 |   189/  319 batches | lr_step  2430 | lr  0.000589 |acc  96.094%| ms/batch 296.41 | loss 0.0116664 
+| epoch   7 |   199/  319 batches | lr_step  2440 | lr  0.000591 |acc  96.367%| ms/batch 295.31 | loss 0.0101553 
+| epoch   7 |   209/  319 batches | lr_step  2450 | lr  0.000594 |acc  95.625%| ms/batch 295.52 | loss 0.0121163 
+| epoch   7 |   219/  319 batches | lr_step  2460 | lr  0.000596 |acc  96.172%| ms/batch 297.01 | loss 0.0113529 
+| epoch   7 |   229/  319 batches | lr_step  2470 | lr  0.000598 |acc  95.723%| ms/batch 295.72 | loss 0.0117768 
+| epoch   7 |   239/  319 batches | lr_step  2480 | lr  0.000601 |acc  96.699%| ms/batch 296.54 | loss 0.0099612 
+| epoch   7 |   249/  319 batches | lr_step  2490 | lr  0.000603 |acc  95.781%| ms/batch 293.81 | loss 0.0122464 
+| epoch   7 |   259/  319 batches | lr_step  2500 | lr  0.000606 |acc  95.996%| ms/batch 301.40 | loss 0.0113774 
+| epoch   7 |   269/  319 batches | lr_step  2510 | lr  0.000608 |acc  95.762%| ms/batch 296.50 | loss 0.0119822 
+| epoch   7 |   279/  319 batches | lr_step  2520 | lr  0.000610 |acc  96.367%| ms/batch 296.61 | loss 0.0113746 
+| epoch   7 |   289/  319 batches | lr_step  2530 | lr  0.000613 |acc  95.801%| ms/batch 294.11 | loss 0.0120964 
+| epoch   7 |   299/  319 batches | lr_step  2540 | lr  0.000615 |acc  96.328%| ms/batch 292.62 | loss 0.0109257 
+| epoch   7 |   309/  319 batches | lr_step  2550 | lr  0.000618 |acc  96.328%| ms/batch 301.20 | loss 0.0109078 
+| epoch   7 |   319/  319 batches | lr_step  2560 | lr  0.000620 |acc  123.923%| ms/batch 302.29 | loss 0.0106514 
+Pred: tensor([ 6, 11,  0,  0,  0,  0,  0,  0,  0]) and tensor([ 6, 11,  0,  0,  0,  0,  0,  0,  0]), tensor([ 6,  7,  8, 12,  9, 13,  0,  0,  0])
+Tar: tensor([[ 6, 11,  0,  0,  0,  0,  0,  0,  0],
+        [ 6, 11,  0,  0,  0,  0,  0,  0,  0],
+        [ 6,  7,  8,  9, 12, 13,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch   7 | time: 97.58s | valid acc 98.647%| Best Model from Epoch 5 with 98.625%
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| end of epoch   7 | time: 97.58s | valid acc 98.647%| 
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| epoch   8 |     9/  319 batches | lr_step  2570 | lr  0.000623 |acc  96.387%| ms/batch 296.01 | loss 0.0104390 
+| epoch   8 |    19/  319 batches | lr_step  2580 | lr  0.000625 |acc  96.152%| ms/batch 301.78 | loss 0.0115427 
+| epoch   8 |    29/  319 batches | lr_step  2590 | lr  0.000627 |acc  96.016%| ms/batch 296.41 | loss 0.0112659 
+| epoch   8 |    39/  319 batches | lr_step  2600 | lr  0.000630 |acc  96.094%| ms/batch 293.12 | loss 0.0114657 
+| epoch   8 |    49/  319 batches | lr_step  2610 | lr  0.000632 |acc  95.762%| ms/batch 294.91 | loss 0.0115696 
+| epoch   8 |    59/  319 batches | lr_step  2620 | lr  0.000635 |acc  95.684%| ms/batch 299.30 | loss 0.0117907 
+| epoch   8 |    69/  319 batches | lr_step  2630 | lr  0.000637 |acc  95.820%| ms/batch 300.80 | loss 0.0115344 
+| epoch   8 |    79/  319 batches | lr_step  2640 | lr  0.000640 |acc  96.348%| ms/batch 293.43 | loss 0.0108466 
+| epoch   8 |    89/  319 batches | lr_step  2650 | lr  0.000642 |acc  96.562%| ms/batch 297.19 | loss 0.0103330 
+| epoch   8 |    99/  319 batches | lr_step  2660 | lr  0.000644 |acc  96.406%| ms/batch 293.32 | loss 0.0108892 
+| epoch   8 |   109/  319 batches | lr_step  2670 | lr  0.000647 |acc  96.230%| ms/batch 301.30 | loss 0.0104804 
+| epoch   8 |   119/  319 batches | lr_step  2680 | lr  0.000649 |acc  96.035%| ms/batch 293.52 | loss 0.0116447 
+| epoch   8 |   129/  319 batches | lr_step  2690 | lr  0.000652 |acc  96.582%| ms/batch 296.06 | loss 0.0103197 
+| epoch   8 |   139/  319 batches | lr_step  2700 | lr  0.000654 |acc  96.367%| ms/batch 297.91 | loss 0.0099097 
+| epoch   8 |   149/  319 batches | lr_step  2710 | lr  0.000656 |acc  96.758%| ms/batch 293.72 | loss 0.0102051 
+| epoch   8 |   159/  319 batches | lr_step  2720 | lr  0.000659 |acc  96.055%| ms/batch 294.93 | loss 0.0106971 
+| epoch   8 |   169/  319 batches | lr_step  2730 | lr  0.000661 |acc  96.094%| ms/batch 297.01 | loss 0.0102545 
+| epoch   8 |   179/  319 batches | lr_step  2740 | lr  0.000664 |acc  96.055%| ms/batch 293.61 | loss 0.0111906 
+| epoch   8 |   189/  319 batches | lr_step  2750 | lr  0.000666 |acc  96.191%| ms/batch 319.14 | loss 0.0108271 
+| epoch   8 |   199/  319 batches | lr_step  2760 | lr  0.000669 |acc  96.465%| ms/batch 292.00 | loss 0.0094534 
+| epoch   8 |   209/  319 batches | lr_step  2770 | lr  0.000671 |acc  96.172%| ms/batch 298.83 | loss 0.0102702 
+| epoch   8 |   219/  319 batches | lr_step  2780 | lr  0.000673 |acc  96.543%| ms/batch 294.71 | loss 0.0100486 
+| epoch   8 |   229/  319 batches | lr_step  2790 | lr  0.000676 |acc  96.777%| ms/batch 294.31 | loss 0.0098060 
+| epoch   8 |   239/  319 batches | lr_step  2800 | lr  0.000678 |acc  96.055%| ms/batch 298.40 | loss 0.0111257 
+| epoch   8 |   249/  319 batches | lr_step  2810 | lr  0.000681 |acc  95.801%| ms/batch 296.51 | loss 0.0112579 
+| epoch   8 |   259/  319 batches | lr_step  2820 | lr  0.000683 |acc  95.996%| ms/batch 297.99 | loss 0.0107410 
+| epoch   8 |   269/  319 batches | lr_step  2830 | lr  0.000686 |acc  96.641%| ms/batch 294.41 | loss 0.0089859 
+| epoch   8 |   279/  319 batches | lr_step  2840 | lr  0.000688 |acc  96.660%| ms/batch 295.95 | loss 0.0096065 
+| epoch   8 |   289/  319 batches | lr_step  2850 | lr  0.000690 |acc  96.523%| ms/batch 290.65 | loss 0.0101632 
+| epoch   8 |   299/  319 batches | lr_step  2860 | lr  0.000693 |acc  96.230%| ms/batch 294.02 | loss 0.0100387 
+| epoch   8 |   309/  319 batches | lr_step  2870 | lr  0.000695 |acc  96.289%| ms/batch 297.31 | loss 0.0102537 
+| epoch   8 |   319/  319 batches | lr_step  2880 | lr  0.000698 |acc  123.795%| ms/batch 286.34 | loss 0.0098230 
+Pred: tensor([ 6, 11,  0,  0,  0,  0,  0,  0,  0]) and tensor([ 6,  7,  8,  9, 11,  0,  0,  0,  0]), tensor([ 6,  7,  8,  9, 10,  0,  0,  0,  0])
+Tar: tensor([[ 6, 11,  0,  0,  0,  0,  0,  0,  0],
+        [ 6,  7,  8,  9, 11,  0,  0,  0,  0],
+        [ 6,  7,  8,  9, 10,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch   8 | time: 97.49s | valid acc 98.800%| Best Model from Epoch 7 with 98.647%
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| end of epoch   8 | time: 97.49s | valid acc 98.800%| 
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| epoch   9 |     9/  319 batches | lr_step  2890 | lr  0.000700 |acc  96.172%| ms/batch 306.68 | loss 0.0113072 
+| epoch   9 |    19/  319 batches | lr_step  2900 | lr  0.000703 |acc  96.348%| ms/batch 291.82 | loss 0.0100055 
+| epoch   9 |    29/  319 batches | lr_step  2910 | lr  0.000705 |acc  96.719%| ms/batch 296.02 | loss 0.0096361 
+| epoch   9 |    39/  319 batches | lr_step  2920 | lr  0.000707 |acc  96.211%| ms/batch 292.92 | loss 0.0107318 
+| epoch   9 |    49/  319 batches | lr_step  2930 | lr  0.000710 |acc  96.680%| ms/batch 296.71 | loss 0.0094466 
+| epoch   9 |    59/  319 batches | lr_step  2940 | lr  0.000712 |acc  96.270%| ms/batch 304.17 | loss 0.0097452 
+| epoch   9 |    69/  319 batches | lr_step  2950 | lr  0.000715 |acc  96.328%| ms/batch 297.22 | loss 0.0099404 
+| epoch   9 |    79/  319 batches | lr_step  2960 | lr  0.000717 |acc  96.445%| ms/batch 297.51 | loss 0.0101428 
+| epoch   9 |    89/  319 batches | lr_step  2970 | lr  0.000719 |acc  96.289%| ms/batch 293.42 | loss 0.0099053 
+| epoch   9 |    99/  319 batches | lr_step  2980 | lr  0.000722 |acc  96.230%| ms/batch 289.64 | loss 0.0105954 
+| epoch   9 |   109/  319 batches | lr_step  2990 | lr  0.000724 |acc  95.996%| ms/batch 289.53 | loss 0.0104980 
+| epoch   9 |   119/  319 batches | lr_step  3000 | lr  0.000727 |acc  97.031%| ms/batch 289.93 | loss 0.0092963 
+| epoch   9 |   129/  319 batches | lr_step  3010 | lr  0.000729 |acc  96.152%| ms/batch 294.92 | loss 0.0103198 
+| epoch   9 |   139/  319 batches | lr_step  3020 | lr  0.000732 |acc  96.816%| ms/batch 294.91 | loss 0.0086756 
+| epoch   9 |   149/  319 batches | lr_step  3030 | lr  0.000734 |acc  96.309%| ms/batch 296.33 | loss 0.0095564 
+| epoch   9 |   159/  319 batches | lr_step  3040 | lr  0.000736 |acc  96.660%| ms/batch 292.02 | loss 0.0085485 
+| epoch   9 |   169/  319 batches | lr_step  3050 | lr  0.000739 |acc  96.426%| ms/batch 295.92 | loss 0.0094956 
+| epoch   9 |   179/  319 batches | lr_step  3060 | lr  0.000741 |acc  96.250%| ms/batch 300.30 | loss 0.0105690 
+| epoch   9 |   189/  319 batches | lr_step  3070 | lr  0.000744 |acc  96.426%| ms/batch 295.91 | loss 0.0097616 
+| epoch   9 |   199/  319 batches | lr_step  3080 | lr  0.000746 |acc  96.543%| ms/batch 292.32 | loss 0.0102148 
+| epoch   9 |   209/  319 batches | lr_step  3090 | lr  0.000749 |acc  96.113%| ms/batch 298.30 | loss 0.0106514 
+| epoch   9 |   219/  319 batches | lr_step  3100 | lr  0.000751 |acc  97.012%| ms/batch 293.02 | loss 0.0084263 
+| epoch   9 |   229/  319 batches | lr_step  3110 | lr  0.000753 |acc  96.660%| ms/batch 294.51 | loss 0.0086919 
+| epoch   9 |   239/  319 batches | lr_step  3120 | lr  0.000756 |acc  96.406%| ms/batch 297.60 | loss 0.0099097 
+| epoch   9 |   249/  319 batches | lr_step  3130 | lr  0.000758 |acc  96.602%| ms/batch 295.38 | loss 0.0095784 
+| epoch   9 |   259/  319 batches | lr_step  3140 | lr  0.000761 |acc  96.504%| ms/batch 296.71 | loss 0.0095235 
+| epoch   9 |   269/  319 batches | lr_step  3150 | lr  0.000763 |acc  96.543%| ms/batch 295.71 | loss 0.0087953 
+| epoch   9 |   279/  319 batches | lr_step  3160 | lr  0.000766 |acc  96.816%| ms/batch 295.54 | loss 0.0083301 
+| epoch   9 |   289/  319 batches | lr_step  3170 | lr  0.000768 |acc  96.836%| ms/batch 292.04 | loss 0.0097236 
+| epoch   9 |   299/  319 batches | lr_step  3180 | lr  0.000770 |acc  96.562%| ms/batch 295.21 | loss 0.0092100 
+| epoch   9 |   309/  319 batches | lr_step  3190 | lr  0.000773 |acc  96.504%| ms/batch 295.81 | loss 0.0097267 
+| epoch   9 |   319/  319 batches | lr_step  3200 | lr  0.000775 |acc  123.308%| ms/batch 285.54 | loss 0.0112687 
+Pred: tensor([ 6,  7,  8,  9, 10,  0,  0,  0,  0]) and tensor([ 6,  7,  8,  9, 11,  0,  0,  0,  0]), tensor([ 6,  7,  8,  9, 11,  0,  0,  0,  0])
+Tar: tensor([[ 6,  7,  8,  9, 10,  0,  0,  0,  0],
+        [ 6,  7,  8,  9, 11,  0,  0,  0,  0],
+        [ 6,  7,  8,  9, 11,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch   9 | time: 97.03s | valid acc 98.734%| Best Model from Epoch 8 with 98.800%
+-----------------------------------------------------------------------------------------
+| epoch  10 |     9/  319 batches | lr_step  3210 | lr  0.000778 |acc  96.562%| ms/batch 292.32 | loss 0.0091724 
+| epoch  10 |    19/  319 batches | lr_step  3220 | lr  0.000780 |acc  96.699%| ms/batch 298.01 | loss 0.0085989 
+| epoch  10 |    29/  319 batches | lr_step  3230 | lr  0.000782 |acc  96.094%| ms/batch 294.22 | loss 0.0104055 
+| epoch  10 |    39/  319 batches | lr_step  3240 | lr  0.000785 |acc  96.836%| ms/batch 295.36 | loss 0.0091554 
+| epoch  10 |    49/  319 batches | lr_step  3250 | lr  0.000787 |acc  96.777%| ms/batch 296.92 | loss 0.0081969 
+| epoch  10 |    59/  319 batches | lr_step  3260 | lr  0.000790 |acc  96.406%| ms/batch 301.00 | loss 0.0100549 
+| epoch  10 |    69/  319 batches | lr_step  3270 | lr  0.000792 |acc  96.270%| ms/batch 294.32 | loss 0.0104857 
+| epoch  10 |    79/  319 batches | lr_step  3280 | lr  0.000795 |acc  96.562%| ms/batch 297.11 | loss 0.0085808 
+| epoch  10 |    89/  319 batches | lr_step  3290 | lr  0.000797 |acc  96.523%| ms/batch 293.62 | loss 0.0086331 
+| epoch  10 |    99/  319 batches | lr_step  3300 | lr  0.000799 |acc  96.445%| ms/batch 293.72 | loss 0.0098390 
+| epoch  10 |   109/  319 batches | lr_step  3310 | lr  0.000802 |acc  96.582%| ms/batch 302.28 | loss 0.0095851 
+| epoch  10 |   119/  319 batches | lr_step  3320 | lr  0.000804 |acc  96.602%| ms/batch 291.21 | loss 0.0094837 
+| epoch  10 |   129/  319 batches | lr_step  3330 | lr  0.000807 |acc  96.387%| ms/batch 294.14 | loss 0.0101603 
+| epoch  10 |   139/  319 batches | lr_step  3340 | lr  0.000809 |acc  96.992%| ms/batch 299.71 | loss 0.0082727 
+| epoch  10 |   149/  319 batches | lr_step  3350 | lr  0.000812 |acc  96.523%| ms/batch 293.62 | loss 0.0096875 
+| epoch  10 |   159/  319 batches | lr_step  3360 | lr  0.000814 |acc  96.445%| ms/batch 295.91 | loss 0.0098917 
+| epoch  10 |   169/  319 batches | lr_step  3370 | lr  0.000816 |acc  96.777%| ms/batch 294.22 | loss 0.0088039 
+| epoch  10 |   179/  319 batches | lr_step  3380 | lr  0.000819 |acc  97.402%| ms/batch 290.33 | loss 0.0075510 
+| epoch  10 |   189/  319 batches | lr_step  3390 | lr  0.000821 |acc  96.602%| ms/batch 293.86 | loss 0.0089393 
+| epoch  10 |   199/  319 batches | lr_step  3400 | lr  0.000824 |acc  96.543%| ms/batch 292.33 | loss 0.0097257 
+| epoch  10 |   209/  319 batches | lr_step  3410 | lr  0.000826 |acc  96.523%| ms/batch 297.01 | loss 0.0082643 
+| epoch  10 |   219/  319 batches | lr_step  3420 | lr  0.000828 |acc  96.621%| ms/batch 295.21 | loss 0.0090775 
+| epoch  10 |   229/  319 batches | lr_step  3430 | lr  0.000831 |acc  96.328%| ms/batch 290.93 | loss 0.0103250 
+| epoch  10 |   239/  319 batches | lr_step  3440 | lr  0.000833 |acc  96.992%| ms/batch 294.22 | loss 0.0082638 
+| epoch  10 |   249/  319 batches | lr_step  3450 | lr  0.000836 |acc  96.484%| ms/batch 294.92 | loss 0.0091108 
+| epoch  10 |   259/  319 batches | lr_step  3460 | lr  0.000838 |acc  96.250%| ms/batch 304.79 | loss 0.0098278 
+| epoch  10 |   269/  319 batches | lr_step  3470 | lr  0.000841 |acc  95.977%| ms/batch 293.16 | loss 0.0106093 
+| epoch  10 |   279/  319 batches | lr_step  3480 | lr  0.000843 |acc  96.621%| ms/batch 292.87 | loss 0.0091298 
+| epoch  10 |   289/  319 batches | lr_step  3490 | lr  0.000845 |acc  96.406%| ms/batch 287.34 | loss 0.0095254 
+| epoch  10 |   299/  319 batches | lr_step  3500 | lr  0.000848 |acc  96.582%| ms/batch 295.21 | loss 0.0090559 
+| epoch  10 |   309/  319 batches | lr_step  3510 | lr  0.000850 |acc  96.309%| ms/batch 292.63 | loss 0.0101795 
+| epoch  10 |   319/  319 batches | lr_step  3520 | lr  0.000853 |acc  123.769%| ms/batch 291.93 | loss 0.0088092 
+Pred: tensor([ 6,  7,  8,  9, 10,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0]) and tensor([ 6, 11,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0]), tensor([ 6, 11,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0])
+Tar: tensor([[ 6,  7,  8,  9, 10,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0],
+        [ 6, 11,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0],
+        [ 6, 11,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  10 | time: 96.98s | valid acc 98.581%| Best Model from Epoch 8 with 98.800%
+-----------------------------------------------------------------------------------------
+| epoch  11 |     9/  319 batches | lr_step  3530 | lr  0.000855 |acc  96.699%| ms/batch 307.39 | loss 0.0086980 
+| epoch  11 |    19/  319 batches | lr_step  3540 | lr  0.000858 |acc  96.387%| ms/batch 295.22 | loss 0.0096229 
+| epoch  11 |    29/  319 batches | lr_step  3550 | lr  0.000860 |acc  96.523%| ms/batch 294.54 | loss 0.0096516 
+| epoch  11 |    39/  319 batches | lr_step  3560 | lr  0.000862 |acc  96.523%| ms/batch 291.24 | loss 0.0093798 
+| epoch  11 |    49/  319 batches | lr_step  3570 | lr  0.000865 |acc  96.387%| ms/batch 301.90 | loss 0.0089129 
+| epoch  11 |    59/  319 batches | lr_step  3580 | lr  0.000867 |acc  96.973%| ms/batch 296.12 | loss 0.0082235 
+| epoch  11 |    69/  319 batches | lr_step  3590 | lr  0.000870 |acc  96.484%| ms/batch 294.32 | loss 0.0091961 
+| epoch  11 |    79/  319 batches | lr_step  3600 | lr  0.000872 |acc  96.543%| ms/batch 295.61 | loss 0.0091136 
+| epoch  11 |    89/  319 batches | lr_step  3610 | lr  0.000875 |acc  96.426%| ms/batch 293.11 | loss 0.0096050 
+| epoch  11 |    99/  319 batches | lr_step  3620 | lr  0.000877 |acc  96.758%| ms/batch 293.32 | loss 0.0081299 
+| epoch  11 |   109/  319 batches | lr_step  3630 | lr  0.000879 |acc  96.992%| ms/batch 293.27 | loss 0.0087783 
+| epoch  11 |   119/  319 batches | lr_step  3640 | lr  0.000882 |acc  96.484%| ms/batch 286.85 | loss 0.0093009 
+| epoch  11 |   129/  319 batches | lr_step  3650 | lr  0.000884 |acc  96.895%| ms/batch 316.51 | loss 0.0083192 
+| epoch  11 |   139/  319 batches | lr_step  3660 | lr  0.000887 |acc  96.641%| ms/batch 294.02 | loss 0.0091322 
+| epoch  11 |   149/  319 batches | lr_step  3670 | lr  0.000889 |acc  95.938%| ms/batch 294.71 | loss 0.0107941 
+| epoch  11 |   159/  319 batches | lr_step  3680 | lr  0.000891 |acc  96.719%| ms/batch 292.73 | loss 0.0083791 
+| epoch  11 |   169/  319 batches | lr_step  3690 | lr  0.000894 |acc  96.426%| ms/batch 294.35 | loss 0.0097656 
+| epoch  11 |   179/  319 batches | lr_step  3700 | lr  0.000896 |acc  96.816%| ms/batch 292.43 | loss 0.0082333 
+| epoch  11 |   189/  319 batches | lr_step  3710 | lr  0.000899 |acc  96.992%| ms/batch 296.21 | loss 0.0087426 
+| epoch  11 |   199/  319 batches | lr_step  3720 | lr  0.000901 |acc  96.582%| ms/batch 294.82 | loss 0.0089129 
+| epoch  11 |   209/  319 batches | lr_step  3730 | lr  0.000904 |acc  97.012%| ms/batch 293.52 | loss 0.0077471 
+| epoch  11 |   219/  319 batches | lr_step  3740 | lr  0.000906 |acc  96.973%| ms/batch 297.81 | loss 0.0082699 
+| epoch  11 |   229/  319 batches | lr_step  3750 | lr  0.000908 |acc  96.152%| ms/batch 296.22 | loss 0.0099160 
+| epoch  11 |   239/  319 batches | lr_step  3760 | lr  0.000911 |acc  96.777%| ms/batch 291.82 | loss 0.0089474 
+| epoch  11 |   249/  319 batches | lr_step  3770 | lr  0.000913 |acc  96.992%| ms/batch 292.22 | loss 0.0083527 
+| epoch  11 |   259/  319 batches | lr_step  3780 | lr  0.000916 |acc  96.738%| ms/batch 290.92 | loss 0.0093498 
+| epoch  11 |   269/  319 batches | lr_step  3790 | lr  0.000918 |acc  96.895%| ms/batch 297.63 | loss 0.0081304 
+| epoch  11 |   279/  319 batches | lr_step  3800 | lr  0.000921 |acc  96.758%| ms/batch 293.59 | loss 0.0079285 
+| epoch  11 |   289/  319 batches | lr_step  3810 | lr  0.000923 |acc  96.855%| ms/batch 290.73 | loss 0.0087113 
+| epoch  11 |   299/  319 batches | lr_step  3820 | lr  0.000925 |acc  96.836%| ms/batch 293.23 | loss 0.0079831 
+| epoch  11 |   309/  319 batches | lr_step  3830 | lr  0.000928 |acc  96.465%| ms/batch 291.72 | loss 0.0088995 
+| epoch  11 |   319/  319 batches | lr_step  3840 | lr  0.000930 |acc  124.026%| ms/batch 285.84 | loss 0.0089659 
+Pred: tensor([11,  6,  0,  0,  0,  0,  0,  0,  0]) and tensor([ 6,  7,  8, 12,  9, 13,  0,  0,  0]), tensor([ 6,  7,  8,  9, 10,  0,  0,  0,  0])
+Tar: tensor([[ 6, 11,  0,  0,  0,  0,  0,  0,  0],
+        [ 6,  7,  8, 12,  9, 13,  0,  0,  0],
+        [ 6,  7,  8,  9, 10,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  11 | time: 96.97s | valid acc 46.574%| Best Model from Epoch 8 with 98.800%
+-----------------------------------------------------------------------------------------
+| epoch  12 |     9/  319 batches | lr_step  3850 | lr  0.000933 |acc  96.660%| ms/batch 294.11 | loss 0.0078542 
+| epoch  12 |    19/  319 batches | lr_step  3860 | lr  0.000935 |acc  97.070%| ms/batch 295.82 | loss 0.0077040 
+| epoch  12 |    29/  319 batches | lr_step  3870 | lr  0.000937 |acc  96.562%| ms/batch 292.76 | loss 0.0090271 
+| epoch  12 |    39/  319 batches | lr_step  3880 | lr  0.000940 |acc  96.543%| ms/batch 291.90 | loss 0.0092948 
+| epoch  12 |    49/  319 batches | lr_step  3890 | lr  0.000942 |acc  96.758%| ms/batch 291.53 | loss 0.0085919 
+| epoch  12 |    59/  319 batches | lr_step  3900 | lr  0.000945 |acc  96.406%| ms/batch 295.81 | loss 0.0085968 
+| epoch  12 |    69/  319 batches | lr_step  3910 | lr  0.000947 |acc  96.523%| ms/batch 292.00 | loss 0.0087723 
+| epoch  12 |    79/  319 batches | lr_step  3920 | lr  0.000950 |acc  97.012%| ms/batch 291.62 | loss 0.0079988 
+| epoch  12 |    89/  319 batches | lr_step  3930 | lr  0.000952 |acc  96.953%| ms/batch 302.24 | loss 0.0076005 
+| epoch  12 |    99/  319 batches | lr_step  3940 | lr  0.000954 |acc  96.875%| ms/batch 295.20 | loss 0.0083578 
+| epoch  12 |   109/  319 batches | lr_step  3950 | lr  0.000957 |acc  97.051%| ms/batch 292.02 | loss 0.0078874 
+| epoch  12 |   119/  319 batches | lr_step  3960 | lr  0.000959 |acc  96.445%| ms/batch 293.52 | loss 0.0091329 
+| epoch  12 |   129/  319 batches | lr_step  3970 | lr  0.000962 |acc  96.504%| ms/batch 292.53 | loss 0.0085846 
+| epoch  12 |   139/  319 batches | lr_step  3980 | lr  0.000964 |acc  96.953%| ms/batch 291.62 | loss 0.0081300 
+| epoch  12 |   149/  319 batches | lr_step  3990 | lr  0.000967 |acc  96.445%| ms/batch 293.12 | loss 0.0086866 
+| epoch  12 |   159/  319 batches | lr_step  4000 | lr  0.000969 |acc  96.699%| ms/batch 289.96 | loss 0.0085483 
+| epoch  12 |   169/  319 batches | lr_step  4010 | lr  0.000968 |acc  96.816%| ms/batch 296.31 | loss 0.0083665 
+| epoch  12 |   179/  319 batches | lr_step  4020 | lr  0.000967 |acc  96.270%| ms/batch 294.32 | loss 0.0094184 
+| epoch  12 |   189/  319 batches | lr_step  4030 | lr  0.000965 |acc  96.641%| ms/batch 297.81 | loss 0.0079818 
+| epoch  12 |   199/  319 batches | lr_step  4040 | lr  0.000964 |acc  96.504%| ms/batch 291.82 | loss 0.0088212 
+| epoch  12 |   209/  319 batches | lr_step  4050 | lr  0.000963 |acc  97.031%| ms/batch 295.01 | loss 0.0079712 
+| epoch  12 |   219/  319 batches | lr_step  4060 | lr  0.000962 |acc  96.465%| ms/batch 304.69 | loss 0.0093592 
+| epoch  12 |   229/  319 batches | lr_step  4070 | lr  0.000961 |acc  96.523%| ms/batch 292.92 | loss 0.0086847 
+| epoch  12 |   239/  319 batches | lr_step  4080 | lr  0.000959 |acc  96.699%| ms/batch 290.53 | loss 0.0089446 
+| epoch  12 |   249/  319 batches | lr_step  4090 | lr  0.000958 |acc  97.168%| ms/batch 290.82 | loss 0.0075109 
+| epoch  12 |   259/  319 batches | lr_step  4100 | lr  0.000957 |acc  96.816%| ms/batch 296.03 | loss 0.0086093 
+| epoch  12 |   269/  319 batches | lr_step  4110 | lr  0.000956 |acc  96.758%| ms/batch 292.72 | loss 0.0089268 
+| epoch  12 |   279/  319 batches | lr_step  4120 | lr  0.000955 |acc  96.855%| ms/batch 294.31 | loss 0.0086752 
+| epoch  12 |   289/  319 batches | lr_step  4130 | lr  0.000954 |acc  96.680%| ms/batch 291.77 | loss 0.0093699 
+| epoch  12 |   299/  319 batches | lr_step  4140 | lr  0.000952 |acc  96.816%| ms/batch 295.31 | loss 0.0078302 
+| epoch  12 |   309/  319 batches | lr_step  4150 | lr  0.000951 |acc  96.211%| ms/batch 293.53 | loss 0.0097556 
+| epoch  12 |   319/  319 batches | lr_step  4160 | lr  0.000950 |acc  124.103%| ms/batch 284.20 | loss 0.0076074 
+Pred: tensor([ 6,  7,  8,  9, 10,  0,  0]) and tensor([ 6, 11,  0,  0,  0,  0,  0]), tensor([ 6, 11,  0,  0,  0,  0,  0])
+Tar: tensor([[ 6,  7,  8,  9, 10,  0,  0],
+        [ 6, 11,  0,  0,  0,  0,  0],
+        [ 6, 11,  0,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  12 | time: 96.63s | valid acc 98.669%| Best Model from Epoch 8 with 98.800%
+-----------------------------------------------------------------------------------------
+| epoch  13 |     9/  319 batches | lr_step  4170 | lr  0.000949 |acc  96.641%| ms/batch 295.41 | loss 0.0090520 
+| epoch  13 |    19/  319 batches | lr_step  4180 | lr  0.000948 |acc  96.523%| ms/batch 291.74 | loss 0.0087942 
+| epoch  13 |    29/  319 batches | lr_step  4190 | lr  0.000947 |acc  96.641%| ms/batch 296.71 | loss 0.0084315 
+| epoch  13 |    39/  319 batches | lr_step  4200 | lr  0.000946 |acc  96.738%| ms/batch 291.17 | loss 0.0085396 
+| epoch  13 |    49/  319 batches | lr_step  4210 | lr  0.000945 |acc  96.758%| ms/batch 293.72 | loss 0.0077421 
+| epoch  13 |    59/  319 batches | lr_step  4220 | lr  0.000943 |acc  96.582%| ms/batch 294.24 | loss 0.0087254 
+| epoch  13 |    69/  319 batches | lr_step  4230 | lr  0.000942 |acc  96.914%| ms/batch 293.67 | loss 0.0077829 
+| epoch  13 |    79/  319 batches | lr_step  4240 | lr  0.000941 |acc  96.758%| ms/batch 298.30 | loss 0.0085707 
+| epoch  13 |    89/  319 batches | lr_step  4250 | lr  0.000940 |acc  96.738%| ms/batch 293.32 | loss 0.0086147 
+| epoch  13 |    99/  319 batches | lr_step  4260 | lr  0.000939 |acc  96.523%| ms/batch 292.62 | loss 0.0090832 
+| epoch  13 |   109/  319 batches | lr_step  4270 | lr  0.000938 |acc  96.289%| ms/batch 295.53 | loss 0.0093161 
+| epoch  13 |   119/  319 batches | lr_step  4280 | lr  0.000937 |acc  96.641%| ms/batch 289.46 | loss 0.0088200 
+| epoch  13 |   129/  319 batches | lr_step  4290 | lr  0.000936 |acc  97.344%| ms/batch 292.12 | loss 0.0072356 
+| epoch  13 |   139/  319 batches | lr_step  4300 | lr  0.000935 |acc  96.973%| ms/batch 293.32 | loss 0.0082104 
+| epoch  13 |   149/  319 batches | lr_step  4310 | lr  0.000933 |acc  96.602%| ms/batch 293.35 | loss 0.0089578 
+| epoch  13 |   159/  319 batches | lr_step  4320 | lr  0.000932 |acc  96.445%| ms/batch 288.43 | loss 0.0097537 
+| epoch  13 |   169/  319 batches | lr_step  4330 | lr  0.000931 |acc  97.012%| ms/batch 293.78 | loss 0.0073326 
+| epoch  13 |   179/  319 batches | lr_step  4340 | lr  0.000930 |acc  96.875%| ms/batch 294.73 | loss 0.0082713 
+| epoch  13 |   189/  319 batches | lr_step  4350 | lr  0.000929 |acc  96.934%| ms/batch 294.02 | loss 0.0077973 
+| epoch  13 |   199/  319 batches | lr_step  4360 | lr  0.000928 |acc  97.207%| ms/batch 293.72 | loss 0.0076017 
+| epoch  13 |   209/  319 batches | lr_step  4370 | lr  0.000927 |acc  96.953%| ms/batch 291.43 | loss 0.0077062 
+| epoch  13 |   219/  319 batches | lr_step  4380 | lr  0.000926 |acc  96.973%| ms/batch 295.92 | loss 0.0082214 
+| epoch  13 |   229/  319 batches | lr_step  4390 | lr  0.000925 |acc  96.660%| ms/batch 287.98 | loss 0.0088634 
+| epoch  13 |   239/  319 batches | lr_step  4400 | lr  0.000924 |acc  97.227%| ms/batch 295.44 | loss 0.0076070 
+| epoch  13 |   249/  319 batches | lr_step  4410 | lr  0.000923 |acc  97.051%| ms/batch 293.16 | loss 0.0078129 
+| epoch  13 |   259/  319 batches | lr_step  4420 | lr  0.000922 |acc  97.617%| ms/batch 289.23 | loss 0.0067242 
+| epoch  13 |   269/  319 batches | lr_step  4430 | lr  0.000921 |acc  96.465%| ms/batch 294.22 | loss 0.0089000 
+| epoch  13 |   279/  319 batches | lr_step  4440 | lr  0.000920 |acc  97.109%| ms/batch 293.07 | loss 0.0075348 
+| epoch  13 |   289/  319 batches | lr_step  4450 | lr  0.000919 |acc  97.012%| ms/batch 289.51 | loss 0.0075563 
+| epoch  13 |   299/  319 batches | lr_step  4460 | lr  0.000918 |acc  97.148%| ms/batch 291.32 | loss 0.0071557 
+| epoch  13 |   309/  319 batches | lr_step  4470 | lr  0.000917 |acc  96.660%| ms/batch 309.93 | loss 0.0081920 
+| epoch  13 |   319/  319 batches | lr_step  4480 | lr  0.000916 |acc  123.923%| ms/batch 285.54 | loss 0.0082087 
+Pred: tensor([ 6, 11,  0,  0,  0,  0,  0,  0,  0]) and tensor([ 6,  7,  8,  9, 10,  0,  0,  0,  0]), tensor([ 6,  7,  8,  9, 10,  0,  0,  0,  0])
+Tar: tensor([[ 6, 11,  0,  0,  0,  0,  0,  0,  0],
+        [ 6,  7,  8,  9, 10,  0,  0,  0,  0],
+        [ 6,  7,  8,  9, 10,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  13 | time: 96.47s | valid acc 97.796%| Best Model from Epoch 8 with 98.800%
+-----------------------------------------------------------------------------------------
+| epoch  14 |     9/  319 batches | lr_step  4490 | lr  0.000915 |acc  97.539%| ms/batch 293.42 | loss 0.0066660 
+| epoch  14 |    19/  319 batches | lr_step  4500 | lr  0.000914 |acc  96.855%| ms/batch 292.94 | loss 0.0084527 
+| epoch  14 |    29/  319 batches | lr_step  4510 | lr  0.000913 |acc  96.895%| ms/batch 292.72 | loss 0.0075802 
+| epoch  14 |    39/  319 batches | lr_step  4520 | lr  0.000912 |acc  97.031%| ms/batch 293.02 | loss 0.0077835 
+| epoch  14 |    49/  319 batches | lr_step  4530 | lr  0.000911 |acc  96.914%| ms/batch 295.61 | loss 0.0078971 
+| epoch  14 |    59/  319 batches | lr_step  4540 | lr  0.000910 |acc  96.855%| ms/batch 295.61 | loss 0.0082413 
+| epoch  14 |    69/  319 batches | lr_step  4550 | lr  0.000909 |acc  96.836%| ms/batch 294.72 | loss 0.0073360 
+| epoch  14 |    79/  319 batches | lr_step  4560 | lr  0.000908 |acc  97.207%| ms/batch 290.42 | loss 0.0079226 
+| epoch  14 |    89/  319 batches | lr_step  4570 | lr  0.000907 |acc  96.797%| ms/batch 300.50 | loss 0.0078359 
+| epoch  14 |    99/  319 batches | lr_step  4580 | lr  0.000906 |acc  97.422%| ms/batch 292.22 | loss 0.0075579 
+| epoch  14 |   109/  319 batches | lr_step  4590 | lr  0.000905 |acc  96.582%| ms/batch 295.01 | loss 0.0091064 
+| epoch  14 |   119/  319 batches | lr_step  4600 | lr  0.000904 |acc  96.914%| ms/batch 296.22 | loss 0.0085894 
+| epoch  14 |   129/  319 batches | lr_step  4610 | lr  0.000903 |acc  96.934%| ms/batch 302.39 | loss 0.0077078 
+| epoch  14 |   139/  319 batches | lr_step  4620 | lr  0.000902 |acc  96.562%| ms/batch 307.28 | loss 0.0088027 
+| epoch  14 |   149/  319 batches | lr_step  4630 | lr  0.000901 |acc  96.699%| ms/batch 298.11 | loss 0.0074761 
+| epoch  14 |   159/  319 batches | lr_step  4640 | lr  0.000900 |acc  97.148%| ms/batch 298.11 | loss 0.0077779 
+| epoch  14 |   169/  319 batches | lr_step  4650 | lr  0.000899 |acc  97.168%| ms/batch 300.28 | loss 0.0072291 
+| epoch  14 |   179/  319 batches | lr_step  4660 | lr  0.000898 |acc  96.895%| ms/batch 304.19 | loss 0.0078562 
+| epoch  14 |   189/  319 batches | lr_step  4670 | lr  0.000897 |acc  97.031%| ms/batch 297.35 | loss 0.0072526 
+| epoch  14 |   199/  319 batches | lr_step  4680 | lr  0.000896 |acc  96.582%| ms/batch 299.28 | loss 0.0079109 
+| epoch  14 |   209/  319 batches | lr_step  4690 | lr  0.000895 |acc  97.031%| ms/batch 310.43 | loss 0.0078466 
+| epoch  14 |   219/  319 batches | lr_step  4700 | lr  0.000894 |acc  97.188%| ms/batch 300.01 | loss 0.0071760 
+| epoch  14 |   229/  319 batches | lr_step  4710 | lr  0.000893 |acc  96.719%| ms/batch 293.91 | loss 0.0089432 
+| epoch  14 |   239/  319 batches | lr_step  4720 | lr  0.000892 |acc  96.914%| ms/batch 303.63 | loss 0.0077243 
+| epoch  14 |   249/  319 batches | lr_step  4730 | lr  0.000891 |acc  97.168%| ms/batch 300.21 | loss 0.0071906 
+| epoch  14 |   259/  319 batches | lr_step  4740 | lr  0.000890 |acc  97.324%| ms/batch 293.07 | loss 0.0069031 
+| epoch  14 |   269/  319 batches | lr_step  4750 | lr  0.000889 |acc  96.582%| ms/batch 304.12 | loss 0.0080142 
+| epoch  14 |   279/  319 batches | lr_step  4760 | lr  0.000888 |acc  96.660%| ms/batch 294.62 | loss 0.0087400 
+| epoch  14 |   289/  319 batches | lr_step  4770 | lr  0.000887 |acc  96.758%| ms/batch 304.99 | loss 0.0080761 
+| epoch  14 |   299/  319 batches | lr_step  4780 | lr  0.000886 |acc  97.344%| ms/batch 303.34 | loss 0.0073908 
+| epoch  14 |   309/  319 batches | lr_step  4790 | lr  0.000885 |acc  96.895%| ms/batch 293.82 | loss 0.0080682 
+| epoch  14 |   319/  319 batches | lr_step  4800 | lr  0.000885 |acc  124.231%| ms/batch 313.45 | loss 0.0075582 
+Pred: tensor([ 6,  7,  8,  9, 11,  0,  0,  0,  0]) and tensor([ 6, 11,  0,  0,  0,  0,  0,  0,  0]), tensor([ 6, 11,  0,  0,  0,  0,  0,  0,  0])
+Tar: tensor([[ 6,  7,  8,  9, 11,  0,  0,  0,  0],
+        [ 6, 11,  0,  0,  0,  0,  0,  0,  0],
+        [ 6, 11,  0,  0,  0,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  14 | time: 98.20s | valid acc 98.669%| Best Model from Epoch 8 with 98.800%
+-----------------------------------------------------------------------------------------
+| epoch  15 |     9/  319 batches | lr_step  4810 | lr  0.000884 |acc  97.461%| ms/batch 306.08 | loss 0.0068866 
+| epoch  15 |    19/  319 batches | lr_step  4820 | lr  0.000883 |acc  97.031%| ms/batch 297.51 | loss 0.0071860 
+| epoch  15 |    29/  319 batches | lr_step  4830 | lr  0.000882 |acc  97.227%| ms/batch 295.72 | loss 0.0072640 
+| epoch  15 |    39/  319 batches | lr_step  4840 | lr  0.000881 |acc  97.031%| ms/batch 295.43 | loss 0.0080156 
+| epoch  15 |    49/  319 batches | lr_step  4850 | lr  0.000880 |acc  96.953%| ms/batch 307.14 | loss 0.0076188 
+| epoch  15 |    59/  319 batches | lr_step  4860 | lr  0.000879 |acc  97.188%| ms/batch 305.48 | loss 0.0074836 
+| epoch  15 |    69/  319 batches | lr_step  4870 | lr  0.000878 |acc  97.031%| ms/batch 310.00 | loss 0.0074309 
+| epoch  15 |    79/  319 batches | lr_step  4880 | lr  0.000877 |acc  96.699%| ms/batch 297.40 | loss 0.0084428 
+| epoch  15 |    89/  319 batches | lr_step  4890 | lr  0.000876 |acc  96.953%| ms/batch 293.32 | loss 0.0076668 
+| epoch  15 |    99/  319 batches | lr_step  4900 | lr  0.000875 |acc  97.148%| ms/batch 296.36 | loss 0.0071939 
+| epoch  15 |   109/  319 batches | lr_step  4910 | lr  0.000875 |acc  96.641%| ms/batch 318.78 | loss 0.0084463 
+| epoch  15 |   119/  319 batches | lr_step  4920 | lr  0.000874 |acc  97.148%| ms/batch 321.24 | loss 0.0078554 
+| epoch  15 |   129/  319 batches | lr_step  4930 | lr  0.000873 |acc  97.383%| ms/batch 336.90 | loss 0.0066913 
+| epoch  15 |   139/  319 batches | lr_step  4940 | lr  0.000872 |acc  97.188%| ms/batch 332.31 | loss 0.0077076 
+| epoch  15 |   149/  319 batches | lr_step  4950 | lr  0.000871 |acc  97.227%| ms/batch 325.14 | loss 0.0074446 
+| epoch  15 |   159/  319 batches | lr_step  4960 | lr  0.000870 |acc  96.797%| ms/batch 299.00 | loss 0.0083776 
+| epoch  15 |   169/  319 batches | lr_step  4970 | lr  0.000869 |acc  97.031%| ms/batch 301.20 | loss 0.0073328 
+| epoch  15 |   179/  319 batches | lr_step  4980 | lr  0.000868 |acc  96.895%| ms/batch 300.09 | loss 0.0081976 
+| epoch  15 |   189/  319 batches | lr_step  4990 | lr  0.000868 |acc  96.797%| ms/batch 305.68 | loss 0.0082097 
+| epoch  15 |   199/  319 batches | lr_step  5000 | lr  0.000867 |acc  97.031%| ms/batch 327.53 | loss 0.0076437 
+| epoch  15 |   209/  319 batches | lr_step  5010 | lr  0.000866 |acc  97.188%| ms/batch 313.70 | loss 0.0073232 
+| epoch  15 |   219/  319 batches | lr_step  5020 | lr  0.000865 |acc  97.207%| ms/batch 306.17 | loss 0.0065963 
+| epoch  15 |   229/  319 batches | lr_step  5030 | lr  0.000864 |acc  97.422%| ms/batch 299.00 | loss 0.0079298 
+| epoch  15 |   239/  319 batches | lr_step  5040 | lr  0.000863 |acc  96.895%| ms/batch 298.01 | loss 0.0073200 
+| epoch  15 |   249/  319 batches | lr_step  5050 | lr  0.000862 |acc  97.090%| ms/batch 310.88 | loss 0.0071671 
+| epoch  15 |   259/  319 batches | lr_step  5060 | lr  0.000862 |acc  96.543%| ms/batch 303.79 | loss 0.0089480 
+| epoch  15 |   269/  319 batches | lr_step  5070 | lr  0.000861 |acc  97.168%| ms/batch 312.86 | loss 0.0074158 
+| epoch  15 |   279/  319 batches | lr_step  5080 | lr  0.000860 |acc  97.129%| ms/batch 317.85 | loss 0.0079016 
+| epoch  15 |   289/  319 batches | lr_step  5090 | lr  0.000859 |acc  97.266%| ms/batch 306.58 | loss 0.0070332 
+| epoch  15 |   299/  319 batches | lr_step  5100 | lr  0.000858 |acc  97.207%| ms/batch 328.12 | loss 0.0071307 
+| epoch  15 |   309/  319 batches | lr_step  5110 | lr  0.000857 |acc  97.305%| ms/batch 303.02 | loss 0.0066677 
+| epoch  15 |   319/  319 batches | lr_step  5120 | lr  0.000856 |acc  124.308%| ms/batch 331.05 | loss 0.0071909 
+Pred: tensor([ 6, 11,  0,  0,  0,  0,  0,  0,  0]) and tensor([ 6, 11,  0,  0,  0,  0,  0,  0,  0]), tensor([ 6,  7,  8,  9, 11,  0,  0,  0,  0])
+Tar: tensor([[ 6, 11,  0,  0,  0,  0,  0,  0,  0],
+        [ 6, 11,  0,  0,  0,  0,  0,  0,  0],
+        [ 6,  7,  8,  9, 11,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  15 | time: 101.71s | valid acc 97.512%| Best Model from Epoch 8 with 98.800%
+-----------------------------------------------------------------------------------------
+| epoch  16 |     9/  319 batches | lr_step  5130 | lr  0.000856 |acc  97.441%| ms/batch 301.11 | loss 0.0064438 
+| epoch  16 |    19/  319 batches | lr_step  5140 | lr  0.000855 |acc  96.699%| ms/batch 292.68 | loss 0.0090029 
+| epoch  16 |    29/  319 batches | lr_step  5150 | lr  0.000854 |acc  97.031%| ms/batch 303.49 | loss 0.0077694 
+| epoch  16 |    39/  319 batches | lr_step  5160 | lr  0.000853 |acc  97.441%| ms/batch 302.19 | loss 0.0065696 
+| epoch  16 |    49/  319 batches | lr_step  5170 | lr  0.000852 |acc  97.188%| ms/batch 292.72 | loss 0.0068196 
+| epoch  16 |    59/  319 batches | lr_step  5180 | lr  0.000851 |acc  97.070%| ms/batch 290.82 | loss 0.0077219 
+| epoch  16 |    69/  319 batches | lr_step  5190 | lr  0.000851 |acc  97.012%| ms/batch 331.61 | loss 0.0077887 
+| epoch  16 |    79/  319 batches | lr_step  5200 | lr  0.000850 |acc  96.816%| ms/batch 332.57 | loss 0.0084569 
+| epoch  16 |    89/  319 batches | lr_step  5210 | lr  0.000849 |acc  97.188%| ms/batch 329.13 | loss 0.0073743 
+| epoch  16 |    99/  319 batches | lr_step  5220 | lr  0.000848 |acc  97.227%| ms/batch 316.25 | loss 0.0075460 
+| epoch  16 |   109/  319 batches | lr_step  5230 | lr  0.000847 |acc  97.461%| ms/batch 293.03 | loss 0.0065151 
+| epoch  16 |   119/  319 batches | lr_step  5240 | lr  0.000847 |acc  96.660%| ms/batch 306.86 | loss 0.0084415 
+| epoch  16 |   129/  319 batches | lr_step  5250 | lr  0.000846 |acc  96.836%| ms/batch 302.59 | loss 0.0081905 
+| epoch  16 |   139/  319 batches | lr_step  5260 | lr  0.000845 |acc  97.461%| ms/batch 296.30 | loss 0.0063986 
+| epoch  16 |   149/  319 batches | lr_step  5270 | lr  0.000844 |acc  97.129%| ms/batch 292.41 | loss 0.0074193 
+| epoch  16 |   159/  319 batches | lr_step  5280 | lr  0.000843 |acc  97.227%| ms/batch 295.41 | loss 0.0075047 
+| epoch  16 |   169/  319 batches | lr_step  5290 | lr  0.000843 |acc  97.188%| ms/batch 299.71 | loss 0.0067606 
+| epoch  16 |   179/  319 batches | lr_step  5300 | lr  0.000842 |acc  97.168%| ms/batch 299.68 | loss 0.0071169 
+| epoch  16 |   189/  319 batches | lr_step  5310 | lr  0.000841 |acc  97.578%| ms/batch 292.93 | loss 0.0067741 
+| epoch  16 |   199/  319 batches | lr_step  5320 | lr  0.000840 |acc  97.227%| ms/batch 294.42 | loss 0.0073384 
+| epoch  16 |   209/  319 batches | lr_step  5330 | lr  0.000839 |acc  97.305%| ms/batch 303.47 | loss 0.0065528 
+| epoch  16 |   219/  319 batches | lr_step  5340 | lr  0.000839 |acc  97.383%| ms/batch 301.49 | loss 0.0066277 
+| epoch  16 |   229/  319 batches | lr_step  5350 | lr  0.000838 |acc  97.031%| ms/batch 293.52 | loss 0.0076929 
+| epoch  16 |   239/  319 batches | lr_step  5360 | lr  0.000837 |acc  96.934%| ms/batch 291.82 | loss 0.0078481 
+| epoch  16 |   249/  319 batches | lr_step  5370 | lr  0.000836 |acc  97.109%| ms/batch 294.42 | loss 0.0077087 
+| epoch  16 |   259/  319 batches | lr_step  5380 | lr  0.000836 |acc  97.148%| ms/batch 294.82 | loss 0.0075375 
+| epoch  16 |   269/  319 batches | lr_step  5390 | lr  0.000835 |acc  97.480%| ms/batch 291.02 | loss 0.0062218 
+| epoch  16 |   279/  319 batches | lr_step  5400 | lr  0.000834 |acc  97.051%| ms/batch 296.91 | loss 0.0074742 
+| epoch  16 |   289/  319 batches | lr_step  5410 | lr  0.000833 |acc  97.129%| ms/batch 291.36 | loss 0.0068806 
+| epoch  16 |   299/  319 batches | lr_step  5420 | lr  0.000832 |acc  96.641%| ms/batch 295.06 | loss 0.0083813 
+| epoch  16 |   309/  319 batches | lr_step  5430 | lr  0.000832 |acc  97.324%| ms/batch 294.93 | loss 0.0067917 
+| epoch  16 |   319/  319 batches | lr_step  5440 | lr  0.000831 |acc  124.641%| ms/batch 290.26 | loss 0.0070423 
+Pred: tensor([11,  6,  0,  0,  0,  0,  0,  0,  0]) and tensor([11,  6,  0,  0,  0,  0,  0,  0,  0]), tensor([11,  6,  0,  0,  0,  0,  0,  0,  0])
+Tar: tensor([[ 6, 11,  0,  0,  0,  0,  0,  0,  0],
+        [ 6, 11,  0,  0,  0,  0,  0,  0,  0],
+        [ 6, 11,  0,  0,  0,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  16 | time: 98.63s | valid acc 46.639%| Best Model from Epoch 8 with 98.800%
+-----------------------------------------------------------------------------------------
+| epoch  17 |     9/  319 batches | lr_step  5450 | lr  0.000830 |acc  96.816%| ms/batch 296.01 | loss 0.0082595 
+| epoch  17 |    19/  319 batches | lr_step  5460 | lr  0.000829 |acc  97.383%| ms/batch 291.71 | loss 0.0062455 
+| epoch  17 |    29/  319 batches | lr_step  5470 | lr  0.000829 |acc  96.680%| ms/batch 304.49 | loss 0.0080066 
+| epoch  17 |    39/  319 batches | lr_step  5480 | lr  0.000828 |acc  97.207%| ms/batch 297.70 | loss 0.0074462 
+| epoch  17 |    49/  319 batches | lr_step  5490 | lr  0.000827 |acc  97.070%| ms/batch 309.07 | loss 0.0070669 
+| epoch  17 |    59/  319 batches | lr_step  5500 | lr  0.000826 |acc  96.953%| ms/batch 298.11 | loss 0.0077702 
+| epoch  17 |    69/  319 batches | lr_step  5510 | lr  0.000826 |acc  97.227%| ms/batch 311.37 | loss 0.0067799 
+| epoch  17 |    79/  319 batches | lr_step  5520 | lr  0.000825 |acc  96.914%| ms/batch 306.35 | loss 0.0080670 
+| epoch  17 |    89/  319 batches | lr_step  5530 | lr  0.000824 |acc  96.992%| ms/batch 295.01 | loss 0.0077934 
+| epoch  17 |    99/  319 batches | lr_step  5540 | lr  0.000823 |acc  97.227%| ms/batch 296.01 | loss 0.0063977 
+| epoch  17 |   109/  319 batches | lr_step  5550 | lr  0.000823 |acc  97.285%| ms/batch 294.26 | loss 0.0065258 
+| epoch  17 |   119/  319 batches | lr_step  5560 | lr  0.000822 |acc  97.500%| ms/batch 295.76 | loss 0.0069274 
+| epoch  17 |   129/  319 batches | lr_step  5570 | lr  0.000821 |acc  97.324%| ms/batch 292.53 | loss 0.0071504 
+| epoch  17 |   139/  319 batches | lr_step  5580 | lr  0.000820 |acc  96.777%| ms/batch 298.35 | loss 0.0087557 
+| epoch  17 |   149/  319 batches | lr_step  5590 | lr  0.000820 |acc  97.070%| ms/batch 295.40 | loss 0.0074777 
+| epoch  17 |   159/  319 batches | lr_step  5600 | lr  0.000819 |acc  97.109%| ms/batch 294.81 | loss 0.0071004 
+| epoch  17 |   169/  319 batches | lr_step  5610 | lr  0.000818 |acc  97.324%| ms/batch 298.80 | loss 0.0066005 
+| epoch  17 |   179/  319 batches | lr_step  5620 | lr  0.000817 |acc  97.070%| ms/batch 296.11 | loss 0.0076313 
+| epoch  17 |   189/  319 batches | lr_step  5630 | lr  0.000817 |acc  97.402%| ms/batch 290.68 | loss 0.0061926 
+| epoch  17 |   199/  319 batches | lr_step  5640 | lr  0.000816 |acc  96.973%| ms/batch 293.22 | loss 0.0076276 
+| epoch  17 |   209/  319 batches | lr_step  5650 | lr  0.000815 |acc  97.324%| ms/batch 292.51 | loss 0.0070743 
+| epoch  17 |   219/  319 batches | lr_step  5660 | lr  0.000815 |acc  97.266%| ms/batch 292.83 | loss 0.0064843 
+| epoch  17 |   229/  319 batches | lr_step  5670 | lr  0.000814 |acc  97.695%| ms/batch 289.83 | loss 0.0061124 
+| epoch  17 |   239/  319 batches | lr_step  5680 | lr  0.000813 |acc  97.383%| ms/batch 293.72 | loss 0.0069946 
+| epoch  17 |   249/  319 batches | lr_step  5690 | lr  0.000812 |acc  97.129%| ms/batch 295.91 | loss 0.0065118 
+| epoch  17 |   259/  319 batches | lr_step  5700 | lr  0.000812 |acc  97.500%| ms/batch 299.43 | loss 0.0064112 
+| epoch  17 |   269/  319 batches | lr_step  5710 | lr  0.000811 |acc  97.266%| ms/batch 290.62 | loss 0.0074846 
+| epoch  17 |   279/  319 batches | lr_step  5720 | lr  0.000810 |acc  96.875%| ms/batch 293.92 | loss 0.0082049 
+| epoch  17 |   289/  319 batches | lr_step  5730 | lr  0.000810 |acc  97.168%| ms/batch 301.29 | loss 0.0071094 
+| epoch  17 |   299/  319 batches | lr_step  5740 | lr  0.000809 |acc  97.051%| ms/batch 289.74 | loss 0.0076494 
+| epoch  17 |   309/  319 batches | lr_step  5750 | lr  0.000808 |acc  96.895%| ms/batch 297.30 | loss 0.0070681 
+| epoch  17 |   319/  319 batches | lr_step  5760 | lr  0.000807 |acc  124.821%| ms/batch 282.05 | loss 0.0069552 
+Pred: tensor([ 6, 11,  0,  0,  0,  0]) and tensor([ 6,  7,  8,  9, 10,  0]), tensor([ 6, 11,  0,  0,  0,  0])
+Tar: tensor([[ 6, 11,  0,  0,  0,  0],
+        [ 6,  7,  8,  9, 10,  0],
+        [ 6, 11,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  17 | time: 97.33s | valid acc 98.712%| Best Model from Epoch 8 with 98.800%
+-----------------------------------------------------------------------------------------
+| epoch  18 |     9/  319 batches | lr_step  5770 | lr  0.000807 |acc  97.109%| ms/batch 293.51 | loss 0.0083663 
+| epoch  18 |    19/  319 batches | lr_step  5780 | lr  0.000806 |acc  97.285%| ms/batch 299.05 | loss 0.0066465 
+| epoch  18 |    29/  319 batches | lr_step  5790 | lr  0.000805 |acc  97.324%| ms/batch 306.98 | loss 0.0064086 
+| epoch  18 |    39/  319 batches | lr_step  5800 | lr  0.000805 |acc  97.559%| ms/batch 302.05 | loss 0.0057054 
+| epoch  18 |    49/  319 batches | lr_step  5810 | lr  0.000804 |acc  97.207%| ms/batch 300.61 | loss 0.0069938 
+| epoch  18 |    59/  319 batches | lr_step  5820 | lr  0.000803 |acc  97.500%| ms/batch 299.60 | loss 0.0064006 
+| epoch  18 |    69/  319 batches | lr_step  5830 | lr  0.000803 |acc  97.363%| ms/batch 306.08 | loss 0.0073194 
+| epoch  18 |    79/  319 batches | lr_step  5840 | lr  0.000802 |acc  96.992%| ms/batch 299.55 | loss 0.0074398 
+| epoch  18 |    89/  319 batches | lr_step  5850 | lr  0.000801 |acc  97.461%| ms/batch 296.34 | loss 0.0068682 
+| epoch  18 |    99/  319 batches | lr_step  5860 | lr  0.000801 |acc  96.797%| ms/batch 308.48 | loss 0.0076229 
+| epoch  18 |   109/  319 batches | lr_step  5870 | lr  0.000800 |acc  97.129%| ms/batch 297.98 | loss 0.0068881 
+| epoch  18 |   119/  319 batches | lr_step  5880 | lr  0.000799 |acc  97.188%| ms/batch 309.09 | loss 0.0074046 
+| epoch  18 |   129/  319 batches | lr_step  5890 | lr  0.000799 |acc  96.992%| ms/batch 316.88 | loss 0.0069983 
+| epoch  18 |   139/  319 batches | lr_step  5900 | lr  0.000798 |acc  97.324%| ms/batch 312.96 | loss 0.0063978 
+| epoch  18 |   149/  319 batches | lr_step  5910 | lr  0.000797 |acc  96.758%| ms/batch 293.34 | loss 0.0078736 
+| epoch  18 |   159/  319 batches | lr_step  5920 | lr  0.000797 |acc  97.344%| ms/batch 299.40 | loss 0.0068169 
+| epoch  18 |   169/  319 batches | lr_step  5930 | lr  0.000796 |acc  97.148%| ms/batch 294.81 | loss 0.0071059 
+| epoch  18 |   179/  319 batches | lr_step  5940 | lr  0.000795 |acc  97.285%| ms/batch 296.91 | loss 0.0070432 
+| epoch  18 |   189/  319 batches | lr_step  5950 | lr  0.000794 |acc  97.324%| ms/batch 295.63 | loss 0.0068699 
+| epoch  18 |   199/  319 batches | lr_step  5960 | lr  0.000794 |acc  97.070%| ms/batch 300.73 | loss 0.0070852 
+| epoch  18 |   209/  319 batches | lr_step  5970 | lr  0.000793 |acc  97.363%| ms/batch 296.21 | loss 0.0071293 
+| epoch  18 |   219/  319 batches | lr_step  5980 | lr  0.000792 |acc  97.480%| ms/batch 302.70 | loss 0.0068085 
+| epoch  18 |   229/  319 batches | lr_step  5990 | lr  0.000792 |acc  97.305%| ms/batch 293.32 | loss 0.0069909 
+| epoch  18 |   239/  319 batches | lr_step  6000 | lr  0.000791 |acc  97.324%| ms/batch 312.99 | loss 0.0076579 
+| epoch  18 |   249/  319 batches | lr_step  6010 | lr  0.000791 |acc  97.344%| ms/batch 303.85 | loss 0.0067678 
+| epoch  18 |   259/  319 batches | lr_step  6020 | lr  0.000790 |acc  97.188%| ms/batch 296.13 | loss 0.0066980 
+| epoch  18 |   269/  319 batches | lr_step  6030 | lr  0.000789 |acc  97.168%| ms/batch 295.81 | loss 0.0071868 
+| epoch  18 |   279/  319 batches | lr_step  6040 | lr  0.000789 |acc  97.422%| ms/batch 291.15 | loss 0.0067775 
+| epoch  18 |   289/  319 batches | lr_step  6050 | lr  0.000788 |acc  97.383%| ms/batch 305.58 | loss 0.0064093 
+| epoch  18 |   299/  319 batches | lr_step  6060 | lr  0.000787 |acc  97.324%| ms/batch 299.91 | loss 0.0068573 
+| epoch  18 |   309/  319 batches | lr_step  6070 | lr  0.000787 |acc  97.227%| ms/batch 296.85 | loss 0.0072779 
+| epoch  18 |   319/  319 batches | lr_step  6080 | lr  0.000786 |acc  125.282%| ms/batch 289.27 | loss 0.0059132 
+Pred: tensor([11,  6,  0,  0,  0,  0,  0,  0,  0]) and tensor([ 6,  7,  8,  9, 10,  0,  0,  0,  0]), tensor([11,  6,  0,  0,  0,  0,  0,  0,  0])
+Tar: tensor([[ 6, 11,  0,  0,  0,  0,  0,  0,  0],
+        [ 6,  7,  8,  9, 10,  0,  0,  0,  0],
+        [ 6, 11,  0,  0,  0,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  18 | time: 98.81s | valid acc 46.595%| Best Model from Epoch 8 with 98.800%
+-----------------------------------------------------------------------------------------
+| epoch  19 |     9/  319 batches | lr_step  6090 | lr  0.000785 |acc  97.422%| ms/batch 296.81 | loss 0.0063142 
+| epoch  19 |    19/  319 batches | lr_step  6100 | lr  0.000785 |acc  97.578%| ms/batch 307.81 | loss 0.0061398 
+| epoch  19 |    29/  319 batches | lr_step  6110 | lr  0.000784 |acc  97.363%| ms/batch 308.36 | loss 0.0070475 
+| epoch  19 |    39/  319 batches | lr_step  6120 | lr  0.000783 |acc  96.797%| ms/batch 323.28 | loss 0.0073751 
+| epoch  19 |    49/  319 batches | lr_step  6130 | lr  0.000783 |acc  97.168%| ms/batch 340.69 | loss 0.0071055 
+| epoch  19 |    59/  319 batches | lr_step  6140 | lr  0.000782 |acc  97.109%| ms/batch 301.90 | loss 0.0070434 
+| epoch  19 |    69/  319 batches | lr_step  6150 | lr  0.000781 |acc  97.266%| ms/batch 303.53 | loss 0.0067168 
+| epoch  19 |    79/  319 batches | lr_step  6160 | lr  0.000781 |acc  97.402%| ms/batch 315.06 | loss 0.0066890 
+| epoch  19 |    89/  319 batches | lr_step  6170 | lr  0.000780 |acc  97.734%| ms/batch 298.47 | loss 0.0064902 
+| epoch  19 |    99/  319 batches | lr_step  6180 | lr  0.000780 |acc  96.973%| ms/batch 317.32 | loss 0.0074812 
+| epoch  19 |   109/  319 batches | lr_step  6190 | lr  0.000779 |acc  97.520%| ms/batch 348.17 | loss 0.0060127 
+| epoch  19 |   119/  319 batches | lr_step  6200 | lr  0.000778 |acc  97.305%| ms/batch 292.83 | loss 0.0071049 
+| epoch  19 |   129/  319 batches | lr_step  6210 | lr  0.000778 |acc  97.637%| ms/batch 291.84 | loss 0.0061490 
+| epoch  19 |   139/  319 batches | lr_step  6220 | lr  0.000777 |acc  97.578%| ms/batch 293.62 | loss 0.0059541 
+| epoch  19 |   149/  319 batches | lr_step  6230 | lr  0.000776 |acc  97.461%| ms/batch 291.92 | loss 0.0067416 
+| epoch  19 |   159/  319 batches | lr_step  6240 | lr  0.000776 |acc  97.012%| ms/batch 292.23 | loss 0.0070003 
+| epoch  19 |   169/  319 batches | lr_step  6250 | lr  0.000775 |acc  96.621%| ms/batch 289.98 | loss 0.0088937 
+| epoch  19 |   179/  319 batches | lr_step  6260 | lr  0.000775 |acc  97.246%| ms/batch 297.26 | loss 0.0069373 
+| epoch  19 |   189/  319 batches | lr_step  6270 | lr  0.000774 |acc  97.168%| ms/batch 293.94 | loss 0.0071459 
+| epoch  19 |   199/  319 batches | lr_step  6280 | lr  0.000773 |acc  97.324%| ms/batch 292.22 | loss 0.0066429 
+| epoch  19 |   209/  319 batches | lr_step  6290 | lr  0.000773 |acc  97.227%| ms/batch 295.35 | loss 0.0069350 
+| epoch  19 |   219/  319 batches | lr_step  6300 | lr  0.000772 |acc  97.383%| ms/batch 291.83 | loss 0.0063602 
+| epoch  19 |   229/  319 batches | lr_step  6310 | lr  0.000771 |acc  97.168%| ms/batch 305.68 | loss 0.0067306 
+| epoch  19 |   239/  319 batches | lr_step  6320 | lr  0.000771 |acc  97.012%| ms/batch 289.89 | loss 0.0074551 
+| epoch  19 |   249/  319 batches | lr_step  6330 | lr  0.000770 |acc  97.246%| ms/batch 294.71 | loss 0.0068054 
+| epoch  19 |   259/  319 batches | lr_step  6340 | lr  0.000770 |acc  97.168%| ms/batch 291.81 | loss 0.0071978 
+| epoch  19 |   269/  319 batches | lr_step  6350 | lr  0.000769 |acc  97.090%| ms/batch 292.02 | loss 0.0073690 
+| epoch  19 |   279/  319 batches | lr_step  6360 | lr  0.000768 |acc  97.070%| ms/batch 296.71 | loss 0.0070960 
+| epoch  19 |   289/  319 batches | lr_step  6370 | lr  0.000768 |acc  97.188%| ms/batch 294.69 | loss 0.0070081 
+| epoch  19 |   299/  319 batches | lr_step  6380 | lr  0.000767 |acc  97.422%| ms/batch 292.31 | loss 0.0067574 
+| epoch  19 |   309/  319 batches | lr_step  6390 | lr  0.000767 |acc  97.578%| ms/batch 296.74 | loss 0.0067878 
+| epoch  19 |   319/  319 batches | lr_step  6400 | lr  0.000766 |acc  125.026%| ms/batch 293.06 | loss 0.0062593 
+Pred: tensor([ 6,  7,  8, 11,  9, 11,  0,  0,  0,  0,  0,  0]) and tensor([ 6, 11,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0]), tensor([ 6, 11,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0])
+Tar: tensor([[ 6,  7,  8, 11,  9, 11,  0,  0,  0,  0,  0,  0],
+        [ 6, 11,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0],
+        [ 6, 11,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  19 | time: 98.90s | valid acc 99.323%| Best Model from Epoch 8 with 98.800%
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| end of epoch  19 | time: 98.90s | valid acc 99.323%| 
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| epoch  20 |     9/  319 batches | lr_step  6410 | lr  0.000765 |acc  97.578%| ms/batch 293.43 | loss 0.0069157 
+| epoch  20 |    19/  319 batches | lr_step  6420 | lr  0.000765 |acc  97.676%| ms/batch 304.09 | loss 0.0060103 
+| epoch  20 |    29/  319 batches | lr_step  6430 | lr  0.000764 |acc  97.461%| ms/batch 294.41 | loss 0.0065849 
+| epoch  20 |    39/  319 batches | lr_step  6440 | lr  0.000764 |acc  97.617%| ms/batch 297.01 | loss 0.0058895 
+| epoch  20 |    49/  319 batches | lr_step  6450 | lr  0.000763 |acc  97.578%| ms/batch 292.72 | loss 0.0060856 
+| epoch  20 |    59/  319 batches | lr_step  6460 | lr  0.000762 |acc  97.324%| ms/batch 298.30 | loss 0.0064570 
+| epoch  20 |    69/  319 batches | lr_step  6470 | lr  0.000762 |acc  97.480%| ms/batch 298.40 | loss 0.0060811 
+| epoch  20 |    79/  319 batches | lr_step  6480 | lr  0.000761 |acc  97.422%| ms/batch 294.42 | loss 0.0063236 
+| epoch  20 |    89/  319 batches | lr_step  6490 | lr  0.000761 |acc  97.227%| ms/batch 300.69 | loss 0.0072396 
+| epoch  20 |    99/  319 batches | lr_step  6500 | lr  0.000760 |acc  97.207%| ms/batch 295.11 | loss 0.0069149 
+| epoch  20 |   109/  319 batches | lr_step  6510 | lr  0.000760 |acc  97.168%| ms/batch 294.11 | loss 0.0073708 
+| epoch  20 |   119/  319 batches | lr_step  6520 | lr  0.000759 |acc  97.031%| ms/batch 291.51 | loss 0.0073192 
+| epoch  20 |   129/  319 batches | lr_step  6530 | lr  0.000758 |acc  97.090%| ms/batch 293.82 | loss 0.0073964 
+| epoch  20 |   139/  319 batches | lr_step  6540 | lr  0.000758 |acc  97.266%| ms/batch 292.22 | loss 0.0064663 
+| epoch  20 |   149/  319 batches | lr_step  6550 | lr  0.000757 |acc  97.520%| ms/batch 337.92 | loss 0.0065086 
+| epoch  20 |   159/  319 batches | lr_step  6560 | lr  0.000757 |acc  97.715%| ms/batch 303.99 | loss 0.0060986 
+| epoch  20 |   169/  319 batches | lr_step  6570 | lr  0.000756 |acc  97.539%| ms/batch 292.61 | loss 0.0055441 
+| epoch  20 |   179/  319 batches | lr_step  6580 | lr  0.000756 |acc  97.480%| ms/batch 299.88 | loss 0.0064102 
+| epoch  20 |   189/  319 batches | lr_step  6590 | lr  0.000755 |acc  97.168%| ms/batch 289.96 | loss 0.0068675 
+| epoch  20 |   199/  319 batches | lr_step  6600 | lr  0.000754 |acc  97.031%| ms/batch 292.82 | loss 0.0072432 
+| epoch  20 |   209/  319 batches | lr_step  6610 | lr  0.000754 |acc  97.656%| ms/batch 304.19 | loss 0.0057151 
+| epoch  20 |   219/  319 batches | lr_step  6620 | lr  0.000753 |acc  97.344%| ms/batch 294.54 | loss 0.0062948 
+| epoch  20 |   229/  319 batches | lr_step  6630 | lr  0.000753 |acc  97.168%| ms/batch 291.73 | loss 0.0072703 
+| epoch  20 |   239/  319 batches | lr_step  6640 | lr  0.000752 |acc  97.168%| ms/batch 300.93 | loss 0.0072866 
+| epoch  20 |   249/  319 batches | lr_step  6650 | lr  0.000752 |acc  97.188%| ms/batch 296.46 | loss 0.0070462 
+| epoch  20 |   259/  319 batches | lr_step  6660 | lr  0.000751 |acc  97.480%| ms/batch 298.64 | loss 0.0063391 
+| epoch  20 |   269/  319 batches | lr_step  6670 | lr  0.000750 |acc  97.480%| ms/batch 297.55 | loss 0.0065610 
+| epoch  20 |   279/  319 batches | lr_step  6680 | lr  0.000750 |acc  97.031%| ms/batch 299.73 | loss 0.0068124 
+| epoch  20 |   289/  319 batches | lr_step  6690 | lr  0.000749 |acc  97.168%| ms/batch 299.90 | loss 0.0067853 
+| epoch  20 |   299/  319 batches | lr_step  6700 | lr  0.000749 |acc  97.480%| ms/batch 297.87 | loss 0.0068286 
+| epoch  20 |   309/  319 batches | lr_step  6710 | lr  0.000748 |acc  97.227%| ms/batch 358.81 | loss 0.0068159 
+| epoch  20 |   319/  319 batches | lr_step  6720 | lr  0.000748 |acc  124.744%| ms/batch 300.99 | loss 0.0066979 
+Pred: tensor([ 6, 11,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0]) and tensor([ 6, 11,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0]), tensor([ 6,  7,  8,  9, 10,  0,  0,  0,  0,  0,  0,  0])
+Tar: tensor([[ 6, 11,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0],
+        [ 6, 11,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0],
+        [ 6,  7,  8,  9, 10,  0,  0,  0,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  20 | time: 98.62s | valid acc 98.669%| Best Model from Epoch 19 with 99.323%
+-----------------------------------------------------------------------------------------
+| epoch  21 |     9/  319 batches | lr_step  6730 | lr  0.000747 |acc  97.188%| ms/batch 298.30 | loss 0.0070559 
+| epoch  21 |    19/  319 batches | lr_step  6740 | lr  0.000746 |acc  97.285%| ms/batch 340.99 | loss 0.0059283 
+| epoch  21 |    29/  319 batches | lr_step  6750 | lr  0.000746 |acc  97.422%| ms/batch 325.71 | loss 0.0065212 
+| epoch  21 |    39/  319 batches | lr_step  6760 | lr  0.000745 |acc  97.324%| ms/batch 320.50 | loss 0.0061475 
+| epoch  21 |    49/  319 batches | lr_step  6770 | lr  0.000745 |acc  97.148%| ms/batch 286.24 | loss 0.0069683 
+| epoch  21 |    59/  319 batches | lr_step  6780 | lr  0.000744 |acc  97.676%| ms/batch 359.05 | loss 0.0053746 
+| epoch  21 |    69/  319 batches | lr_step  6790 | lr  0.000744 |acc  97.715%| ms/batch 367.54 | loss 0.0056998 
+| epoch  21 |    79/  319 batches | lr_step  6800 | lr  0.000743 |acc  97.520%| ms/batch 424.51 | loss 0.0063180 
+| epoch  21 |    89/  319 batches | lr_step  6810 | lr  0.000743 |acc  97.715%| ms/batch 309.18 | loss 0.0056082 
+| epoch  21 |    99/  319 batches | lr_step  6820 | lr  0.000742 |acc  97.461%| ms/batch 375.99 | loss 0.0060827 
+| epoch  21 |   109/  319 batches | lr_step  6830 | lr  0.000742 |acc  97.695%| ms/batch 342.02 | loss 0.0057841 
+| epoch  21 |   119/  319 batches | lr_step  6840 | lr  0.000741 |acc  97.598%| ms/batch 302.35 | loss 0.0061641 
+| epoch  21 |   129/  319 batches | lr_step  6850 | lr  0.000740 |acc  97.500%| ms/batch 362.06 | loss 0.0059774 
+| epoch  21 |   139/  319 batches | lr_step  6860 | lr  0.000740 |acc  97.422%| ms/batch 328.07 | loss 0.0069206 
+| epoch  21 |   149/  319 batches | lr_step  6870 | lr  0.000739 |acc  97.090%| ms/batch 329.68 | loss 0.0070665 
+| epoch  21 |   159/  319 batches | lr_step  6880 | lr  0.000739 |acc  97.109%| ms/batch 318.80 | loss 0.0075848 
+| epoch  21 |   169/  319 batches | lr_step  6890 | lr  0.000738 |acc  97.363%| ms/batch 408.09 | loss 0.0071501 
+| epoch  21 |   179/  319 batches | lr_step  6900 | lr  0.000738 |acc  96.992%| ms/batch 308.68 | loss 0.0074121 
+| epoch  21 |   189/  319 batches | lr_step  6910 | lr  0.000737 |acc  97.441%| ms/batch 296.21 | loss 0.0059726 
+| epoch  21 |   199/  319 batches | lr_step  6920 | lr  0.000737 |acc  97.422%| ms/batch 294.31 | loss 0.0062964 
+| epoch  21 |   209/  319 batches | lr_step  6930 | lr  0.000736 |acc  97.207%| ms/batch 295.71 | loss 0.0068427 
+| epoch  21 |   219/  319 batches | lr_step  6940 | lr  0.000736 |acc  97.422%| ms/batch 294.11 | loss 0.0068801 
+| epoch  21 |   229/  319 batches | lr_step  6950 | lr  0.000735 |acc  97.754%| ms/batch 296.21 | loss 0.0058894 
+| epoch  21 |   239/  319 batches | lr_step  6960 | lr  0.000735 |acc  97.441%| ms/batch 313.71 | loss 0.0066452 
+| epoch  21 |   249/  319 batches | lr_step  6970 | lr  0.000734 |acc  97.305%| ms/batch 311.52 | loss 0.0067672 
+| epoch  21 |   259/  319 batches | lr_step  6980 | lr  0.000734 |acc  97.500%| ms/batch 299.14 | loss 0.0056219 
+| epoch  21 |   269/  319 batches | lr_step  6990 | lr  0.000733 |acc  97.773%| ms/batch 296.29 | loss 0.0059763 
+| epoch  21 |   279/  319 batches | lr_step  7000 | lr  0.000732 |acc  97.812%| ms/batch 292.92 | loss 0.0057792 
+| epoch  21 |   289/  319 batches | lr_step  7010 | lr  0.000732 |acc  97.363%| ms/batch 331.27 | loss 0.0073218 
+| epoch  21 |   299/  319 batches | lr_step  7020 | lr  0.000731 |acc  97.109%| ms/batch 372.66 | loss 0.0071458 
+| epoch  21 |   309/  319 batches | lr_step  7030 | lr  0.000731 |acc  97.148%| ms/batch 319.56 | loss 0.0070075 
+| epoch  21 |   319/  319 batches | lr_step  7040 | lr  0.000730 |acc  125.077%| ms/batch 301.92 | loss 0.0059426 
+Pred: tensor([ 6,  7,  8,  9, 10,  0,  0,  0,  0]) and tensor([ 6, 11,  0,  0,  0,  0,  0,  0,  0]), tensor([ 6,  7,  8,  9, 10,  0,  0,  0,  0])
+Tar: tensor([[ 6,  7,  8,  9, 10,  0,  0,  0,  0],
+        [ 6, 11,  0,  0,  0,  0,  0,  0,  0],
+        [ 6,  7,  8,  9, 10,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  21 | time: 106.95s | valid acc 90.768%| Best Model from Epoch 19 with 99.323%
+-----------------------------------------------------------------------------------------
+| epoch  22 |     9/  319 batches | lr_step  7050 | lr  0.000730 |acc  97.598%| ms/batch 297.39 | loss 0.0059554 
+| epoch  22 |    19/  319 batches | lr_step  7060 | lr  0.000729 |acc  97.715%| ms/batch 307.77 | loss 0.0064093 
+| epoch  22 |    29/  319 batches | lr_step  7070 | lr  0.000729 |acc  97.402%| ms/batch 299.30 | loss 0.0063759 
+| epoch  22 |    39/  319 batches | lr_step  7080 | lr  0.000728 |acc  97.383%| ms/batch 301.69 | loss 0.0065359 
+| epoch  22 |    49/  319 batches | lr_step  7090 | lr  0.000728 |acc  97.637%| ms/batch 303.19 | loss 0.0060416 
+| epoch  22 |    59/  319 batches | lr_step  7100 | lr  0.000727 |acc  97.188%| ms/batch 297.40 | loss 0.0065681 
+| epoch  22 |    69/  319 batches | lr_step  7110 | lr  0.000727 |acc  96.973%| ms/batch 296.91 | loss 0.0074030 
+| epoch  22 |    79/  319 batches | lr_step  7120 | lr  0.000726 |acc  97.344%| ms/batch 296.40 | loss 0.0066498 
+| epoch  22 |    89/  319 batches | lr_step  7130 | lr  0.000726 |acc  97.422%| ms/batch 292.92 | loss 0.0063447 
+| epoch  22 |    99/  319 batches | lr_step  7140 | lr  0.000725 |acc  97.715%| ms/batch 293.32 | loss 0.0058607 
+| epoch  22 |   109/  319 batches | lr_step  7150 | lr  0.000725 |acc  97.715%| ms/batch 297.90 | loss 0.0063076 
+| epoch  22 |   119/  319 batches | lr_step  7160 | lr  0.000724 |acc  97.207%| ms/batch 299.50 | loss 0.0066091 
+| epoch  22 |   129/  319 batches | lr_step  7170 | lr  0.000724 |acc  97.520%| ms/batch 298.20 | loss 0.0058565 
+| epoch  22 |   139/  319 batches | lr_step  7180 | lr  0.000723 |acc  97.344%| ms/batch 317.95 | loss 0.0065529 
+| epoch  22 |   149/  319 batches | lr_step  7190 | lr  0.000723 |acc  97.480%| ms/batch 303.19 | loss 0.0062526 
+| epoch  22 |   159/  319 batches | lr_step  7200 | lr  0.000722 |acc  97.031%| ms/batch 333.44 | loss 0.0071918 
+| epoch  22 |   169/  319 batches | lr_step  7210 | lr  0.000722 |acc  97.676%| ms/batch 313.87 | loss 0.0053699 
+| epoch  22 |   179/  319 batches | lr_step  7220 | lr  0.000721 |acc  97.812%| ms/batch 317.97 | loss 0.0058726 
+| epoch  22 |   189/  319 batches | lr_step  7230 | lr  0.000721 |acc  97.031%| ms/batch 339.34 | loss 0.0074391 
+| epoch  22 |   199/  319 batches | lr_step  7240 | lr  0.000720 |acc  97.246%| ms/batch 350.97 | loss 0.0061769 
+| epoch  22 |   209/  319 batches | lr_step  7250 | lr  0.000720 |acc  97.441%| ms/batch 326.35 | loss 0.0066305 
+| epoch  22 |   219/  319 batches | lr_step  7260 | lr  0.000719 |acc  97.910%| ms/batch 301.10 | loss 0.0062516 
+| epoch  22 |   229/  319 batches | lr_step  7270 | lr  0.000719 |acc  97.734%| ms/batch 303.79 | loss 0.0059552 
+| epoch  22 |   239/  319 batches | lr_step  7280 | lr  0.000718 |acc  97.500%| ms/batch 313.66 | loss 0.0060384 
+| epoch  22 |   249/  319 batches | lr_step  7290 | lr  0.000718 |acc  97.070%| ms/batch 291.02 | loss 0.0070543 
+| epoch  22 |   259/  319 batches | lr_step  7300 | lr  0.000717 |acc  97.441%| ms/batch 289.93 | loss 0.0065888 
+| epoch  22 |   269/  319 batches | lr_step  7310 | lr  0.000717 |acc  98.145%| ms/batch 296.31 | loss 0.0047986 
+| epoch  22 |   279/  319 batches | lr_step  7320 | lr  0.000716 |acc  97.383%| ms/batch 296.11 | loss 0.0065305 
+| epoch  22 |   289/  319 batches | lr_step  7330 | lr  0.000716 |acc  97.246%| ms/batch 291.72 | loss 0.0072065 
+| epoch  22 |   299/  319 batches | lr_step  7340 | lr  0.000715 |acc  97.363%| ms/batch 298.58 | loss 0.0069239 
+| epoch  22 |   309/  319 batches | lr_step  7350 | lr  0.000715 |acc  97.715%| ms/batch 294.11 | loss 0.0056082 
+| epoch  22 |   319/  319 batches | lr_step  7360 | lr  0.000714 |acc  124.359%| ms/batch 295.11 | loss 0.0069986 
+Pred: tensor([ 6,  7,  8, 11,  9, 11]) and tensor([ 6,  7,  8,  9, 10,  0]), tensor([ 6,  7,  8,  9, 11,  0])
+Tar: tensor([[ 6,  7,  8, 11,  9, 11],
+        [ 6,  7,  8,  9, 10,  0],
+        [ 6,  7,  8,  9, 11,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  22 | time: 100.18s | valid acc 46.443%| Best Model from Epoch 19 with 99.323%
+-----------------------------------------------------------------------------------------
+| epoch  23 |     9/  319 batches | lr_step  7370 | lr  0.000714 |acc  97.852%| ms/batch 297.11 | loss 0.0056975 
+| epoch  23 |    19/  319 batches | lr_step  7380 | lr  0.000713 |acc  97.324%| ms/batch 295.24 | loss 0.0069703 
+| epoch  23 |    29/  319 batches | lr_step  7390 | lr  0.000713 |acc  97.539%| ms/batch 291.41 | loss 0.0056847 
+| epoch  23 |    39/  319 batches | lr_step  7400 | lr  0.000712 |acc  97.324%| ms/batch 293.72 | loss 0.0065147 
+| epoch  23 |    49/  319 batches | lr_step  7410 | lr  0.000712 |acc  97.578%| ms/batch 307.10 | loss 0.0054464 
+| epoch  23 |    59/  319 batches | lr_step  7420 | lr  0.000711 |acc  97.598%| ms/batch 295.72 | loss 0.0059936 
+| epoch  23 |    69/  319 batches | lr_step  7430 | lr  0.000711 |acc  97.402%| ms/batch 343.93 | loss 0.0065195 
+| epoch  23 |    79/  319 batches | lr_step  7440 | lr  0.000710 |acc  97.383%| ms/batch 349.14 | loss 0.0061767 
+| epoch  23 |    89/  319 batches | lr_step  7450 | lr  0.000710 |acc  97.520%| ms/batch 453.84 | loss 0.0061798 
+| epoch  23 |    99/  319 batches | lr_step  7460 | lr  0.000710 |acc  97.656%| ms/batch 310.17 | loss 0.0061772 
+| epoch  23 |   109/  319 batches | lr_step  7470 | lr  0.000709 |acc  97.520%| ms/batch 317.35 | loss 0.0063883 
+| epoch  23 |   119/  319 batches | lr_step  7480 | lr  0.000709 |acc  97.637%| ms/batch 322.89 | loss 0.0057714 
+| epoch  23 |   129/  319 batches | lr_step  7490 | lr  0.000708 |acc  97.344%| ms/batch 328.21 | loss 0.0069116 
+| epoch  23 |   139/  319 batches | lr_step  7500 | lr  0.000708 |acc  97.559%| ms/batch 311.11 | loss 0.0061894 
+| epoch  23 |   149/  319 batches | lr_step  7510 | lr  0.000707 |acc  97.832%| ms/batch 299.09 | loss 0.0051097 
+| epoch  23 |   159/  319 batches | lr_step  7520 | lr  0.000707 |acc  97.559%| ms/batch 302.34 | loss 0.0058068 
+| epoch  23 |   169/  319 batches | lr_step  7530 | lr  0.000706 |acc  97.656%| ms/batch 305.91 | loss 0.0059832 
+| epoch  23 |   179/  319 batches | lr_step  7540 | lr  0.000706 |acc  97.676%| ms/batch 325.13 | loss 0.0055035 
+| epoch  23 |   189/  319 batches | lr_step  7550 | lr  0.000705 |acc  97.598%| ms/batch 308.30 | loss 0.0063438 
+| epoch  23 |   199/  319 batches | lr_step  7560 | lr  0.000705 |acc  97.266%| ms/batch 327.59 | loss 0.0068072 
+| epoch  23 |   209/  319 batches | lr_step  7570 | lr  0.000704 |acc  97.129%| ms/batch 294.51 | loss 0.0067295 
+| epoch  23 |   219/  319 batches | lr_step  7580 | lr  0.000704 |acc  97.637%| ms/batch 295.81 | loss 0.0058019 
+| epoch  23 |   229/  319 batches | lr_step  7590 | lr  0.000703 |acc  97.363%| ms/batch 306.78 | loss 0.0070128 
+| epoch  23 |   239/  319 batches | lr_step  7600 | lr  0.000703 |acc  97.676%| ms/batch 309.13 | loss 0.0057363 
+| epoch  23 |   249/  319 batches | lr_step  7610 | lr  0.000703 |acc  97.520%| ms/batch 293.62 | loss 0.0060256 
+| epoch  23 |   259/  319 batches | lr_step  7620 | lr  0.000702 |acc  97.461%| ms/batch 293.91 | loss 0.0062309 
+| epoch  23 |   269/  319 batches | lr_step  7630 | lr  0.000702 |acc  97.324%| ms/batch 294.51 | loss 0.0063743 
+| epoch  23 |   279/  319 batches | lr_step  7640 | lr  0.000701 |acc  97.324%| ms/batch 335.00 | loss 0.0065375 
+| epoch  23 |   289/  319 batches | lr_step  7650 | lr  0.000701 |acc  97.051%| ms/batch 324.21 | loss 0.0072174 
+| epoch  23 |   299/  319 batches | lr_step  7660 | lr  0.000700 |acc  97.266%| ms/batch 319.81 | loss 0.0064998 
+| epoch  23 |   309/  319 batches | lr_step  7670 | lr  0.000700 |acc  97.441%| ms/batch 297.80 | loss 0.0064171 
+| epoch  23 |   319/  319 batches | lr_step  7680 | lr  0.000699 |acc  124.769%| ms/batch 287.73 | loss 0.0064257 
+Pred: tensor([ 6,  7,  8, 12,  9, 13]) and tensor([ 6,  7,  8,  9, 10,  0]), tensor([11,  6,  0,  0,  0,  0])
+Tar: tensor([[ 6,  7,  8, 12,  9, 13],
+        [ 6,  7,  8,  9, 10,  0],
+        [ 6, 11,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  23 | time: 103.02s | valid acc 47.316%| Best Model from Epoch 19 with 99.323%
+-----------------------------------------------------------------------------------------
+| epoch  24 |     9/  319 batches | lr_step  7690 | lr  0.000699 |acc  97.520%| ms/batch 303.11 | loss 0.0062299 
+| epoch  24 |    19/  319 batches | lr_step  7700 | lr  0.000698 |acc  97.695%| ms/batch 292.51 | loss 0.0055178 
+| epoch  24 |    29/  319 batches | lr_step  7710 | lr  0.000698 |acc  97.441%| ms/batch 295.03 | loss 0.0064968 
+| epoch  24 |    39/  319 batches | lr_step  7720 | lr  0.000697 |acc  97.520%| ms/batch 297.53 | loss 0.0065034 
+| epoch  24 |    49/  319 batches | lr_step  7730 | lr  0.000697 |acc  97.676%| ms/batch 294.61 | loss 0.0058254 
+| epoch  24 |    59/  319 batches | lr_step  7740 | lr  0.000697 |acc  97.266%| ms/batch 298.70 | loss 0.0067428 
+| epoch  24 |    69/  319 batches | lr_step  7750 | lr  0.000696 |acc  97.266%| ms/batch 297.89 | loss 0.0070248 
+| epoch  24 |    79/  319 batches | lr_step  7760 | lr  0.000696 |acc  97.480%| ms/batch 327.49 | loss 0.0062967 
+| epoch  24 |    89/  319 batches | lr_step  7770 | lr  0.000695 |acc  97.930%| ms/batch 313.52 | loss 0.0051802 
+| epoch  24 |    99/  319 batches | lr_step  7780 | lr  0.000695 |acc  97.754%| ms/batch 307.66 | loss 0.0058421 
+| epoch  24 |   109/  319 batches | lr_step  7790 | lr  0.000694 |acc  97.363%| ms/batch 296.21 | loss 0.0062700 
+| epoch  24 |   119/  319 batches | lr_step  7800 | lr  0.000694 |acc  97.852%| ms/batch 304.50 | loss 0.0054160 
+| epoch  24 |   129/  319 batches | lr_step  7810 | lr  0.000693 |acc  97.168%| ms/batch 309.94 | loss 0.0070481 
+| epoch  24 |   139/  319 batches | lr_step  7820 | lr  0.000693 |acc  97.363%| ms/batch 296.22 | loss 0.0063512 
+| epoch  24 |   149/  319 batches | lr_step  7830 | lr  0.000693 |acc  97.617%| ms/batch 293.82 | loss 0.0060246 
+| epoch  24 |   159/  319 batches | lr_step  7840 | lr  0.000692 |acc  97.578%| ms/batch 299.34 | loss 0.0063496 
+| epoch  24 |   169/  319 batches | lr_step  7850 | lr  0.000692 |acc  97.227%| ms/batch 303.99 | loss 0.0067863 
+| epoch  24 |   179/  319 batches | lr_step  7860 | lr  0.000691 |acc  97.578%| ms/batch 292.92 | loss 0.0064802 
+| epoch  24 |   189/  319 batches | lr_step  7870 | lr  0.000691 |acc  97.715%| ms/batch 299.00 | loss 0.0058508 
+| epoch  24 |   199/  319 batches | lr_step  7880 | lr  0.000690 |acc  97.598%| ms/batch 345.65 | loss 0.0057111 
+| epoch  24 |   209/  319 batches | lr_step  7890 | lr  0.000690 |acc  97.480%| ms/batch 328.16 | loss 0.0061112 
+| epoch  24 |   219/  319 batches | lr_step  7900 | lr  0.000690 |acc  97.363%| ms/batch 304.97 | loss 0.0056636 
+| epoch  24 |   229/  319 batches | lr_step  7910 | lr  0.000689 |acc  97.520%| ms/batch 377.63 | loss 0.0056693 
+| epoch  24 |   239/  319 batches | lr_step  7920 | lr  0.000689 |acc  97.520%| ms/batch 309.79 | loss 0.0060254 
+| epoch  24 |   249/  319 batches | lr_step  7930 | lr  0.000688 |acc  97.578%| ms/batch 313.20 | loss 0.0064234 
+| epoch  24 |   259/  319 batches | lr_step  7940 | lr  0.000688 |acc  97.559%| ms/batch 364.55 | loss 0.0060193 
+| epoch  24 |   269/  319 batches | lr_step  7950 | lr  0.000687 |acc  97.617%| ms/batch 346.73 | loss 0.0060334 
+| epoch  24 |   279/  319 batches | lr_step  7960 | lr  0.000687 |acc  97.891%| ms/batch 315.89 | loss 0.0055844 
+| epoch  24 |   289/  319 batches | lr_step  7970 | lr  0.000686 |acc  97.637%| ms/batch 343.68 | loss 0.0056141 
+| epoch  24 |   299/  319 batches | lr_step  7980 | lr  0.000686 |acc  97.656%| ms/batch 303.54 | loss 0.0058727 
+| epoch  24 |   309/  319 batches | lr_step  7990 | lr  0.000686 |acc  97.715%| ms/batch 293.37 | loss 0.0062091 
+| epoch  24 |   319/  319 batches | lr_step  8000 | lr  0.000685 |acc  124.923%| ms/batch 296.01 | loss 0.0060695 
+Pred: tensor([ 6,  7,  8, 11,  9,  0,  0]) and tensor([ 6,  7,  8,  9, 10,  0,  0]), tensor([ 6,  7,  8,  9, 11, 11,  0])
+Tar: tensor([[ 6,  7,  8,  9, 11,  0,  0],
+        [ 6,  7,  8,  9, 10,  0,  0],
+        [ 6,  7,  8,  9, 11, 11,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  24 | time: 102.29s | valid acc 38.629%| Best Model from Epoch 19 with 99.323%
+-----------------------------------------------------------------------------------------
+| epoch  25 |     9/  319 batches | lr_step  8010 | lr  0.000685 |acc  97.949%| ms/batch 297.36 | loss 0.0053673 
+| epoch  25 |    19/  319 batches | lr_step  8020 | lr  0.000684 |acc  97.461%| ms/batch 298.12 | loss 0.0059992 
+| epoch  25 |    29/  319 batches | lr_step  8030 | lr  0.000684 |acc  97.559%| ms/batch 297.41 | loss 0.0058939 
+| epoch  25 |    39/  319 batches | lr_step  8040 | lr  0.000683 |acc  97.617%| ms/batch 301.20 | loss 0.0058963 
+| epoch  25 |    49/  319 batches | lr_step  8050 | lr  0.000683 |acc  97.441%| ms/batch 297.31 | loss 0.0063388 
+| epoch  25 |    59/  319 batches | lr_step  8060 | lr  0.000683 |acc  97.500%| ms/batch 299.50 | loss 0.0064663 
+| epoch  25 |    69/  319 batches | lr_step  8070 | lr  0.000682 |acc  97.617%| ms/batch 303.59 | loss 0.0061039 
+| epoch  25 |    79/  319 batches | lr_step  8080 | lr  0.000682 |acc  97.598%| ms/batch 305.68 | loss 0.0055138 
+| epoch  25 |    89/  319 batches | lr_step  8090 | lr  0.000681 |acc  97.715%| ms/batch 304.49 | loss 0.0057578 
+| epoch  25 |    99/  319 batches | lr_step  8100 | lr  0.000681 |acc  97.559%| ms/batch 300.10 | loss 0.0059831 
+| epoch  25 |   109/  319 batches | lr_step  8110 | lr  0.000681 |acc  97.109%| ms/batch 297.31 | loss 0.0072993 
+| epoch  25 |   119/  319 batches | lr_step  8120 | lr  0.000680 |acc  97.578%| ms/batch 311.37 | loss 0.0060155 
+| epoch  25 |   129/  319 batches | lr_step  8130 | lr  0.000680 |acc  97.715%| ms/batch 301.00 | loss 0.0055932 
+| epoch  25 |   139/  319 batches | lr_step  8140 | lr  0.000679 |acc  97.441%| ms/batch 297.90 | loss 0.0064854 
+| epoch  25 |   149/  319 batches | lr_step  8150 | lr  0.000679 |acc  97.363%| ms/batch 303.19 | loss 0.0064616 
+| epoch  25 |   159/  319 batches | lr_step  8160 | lr  0.000678 |acc  97.539%| ms/batch 304.09 | loss 0.0056376 
+| epoch  25 |   169/  319 batches | lr_step  8170 | lr  0.000678 |acc  97.617%| ms/batch 397.39 | loss 0.0056715 
+| epoch  25 |   179/  319 batches | lr_step  8180 | lr  0.000678 |acc  97.793%| ms/batch 313.31 | loss 0.0054746 
+| epoch  25 |   189/  319 batches | lr_step  8190 | lr  0.000677 |acc  97.402%| ms/batch 301.51 | loss 0.0061915 
+| epoch  25 |   199/  319 batches | lr_step  8200 | lr  0.000677 |acc  97.793%| ms/batch 303.99 | loss 0.0057670 
+| epoch  25 |   209/  319 batches | lr_step  8210 | lr  0.000676 |acc  97.539%| ms/batch 315.47 | loss 0.0062379 
+| epoch  25 |   219/  319 batches | lr_step  8220 | lr  0.000676 |acc  97.637%| ms/batch 306.88 | loss 0.0064561 
+| epoch  25 |   229/  319 batches | lr_step  8230 | lr  0.000676 |acc  97.480%| ms/batch 332.82 | loss 0.0057977 
+| epoch  25 |   239/  319 batches | lr_step  8240 | lr  0.000675 |acc  97.695%| ms/batch 311.57 | loss 0.0058251 
+| epoch  25 |   249/  319 batches | lr_step  8250 | lr  0.000675 |acc  97.754%| ms/batch 305.25 | loss 0.0058477 
+| epoch  25 |   259/  319 batches | lr_step  8260 | lr  0.000674 |acc  97.207%| ms/batch 319.86 | loss 0.0067907 
+| epoch  25 |   269/  319 batches | lr_step  8270 | lr  0.000674 |acc  97.246%| ms/batch 318.89 | loss 0.0064717 
+| epoch  25 |   279/  319 batches | lr_step  8280 | lr  0.000673 |acc  98.086%| ms/batch 311.37 | loss 0.0049230 
+| epoch  25 |   289/  319 batches | lr_step  8290 | lr  0.000673 |acc  97.207%| ms/batch 298.90 | loss 0.0063785 
+| epoch  25 |   299/  319 batches | lr_step  8300 | lr  0.000673 |acc  97.422%| ms/batch 295.06 | loss 0.0064295 
+| epoch  25 |   309/  319 batches | lr_step  8310 | lr  0.000672 |acc  97.324%| ms/batch 309.02 | loss 0.0066956 
+| epoch  25 |   319/  319 batches | lr_step  8320 | lr  0.000672 |acc  124.667%| ms/batch 300.30 | loss 0.0060550 
+Pred: tensor([ 6,  7,  8,  9, 10,  0,  0,  0,  0]) and tensor([ 6, 11,  0,  0,  0,  0,  0,  0,  0]), tensor([ 6,  7,  8,  9, 10,  0,  0,  0,  0])
+Tar: tensor([[ 6,  7,  8,  9, 10,  0,  0,  0,  0],
+        [ 6, 11,  0,  0,  0,  0,  0,  0,  0],
+        [ 6,  7,  8,  9, 10,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  25 | time: 101.22s | valid acc 98.691%| Best Model from Epoch 19 with 99.323%
+-----------------------------------------------------------------------------------------
+| epoch  26 |     9/  319 batches | lr_step  8330 | lr  0.000671 |acc  97.793%| ms/batch 296.41 | loss 0.0055274 
+| epoch  26 |    19/  319 batches | lr_step  8340 | lr  0.000671 |acc  97.656%| ms/batch 315.36 | loss 0.0060001 
+| epoch  26 |    29/  319 batches | lr_step  8350 | lr  0.000671 |acc  97.734%| ms/batch 305.60 | loss 0.0062046 
+| epoch  26 |    39/  319 batches | lr_step  8360 | lr  0.000670 |acc  97.637%| ms/batch 297.22 | loss 0.0052759 
+| epoch  26 |    49/  319 batches | lr_step  8370 | lr  0.000670 |acc  97.266%| ms/batch 293.83 | loss 0.0062001 
+| epoch  26 |    59/  319 batches | lr_step  8380 | lr  0.000669 |acc  97.578%| ms/batch 293.92 | loss 0.0060038 
+| epoch  26 |    69/  319 batches | lr_step  8390 | lr  0.000669 |acc  97.500%| ms/batch 293.73 | loss 0.0062089 
+| epoch  26 |    79/  319 batches | lr_step  8400 | lr  0.000669 |acc  97.812%| ms/batch 296.31 | loss 0.0060394 
+| epoch  26 |    89/  319 batches | lr_step  8410 | lr  0.000668 |acc  97.598%| ms/batch 291.82 | loss 0.0059256 
+| epoch  26 |    99/  319 batches | lr_step  8420 | lr  0.000668 |acc  97.773%| ms/batch 327.24 | loss 0.0059263 
+| epoch  26 |   109/  319 batches | lr_step  8430 | lr  0.000667 |acc  97.520%| ms/batch 372.86 | loss 0.0062594 
+| epoch  26 |   119/  319 batches | lr_step  8440 | lr  0.000667 |acc  97.930%| ms/batch 427.99 | loss 0.0052054 
+| epoch  26 |   129/  319 batches | lr_step  8450 | lr  0.000667 |acc  97.500%| ms/batch 335.82 | loss 0.0063768 
+| epoch  26 |   139/  319 batches | lr_step  8460 | lr  0.000666 |acc  97.227%| ms/batch 334.20 | loss 0.0071692 
+| epoch  26 |   149/  319 batches | lr_step  8470 | lr  0.000666 |acc  97.266%| ms/batch 331.92 | loss 0.0069107 
+| epoch  26 |   159/  319 batches | lr_step  8480 | lr  0.000666 |acc  97.637%| ms/batch 304.20 | loss 0.0057377 
+| epoch  26 |   169/  319 batches | lr_step  8490 | lr  0.000665 |acc  97.402%| ms/batch 312.07 | loss 0.0065867 
+| epoch  26 |   179/  319 batches | lr_step  8500 | lr  0.000665 |acc  97.656%| ms/batch 310.49 | loss 0.0056258 
+| epoch  26 |   189/  319 batches | lr_step  8510 | lr  0.000664 |acc  97.715%| ms/batch 319.19 | loss 0.0050550 
+| epoch  26 |   199/  319 batches | lr_step  8520 | lr  0.000664 |acc  97.637%| ms/batch 297.31 | loss 0.0060088 
+| epoch  26 |   209/  319 batches | lr_step  8530 | lr  0.000664 |acc  97.734%| ms/batch 300.14 | loss 0.0056689 
+| epoch  26 |   219/  319 batches | lr_step  8540 | lr  0.000663 |acc  97.402%| ms/batch 304.22 | loss 0.0067557 
+| epoch  26 |   229/  319 batches | lr_step  8550 | lr  0.000663 |acc  97.617%| ms/batch 328.56 | loss 0.0057889 
+| epoch  26 |   239/  319 batches | lr_step  8560 | lr  0.000662 |acc  97.676%| ms/batch 321.31 | loss 0.0052934 
+| epoch  26 |   249/  319 batches | lr_step  8570 | lr  0.000662 |acc  97.598%| ms/batch 332.52 | loss 0.0060613 
+| epoch  26 |   259/  319 batches | lr_step  8580 | lr  0.000662 |acc  97.539%| ms/batch 314.94 | loss 0.0060121 
+| epoch  26 |   269/  319 batches | lr_step  8590 | lr  0.000661 |acc  97.461%| ms/batch 302.89 | loss 0.0059456 
+| epoch  26 |   279/  319 batches | lr_step  8600 | lr  0.000661 |acc  97.324%| ms/batch 297.51 | loss 0.0062383 
+| epoch  26 |   289/  319 batches | lr_step  8610 | lr  0.000660 |acc  97.734%| ms/batch 306.18 | loss 0.0056268 
+| epoch  26 |   299/  319 batches | lr_step  8620 | lr  0.000660 |acc  97.324%| ms/batch 342.00 | loss 0.0068646 
+| epoch  26 |   309/  319 batches | lr_step  8630 | lr  0.000660 |acc  97.852%| ms/batch 310.17 | loss 0.0052761 
+| epoch  26 |   319/  319 batches | lr_step  8640 | lr  0.000659 |acc  125.231%| ms/batch 291.92 | loss 0.0056507 
+Pred: tensor([ 6, 11,  0,  0,  0,  0]) and tensor([ 6,  7,  8,  9, 11,  0]), tensor([ 6, 11,  0,  0,  0,  0])
+Tar: tensor([[ 6, 11,  0,  0,  0,  0],
+        [ 6,  7,  8,  9, 11,  0],
+        [ 6, 11,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  26 | time: 103.77s | valid acc 98.734%| Best Model from Epoch 19 with 99.323%
+-----------------------------------------------------------------------------------------
+| epoch  27 |     9/  319 batches | lr_step  8650 | lr  0.000659 |acc  97.598%| ms/batch 295.41 | loss 0.0059014 
+| epoch  27 |    19/  319 batches | lr_step  8660 | lr  0.000659 |acc  97.363%| ms/batch 298.50 | loss 0.0067174 
+| epoch  27 |    29/  319 batches | lr_step  8670 | lr  0.000658 |acc  97.754%| ms/batch 334.94 | loss 0.0053689 
+| epoch  27 |    39/  319 batches | lr_step  8680 | lr  0.000658 |acc  98.066%| ms/batch 335.63 | loss 0.0052876 
+| epoch  27 |    49/  319 batches | lr_step  8690 | lr  0.000657 |acc  97.422%| ms/batch 322.37 | loss 0.0065751 
+| epoch  27 |    59/  319 batches | lr_step  8700 | lr  0.000657 |acc  97.285%| ms/batch 313.96 | loss 0.0062395 
+| epoch  27 |    69/  319 batches | lr_step  8710 | lr  0.000657 |acc  97.715%| ms/batch 334.40 | loss 0.0056117 
+| epoch  27 |    79/  319 batches | lr_step  8720 | lr  0.000656 |acc  97.578%| ms/batch 321.52 | loss 0.0064813 
+| epoch  27 |    89/  319 batches | lr_step  8730 | lr  0.000656 |acc  97.539%| ms/batch 302.79 | loss 0.0058735 
+| epoch  27 |    99/  319 batches | lr_step  8740 | lr  0.000656 |acc  97.734%| ms/batch 299.80 | loss 0.0055296 
+| epoch  27 |   109/  319 batches | lr_step  8750 | lr  0.000655 |acc  97.637%| ms/batch 326.60 | loss 0.0055601 
+| epoch  27 |   119/  319 batches | lr_step  8760 | lr  0.000655 |acc  98.008%| ms/batch 292.92 | loss 0.0049647 
+| epoch  27 |   129/  319 batches | lr_step  8770 | lr  0.000654 |acc  97.324%| ms/batch 302.49 | loss 0.0061409 
+| epoch  27 |   139/  319 batches | lr_step  8780 | lr  0.000654 |acc  97.363%| ms/batch 302.09 | loss 0.0062032 
+| epoch  27 |   149/  319 batches | lr_step  8790 | lr  0.000654 |acc  97.656%| ms/batch 331.30 | loss 0.0055169 
+| epoch  27 |   159/  319 batches | lr_step  8800 | lr  0.000653 |acc  97.363%| ms/batch 305.01 | loss 0.0059042 
+| epoch  27 |   169/  319 batches | lr_step  8810 | lr  0.000653 |acc  97.285%| ms/batch 297.60 | loss 0.0071086 
+| epoch  27 |   179/  319 batches | lr_step  8820 | lr  0.000653 |acc  97.715%| ms/batch 298.30 | loss 0.0055016 
+| epoch  27 |   189/  319 batches | lr_step  8830 | lr  0.000652 |acc  97.539%| ms/batch 334.43 | loss 0.0063550 
+| epoch  27 |   199/  319 batches | lr_step  8840 | lr  0.000652 |acc  97.617%| ms/batch 297.91 | loss 0.0054644 
+| epoch  27 |   209/  319 batches | lr_step  8850 | lr  0.000651 |acc  97.695%| ms/batch 292.84 | loss 0.0059358 
+| epoch  27 |   219/  319 batches | lr_step  8860 | lr  0.000651 |acc  97.598%| ms/batch 309.21 | loss 0.0061217 
+| epoch  27 |   229/  319 batches | lr_step  8870 | lr  0.000651 |acc  97.715%| ms/batch 312.41 | loss 0.0060577 
+| epoch  27 |   239/  319 batches | lr_step  8880 | lr  0.000650 |acc  97.246%| ms/batch 307.37 | loss 0.0073498 
+| epoch  27 |   249/  319 batches | lr_step  8890 | lr  0.000650 |acc  97.656%| ms/batch 309.92 | loss 0.0061687 
+| epoch  27 |   259/  319 batches | lr_step  8900 | lr  0.000650 |acc  97.852%| ms/batch 401.98 | loss 0.0054395 
+| epoch  27 |   269/  319 batches | lr_step  8910 | lr  0.000649 |acc  97.598%| ms/batch 296.95 | loss 0.0055411 
+| epoch  27 |   279/  319 batches | lr_step  8920 | lr  0.000649 |acc  98.008%| ms/batch 292.12 | loss 0.0048210 
+| epoch  27 |   289/  319 batches | lr_step  8930 | lr  0.000649 |acc  97.500%| ms/batch 302.13 | loss 0.0060179 
+| epoch  27 |   299/  319 batches | lr_step  8940 | lr  0.000648 |acc  97.598%| ms/batch 292.75 | loss 0.0061431 
+| epoch  27 |   309/  319 batches | lr_step  8950 | lr  0.000648 |acc  97.324%| ms/batch 297.41 | loss 0.0066311 
+| epoch  27 |   319/  319 batches | lr_step  8960 | lr  0.000647 |acc  125.231%| ms/batch 290.63 | loss 0.0053106 
+Pred: tensor([11,  6,  0,  0,  0,  0]) and tensor([ 6,  7,  8,  9, 10,  0]), tensor([ 6,  7,  8,  9, 11,  0])
+Tar: tensor([[ 6, 11,  0,  0,  0,  0],
+        [ 6,  7,  8,  9, 10,  0],
+        [ 6,  7,  8,  9, 11,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  27 | time: 102.19s | valid acc 46.595%| Best Model from Epoch 19 with 99.323%
+-----------------------------------------------------------------------------------------
+| epoch  28 |     9/  319 batches | lr_step  8970 | lr  0.000647 |acc  97.441%| ms/batch 291.81 | loss 0.0068597 
+| epoch  28 |    19/  319 batches | lr_step  8980 | lr  0.000647 |acc  97.500%| ms/batch 301.30 | loss 0.0059253 
+| epoch  28 |    29/  319 batches | lr_step  8990 | lr  0.000646 |acc  97.344%| ms/batch 295.31 | loss 0.0064906 
+| epoch  28 |    39/  319 batches | lr_step  9000 | lr  0.000646 |acc  97.754%| ms/batch 293.42 | loss 0.0054819 
+| epoch  28 |    49/  319 batches | lr_step  9010 | lr  0.000646 |acc  97.871%| ms/batch 309.57 | loss 0.0057019 
+| epoch  28 |    59/  319 batches | lr_step  9020 | lr  0.000645 |acc  97.598%| ms/batch 302.34 | loss 0.0063348 
+| epoch  28 |    69/  319 batches | lr_step  9030 | lr  0.000645 |acc  97.461%| ms/batch 390.43 | loss 0.0058418 
+| epoch  28 |    79/  319 batches | lr_step  9040 | lr  0.000645 |acc  97.617%| ms/batch 333.02 | loss 0.0053323 
+| epoch  28 |    89/  319 batches | lr_step  9050 | lr  0.000644 |acc  97.441%| ms/batch 345.65 | loss 0.0061469 
+| epoch  28 |    99/  319 batches | lr_step  9060 | lr  0.000644 |acc  97.910%| ms/batch 307.70 | loss 0.0048024 
+| epoch  28 |   109/  319 batches | lr_step  9070 | lr  0.000643 |acc  97.852%| ms/batch 300.10 | loss 0.0056211 
+| epoch  28 |   119/  319 batches | lr_step  9080 | lr  0.000643 |acc  97.910%| ms/batch 299.62 | loss 0.0051530 
+| epoch  28 |   129/  319 batches | lr_step  9090 | lr  0.000643 |acc  97.480%| ms/batch 306.48 | loss 0.0058417 
+| epoch  28 |   139/  319 batches | lr_step  9100 | lr  0.000642 |acc  97.461%| ms/batch 329.21 | loss 0.0060800 
+| epoch  28 |   149/  319 batches | lr_step  9110 | lr  0.000642 |acc  97.812%| ms/batch 302.69 | loss 0.0052638 
+| epoch  28 |   159/  319 batches | lr_step  9120 | lr  0.000642 |acc  97.383%| ms/batch 304.59 | loss 0.0066249 
+| epoch  28 |   169/  319 batches | lr_step  9130 | lr  0.000641 |acc  97.539%| ms/batch 305.06 | loss 0.0062672 
+| epoch  28 |   179/  319 batches | lr_step  9140 | lr  0.000641 |acc  97.637%| ms/batch 300.68 | loss 0.0057812 
+| epoch  28 |   189/  319 batches | lr_step  9150 | lr  0.000641 |acc  98.086%| ms/batch 295.11 | loss 0.0055079 
+| epoch  28 |   199/  319 batches | lr_step  9160 | lr  0.000640 |acc  97.832%| ms/batch 297.80 | loss 0.0056882 
+| epoch  28 |   209/  319 batches | lr_step  9170 | lr  0.000640 |acc  97.734%| ms/batch 298.70 | loss 0.0054787 
+| epoch  28 |   219/  319 batches | lr_step  9180 | lr  0.000640 |acc  97.520%| ms/batch 304.10 | loss 0.0060143 
+| epoch  28 |   229/  319 batches | lr_step  9190 | lr  0.000639 |acc  97.324%| ms/batch 340.65 | loss 0.0060168 
+| epoch  28 |   239/  319 batches | lr_step  9200 | lr  0.000639 |acc  98.281%| ms/batch 291.41 | loss 0.0047181 
+| epoch  28 |   249/  319 batches | lr_step  9210 | lr  0.000639 |acc  97.793%| ms/batch 299.92 | loss 0.0055636 
+| epoch  28 |   259/  319 batches | lr_step  9220 | lr  0.000638 |acc  97.520%| ms/batch 306.99 | loss 0.0058993 
+| epoch  28 |   269/  319 batches | lr_step  9230 | lr  0.000638 |acc  97.402%| ms/batch 328.77 | loss 0.0059475 
+| epoch  28 |   279/  319 batches | lr_step  9240 | lr  0.000638 |acc  97.715%| ms/batch 318.84 | loss 0.0054626 
+| epoch  28 |   289/  319 batches | lr_step  9250 | lr  0.000637 |acc  97.910%| ms/batch 306.18 | loss 0.0055443 
+| epoch  28 |   299/  319 batches | lr_step  9260 | lr  0.000637 |acc  97.656%| ms/batch 305.09 | loss 0.0054138 
+| epoch  28 |   309/  319 batches | lr_step  9270 | lr  0.000637 |acc  97.656%| ms/batch 290.12 | loss 0.0057406 
+| epoch  28 |   319/  319 batches | lr_step  9280 | lr  0.000636 |acc  124.667%| ms/batch 284.94 | loss 0.0065754 
+Pred: tensor([ 6, 11,  0,  0,  0,  0,  0]) and tensor([ 6, 11,  0,  0,  0,  0,  0]), tensor([ 6, 11,  0,  0,  0,  0,  0])
+Tar: tensor([[ 6, 11,  0,  0,  0,  0,  0],
+        [ 6, 11,  0,  0,  0,  0,  0],
+        [ 6, 11,  0,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  28 | time: 101.56s | valid acc 97.447%| Best Model from Epoch 19 with 99.323%
+-----------------------------------------------------------------------------------------
+| epoch  29 |     9/  319 batches | lr_step  9290 | lr  0.000636 |acc  97.402%| ms/batch 289.93 | loss 0.0065253 
+| epoch  29 |    19/  319 batches | lr_step  9300 | lr  0.000635 |acc  97.773%| ms/batch 305.58 | loss 0.0054579 
+| epoch  29 |    29/  319 batches | lr_step  9310 | lr  0.000635 |acc  97.754%| ms/batch 358.30 | loss 0.0054866 
+| epoch  29 |    39/  319 batches | lr_step  9320 | lr  0.000635 |acc  97.852%| ms/batch 295.49 | loss 0.0050406 
+| epoch  29 |    49/  319 batches | lr_step  9330 | lr  0.000634 |acc  97.285%| ms/batch 293.91 | loss 0.0069209 
+| epoch  29 |    59/  319 batches | lr_step  9340 | lr  0.000634 |acc  97.891%| ms/batch 306.25 | loss 0.0051546 
+| epoch  29 |    69/  319 batches | lr_step  9350 | lr  0.000634 |acc  97.422%| ms/batch 408.13 | loss 0.0058188 
+| epoch  29 |    79/  319 batches | lr_step  9360 | lr  0.000633 |acc  97.812%| ms/batch 408.21 | loss 0.0052867 
+| epoch  29 |    89/  319 batches | lr_step  9370 | lr  0.000633 |acc  97.363%| ms/batch 325.43 | loss 0.0063698 
+| epoch  29 |    99/  319 batches | lr_step  9380 | lr  0.000633 |acc  98.223%| ms/batch 303.34 | loss 0.0047069 
+| epoch  29 |   109/  319 batches | lr_step  9390 | lr  0.000632 |acc  97.246%| ms/batch 318.10 | loss 0.0061337 
+| epoch  29 |   119/  319 batches | lr_step  9400 | lr  0.000632 |acc  97.852%| ms/batch 307.68 | loss 0.0052994 
+| epoch  29 |   129/  319 batches | lr_step  9410 | lr  0.000632 |acc  97.871%| ms/batch 324.20 | loss 0.0051883 
+| epoch  29 |   139/  319 batches | lr_step  9420 | lr  0.000631 |acc  97.676%| ms/batch 304.49 | loss 0.0055122 
+| epoch  29 |   149/  319 batches | lr_step  9430 | lr  0.000631 |acc  97.402%| ms/batch 293.52 | loss 0.0066534 
+| epoch  29 |   159/  319 batches | lr_step  9440 | lr  0.000631 |acc  97.793%| ms/batch 295.56 | loss 0.0057652 
+| epoch  29 |   169/  319 batches | lr_step  9450 | lr  0.000630 |acc  97.676%| ms/batch 298.30 | loss 0.0053302 
+| epoch  29 |   179/  319 batches | lr_step  9460 | lr  0.000630 |acc  97.520%| ms/batch 301.39 | loss 0.0061467 
+| epoch  29 |   189/  319 batches | lr_step  9470 | lr  0.000630 |acc  97.461%| ms/batch 301.99 | loss 0.0061804 
+| epoch  29 |   199/  319 batches | lr_step  9480 | lr  0.000629 |acc  97.617%| ms/batch 330.07 | loss 0.0062744 
+| epoch  29 |   209/  319 batches | lr_step  9490 | lr  0.000629 |acc  97.656%| ms/batch 319.46 | loss 0.0054995 
+| epoch  29 |   219/  319 batches | lr_step  9500 | lr  0.000629 |acc  97.578%| ms/batch 347.88 | loss 0.0055533 
+| epoch  29 |   229/  319 batches | lr_step  9510 | lr  0.000628 |acc  97.949%| ms/batch 320.77 | loss 0.0058211 
+| epoch  29 |   239/  319 batches | lr_step  9520 | lr  0.000628 |acc  97.598%| ms/batch 303.39 | loss 0.0058277 
+| epoch  29 |   249/  319 batches | lr_step  9530 | lr  0.000628 |acc  97.441%| ms/batch 302.49 | loss 0.0063106 
+| epoch  29 |   259/  319 batches | lr_step  9540 | lr  0.000627 |acc  97.578%| ms/batch 297.11 | loss 0.0060636 
+| epoch  29 |   269/  319 batches | lr_step  9550 | lr  0.000627 |acc  97.617%| ms/batch 296.81 | loss 0.0058328 
+| epoch  29 |   279/  319 batches | lr_step  9560 | lr  0.000627 |acc  98.086%| ms/batch 294.01 | loss 0.0047263 
+| epoch  29 |   289/  319 batches | lr_step  9570 | lr  0.000626 |acc  97.695%| ms/batch 308.15 | loss 0.0049698 
+| epoch  29 |   299/  319 batches | lr_step  9580 | lr  0.000626 |acc  97.461%| ms/batch 338.75 | loss 0.0059507 
+| epoch  29 |   309/  319 batches | lr_step  9590 | lr  0.000626 |acc  97.559%| ms/batch 297.60 | loss 0.0056810 
+| epoch  29 |   319/  319 batches | lr_step  9600 | lr  0.000625 |acc  125.462%| ms/batch 288.83 | loss 0.0049525 
+Pred: tensor([ 6, 11,  0,  0,  0,  0,  0,  0,  0]) and tensor([ 6, 11,  0,  0,  0,  0,  0,  0,  0]), tensor([ 6, 11,  0,  0,  0,  0,  0,  0,  0])
+Tar: tensor([[ 6, 11,  0,  0,  0,  0,  0,  0,  0],
+        [ 6, 11,  0,  0,  0,  0,  0,  0,  0],
+        [ 6, 11,  0,  0,  0,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  29 | time: 103.47s | valid acc 98.712%| Best Model from Epoch 19 with 99.323%
+-----------------------------------------------------------------------------------------
+| epoch  30 |     9/  319 batches | lr_step  9610 | lr  0.000625 |acc  97.285%| ms/batch 303.99 | loss 0.0065694 
+| epoch  30 |    19/  319 batches | lr_step  9620 | lr  0.000625 |acc  97.676%| ms/batch 308.28 | loss 0.0058881 
+| epoch  30 |    29/  319 batches | lr_step  9630 | lr  0.000625 |acc  97.871%| ms/batch 356.15 | loss 0.0055360 
+| epoch  30 |    39/  319 batches | lr_step  9640 | lr  0.000624 |acc  97.715%| ms/batch 305.18 | loss 0.0058422 
+| epoch  30 |    49/  319 batches | lr_step  9650 | lr  0.000624 |acc  97.734%| ms/batch 295.31 | loss 0.0053662 
+| epoch  30 |    59/  319 batches | lr_step  9660 | lr  0.000624 |acc  97.559%| ms/batch 315.46 | loss 0.0056605 
+| epoch  30 |    69/  319 batches | lr_step  9670 | lr  0.000623 |acc  97.617%| ms/batch 297.70 | loss 0.0056280 
+| epoch  30 |    79/  319 batches | lr_step  9680 | lr  0.000623 |acc  97.578%| ms/batch 312.02 | loss 0.0058961 
+| epoch  30 |    89/  319 batches | lr_step  9690 | lr  0.000623 |acc  97.559%| ms/batch 308.38 | loss 0.0057485 
+| epoch  30 |    99/  319 batches | lr_step  9700 | lr  0.000622 |acc  97.559%| ms/batch 296.01 | loss 0.0054274 
+| epoch  30 |   109/  319 batches | lr_step  9710 | lr  0.000622 |acc  97.676%| ms/batch 329.94 | loss 0.0055893 
+| epoch  30 |   119/  319 batches | lr_step  9720 | lr  0.000622 |acc  97.832%| ms/batch 355.51 | loss 0.0056809 
+| epoch  30 |   129/  319 batches | lr_step  9730 | lr  0.000621 |acc  97.637%| ms/batch 319.23 | loss 0.0051532 
+| epoch  30 |   139/  319 batches | lr_step  9740 | lr  0.000621 |acc  97.422%| ms/batch 316.11 | loss 0.0066786 
+| epoch  30 |   149/  319 batches | lr_step  9750 | lr  0.000621 |acc  97.793%| ms/batch 306.68 | loss 0.0055467 
+| epoch  30 |   159/  319 batches | lr_step  9760 | lr  0.000620 |acc  97.676%| ms/batch 354.62 | loss 0.0057646 
+| epoch  30 |   169/  319 batches | lr_step  9770 | lr  0.000620 |acc  97.773%| ms/batch 313.75 | loss 0.0055429 
+| epoch  30 |   179/  319 batches | lr_step  9780 | lr  0.000620 |acc  97.480%| ms/batch 347.70 | loss 0.0058345 
+| epoch  30 |   189/  319 batches | lr_step  9790 | lr  0.000619 |acc  97.598%| ms/batch 332.58 | loss 0.0060112 
+| epoch  30 |   199/  319 batches | lr_step  9800 | lr  0.000619 |acc  97.520%| ms/batch 296.41 | loss 0.0059591 
+| epoch  30 |   209/  319 batches | lr_step  9810 | lr  0.000619 |acc  97.910%| ms/batch 302.19 | loss 0.0050254 
+| epoch  30 |   219/  319 batches | lr_step  9820 | lr  0.000618 |acc  97.930%| ms/batch 322.94 | loss 0.0054535 
+| epoch  30 |   229/  319 batches | lr_step  9830 | lr  0.000618 |acc  97.578%| ms/batch 297.16 | loss 0.0056360 
+| epoch  30 |   239/  319 batches | lr_step  9840 | lr  0.000618 |acc  97.930%| ms/batch 296.71 | loss 0.0048958 
+| epoch  30 |   249/  319 batches | lr_step  9850 | lr  0.000617 |acc  97.578%| ms/batch 297.21 | loss 0.0063705 
+| epoch  30 |   259/  319 batches | lr_step  9860 | lr  0.000617 |acc  97.598%| ms/batch 308.12 | loss 0.0059098 
+| epoch  30 |   269/  319 batches | lr_step  9870 | lr  0.000617 |acc  97.539%| ms/batch 315.96 | loss 0.0056535 
+| epoch  30 |   279/  319 batches | lr_step  9880 | lr  0.000617 |acc  97.754%| ms/batch 300.20 | loss 0.0053559 
+| epoch  30 |   289/  319 batches | lr_step  9890 | lr  0.000616 |acc  97.988%| ms/batch 297.90 | loss 0.0045662 
+| epoch  30 |   299/  319 batches | lr_step  9900 | lr  0.000616 |acc  97.773%| ms/batch 313.85 | loss 0.0055859 
+| epoch  30 |   309/  319 batches | lr_step  9910 | lr  0.000616 |acc  97.871%| ms/batch 301.49 | loss 0.0053040 
+| epoch  30 |   319/  319 batches | lr_step  9920 | lr  0.000615 |acc  125.103%| ms/batch 288.22 | loss 0.0059952 
+Pred: tensor([11,  6,  0,  0,  0,  0,  0]) and tensor([ 6,  7,  8,  9, 10,  0,  0]), tensor([11,  6,  0,  0,  0,  0,  0])
+Tar: tensor([[ 6, 11,  0,  0,  0,  0,  0],
+        [ 6,  7,  8,  9, 10,  0,  0],
+        [ 6, 11,  0,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  30 | time: 102.82s | valid acc 46.574%| Best Model from Epoch 19 with 99.323%
+-----------------------------------------------------------------------------------------
+| epoch  31 |     9/  319 batches | lr_step  9930 | lr  0.000615 |acc  97.188%| ms/batch 291.68 | loss 0.0059809 
+| epoch  31 |    19/  319 batches | lr_step  9940 | lr  0.000615 |acc  97.891%| ms/batch 306.98 | loss 0.0053200 
+| epoch  31 |    29/  319 batches | lr_step  9950 | lr  0.000614 |acc  97.812%| ms/batch 304.89 | loss 0.0054950 
+| epoch  31 |    39/  319 batches | lr_step  9960 | lr  0.000614 |acc  97.910%| ms/batch 297.61 | loss 0.0053810 
+| epoch  31 |    49/  319 batches | lr_step  9970 | lr  0.000614 |acc  97.617%| ms/batch 285.74 | loss 0.0055542 
+| epoch  31 |    59/  319 batches | lr_step  9980 | lr  0.000613 |acc  97.520%| ms/batch 290.91 | loss 0.0060154 
+| epoch  31 |    69/  319 batches | lr_step  9990 | lr  0.000613 |acc  97.734%| ms/batch 289.15 | loss 0.0059761 
+| epoch  31 |    79/  319 batches | lr_step  10000 | lr  0.000613 |acc  98.047%| ms/batch 293.83 | loss 0.0047227 
+| epoch  31 |    89/  319 batches | lr_step  10010 | lr  0.000613 |acc  97.617%| ms/batch 354.31 | loss 0.0059308 
+| epoch  31 |    99/  319 batches | lr_step  10020 | lr  0.000612 |acc  98.086%| ms/batch 299.22 | loss 0.0047876 
+| epoch  31 |   109/  319 batches | lr_step  10030 | lr  0.000612 |acc  97.344%| ms/batch 304.25 | loss 0.0063964 
+| epoch  31 |   119/  319 batches | lr_step  10040 | lr  0.000612 |acc  97.441%| ms/batch 303.92 | loss 0.0059448 
+| epoch  31 |   129/  319 batches | lr_step  10050 | lr  0.000611 |acc  97.715%| ms/batch 315.25 | loss 0.0057672 
+| epoch  31 |   139/  319 batches | lr_step  10060 | lr  0.000611 |acc  97.656%| ms/batch 318.53 | loss 0.0056143 
+| epoch  31 |   149/  319 batches | lr_step  10070 | lr  0.000611 |acc  97.754%| ms/batch 297.60 | loss 0.0053924 
+| epoch  31 |   159/  319 batches | lr_step  10080 | lr  0.000610 |acc  98.066%| ms/batch 289.83 | loss 0.0052159 
+| epoch  31 |   169/  319 batches | lr_step  10090 | lr  0.000610 |acc  97.930%| ms/batch 315.29 | loss 0.0051793 
+| epoch  31 |   179/  319 batches | lr_step  10100 | lr  0.000610 |acc  97.969%| ms/batch 313.80 | loss 0.0053065 
+| epoch  31 |   189/  319 batches | lr_step  10110 | lr  0.000609 |acc  97.812%| ms/batch 297.06 | loss 0.0053867 
+| epoch  31 |   199/  319 batches | lr_step  10120 | lr  0.000609 |acc  97.656%| ms/batch 311.77 | loss 0.0053901 
+| epoch  31 |   209/  319 batches | lr_step  10130 | lr  0.000609 |acc  97.754%| ms/batch 296.41 | loss 0.0052458 
+| epoch  31 |   219/  319 batches | lr_step  10140 | lr  0.000609 |acc  98.047%| ms/batch 296.01 | loss 0.0048713 
+| epoch  31 |   229/  319 batches | lr_step  10150 | lr  0.000608 |acc  97.480%| ms/batch 316.65 | loss 0.0066042 
+| epoch  31 |   239/  319 batches | lr_step  10160 | lr  0.000608 |acc  97.207%| ms/batch 332.43 | loss 0.0066888 
+| epoch  31 |   249/  319 batches | lr_step  10170 | lr  0.000608 |acc  97.988%| ms/batch 298.89 | loss 0.0053257 
+| epoch  31 |   259/  319 batches | lr_step  10180 | lr  0.000607 |acc  97.676%| ms/batch 319.85 | loss 0.0060371 
+| epoch  31 |   269/  319 batches | lr_step  10190 | lr  0.000607 |acc  97.500%| ms/batch 300.60 | loss 0.0059873 
+| epoch  31 |   279/  319 batches | lr_step  10200 | lr  0.000607 |acc  97.949%| ms/batch 302.70 | loss 0.0046697 
+| epoch  31 |   289/  319 batches | lr_step  10210 | lr  0.000607 |acc  98.047%| ms/batch 370.91 | loss 0.0047030 
+| epoch  31 |   299/  319 batches | lr_step  10220 | lr  0.000606 |acc  98.027%| ms/batch 304.59 | loss 0.0054742 
+| epoch  31 |   309/  319 batches | lr_step  10230 | lr  0.000606 |acc  97.637%| ms/batch 304.09 | loss 0.0056933 
+| epoch  31 |   319/  319 batches | lr_step  10240 | lr  0.000606 |acc  125.359%| ms/batch 289.53 | loss 0.0057914 
+Pred: tensor([ 6,  7,  8,  9, 10,  0,  0,  0,  0]) and tensor([ 6,  7,  8,  9, 16, 10,  0,  0,  0]), tensor([ 6, 11,  0,  0,  0,  0,  0,  0,  0])
+Tar: tensor([[ 6,  7,  8,  9, 10,  0,  0,  0,  0],
+        [ 6,  7,  8,  9, 16, 10,  0,  0,  0],
+        [ 6, 11,  0,  0,  0,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  31 | time: 100.77s | valid acc 97.643%| Best Model from Epoch 19 with 99.323%
+-----------------------------------------------------------------------------------------
+| epoch  32 |     9/  319 batches | lr_step  10250 | lr  0.000605 |acc  97.598%| ms/batch 291.32 | loss 0.0058443 
+| epoch  32 |    19/  319 batches | lr_step  10260 | lr  0.000605 |acc  98.027%| ms/batch 300.70 | loss 0.0050007 
+| epoch  32 |    29/  319 batches | lr_step  10270 | lr  0.000605 |acc  98.008%| ms/batch 354.51 | loss 0.0051199 
+| epoch  32 |    39/  319 batches | lr_step  10280 | lr  0.000604 |acc  97.656%| ms/batch 292.32 | loss 0.0057870 
+| epoch  32 |    49/  319 batches | lr_step  10290 | lr  0.000604 |acc  98.008%| ms/batch 297.11 | loss 0.0049414 
+| epoch  32 |    59/  319 batches | lr_step  10300 | lr  0.000604 |acc  98.008%| ms/batch 298.50 | loss 0.0050876 
+| epoch  32 |    69/  319 batches | lr_step  10310 | lr  0.000604 |acc  97.812%| ms/batch 291.52 | loss 0.0056980 
+| epoch  32 |    79/  319 batches | lr_step  10320 | lr  0.000603 |acc  97.500%| ms/batch 296.11 | loss 0.0055234 
+| epoch  32 |    89/  319 batches | lr_step  10330 | lr  0.000603 |acc  97.754%| ms/batch 298.80 | loss 0.0053910 
+| epoch  32 |    99/  319 batches | lr_step  10340 | lr  0.000603 |acc  97.383%| ms/batch 294.91 | loss 0.0065458 
+| epoch  32 |   109/  319 batches | lr_step  10350 | lr  0.000602 |acc  97.559%| ms/batch 306.83 | loss 0.0057372 
+| epoch  32 |   119/  319 batches | lr_step  10360 | lr  0.000602 |acc  97.578%| ms/batch 301.67 | loss 0.0055557 
+| epoch  32 |   129/  319 batches | lr_step  10370 | lr  0.000602 |acc  97.812%| ms/batch 307.28 | loss 0.0052515 
+| epoch  32 |   139/  319 batches | lr_step  10380 | lr  0.000602 |acc  97.793%| ms/batch 295.86 | loss 0.0053592 
+| epoch  32 |   149/  319 batches | lr_step  10390 | lr  0.000601 |acc  98.164%| ms/batch 311.18 | loss 0.0043783 
+| epoch  32 |   159/  319 batches | lr_step  10400 | lr  0.000601 |acc  97.891%| ms/batch 313.26 | loss 0.0051489 
+| epoch  32 |   169/  319 batches | lr_step  10410 | lr  0.000601 |acc  97.539%| ms/batch 292.42 | loss 0.0060565 
+| epoch  32 |   179/  319 batches | lr_step  10420 | lr  0.000600 |acc  97.715%| ms/batch 290.78 | loss 0.0057803 
+| epoch  32 |   189/  319 batches | lr_step  10430 | lr  0.000600 |acc  97.812%| ms/batch 295.46 | loss 0.0056297 
+| epoch  32 |   199/  319 batches | lr_step  10440 | lr  0.000600 |acc  97.832%| ms/batch 347.55 | loss 0.0054424 
+| epoch  32 |   209/  319 batches | lr_step  10450 | lr  0.000600 |acc  97.676%| ms/batch 297.78 | loss 0.0056087 
+| epoch  32 |   219/  319 batches | lr_step  10460 | lr  0.000599 |acc  97.793%| ms/batch 342.04 | loss 0.0057282 
+| epoch  32 |   229/  319 batches | lr_step  10470 | lr  0.000599 |acc  97.852%| ms/batch 312.45 | loss 0.0053309 
+| epoch  32 |   239/  319 batches | lr_step  10480 | lr  0.000599 |acc  97.598%| ms/batch 343.46 | loss 0.0063438 
+| epoch  32 |   249/  319 batches | lr_step  10490 | lr  0.000598 |acc  97.656%| ms/batch 332.95 | loss 0.0049618 
+| epoch  32 |   259/  319 batches | lr_step  10500 | lr  0.000598 |acc  98.164%| ms/batch 295.08 | loss 0.0049096 
+| epoch  32 |   269/  319 batches | lr_step  10510 | lr  0.000598 |acc  97.461%| ms/batch 291.12 | loss 0.0060462 
+| epoch  32 |   279/  319 batches | lr_step  10520 | lr  0.000598 |acc  97.441%| ms/batch 286.04 | loss 0.0058965 
+| epoch  32 |   289/  319 batches | lr_step  10530 | lr  0.000597 |acc  97.480%| ms/batch 293.56 | loss 0.0061223 
+| epoch  32 |   299/  319 batches | lr_step  10540 | lr  0.000597 |acc  97.305%| ms/batch 292.93 | loss 0.0063383 
+| epoch  32 |   309/  319 batches | lr_step  10550 | lr  0.000597 |acc  97.754%| ms/batch 289.12 | loss 0.0056961 
+| epoch  32 |   319/  319 batches | lr_step  10560 | lr  0.000596 |acc  125.385%| ms/batch 286.62 | loss 0.0055470 
+Pred: tensor([ 6,  7,  8, 12,  9, 13,  0]) and tensor([11,  6,  0,  0,  0,  0,  0]), tensor([ 6,  7,  8,  9, 11, 11,  0])
+Tar: tensor([[ 6,  7,  8,  9, 12, 13,  0],
+        [ 6, 11,  0,  0,  0,  0,  0],
+        [ 6,  7,  8,  9, 11, 11,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  32 | time: 99.96s | valid acc 46.486%| Best Model from Epoch 19 with 99.323%
+-----------------------------------------------------------------------------------------
+| epoch  33 |     9/  319 batches | lr_step  10570 | lr  0.000596 |acc  97.520%| ms/batch 305.43 | loss 0.0057683 
+| epoch  33 |    19/  319 batches | lr_step  10580 | lr  0.000596 |acc  97.793%| ms/batch 296.91 | loss 0.0055011 
+| epoch  33 |    29/  319 batches | lr_step  10590 | lr  0.000596 |acc  97.969%| ms/batch 326.44 | loss 0.0052967 
+| epoch  33 |    39/  319 batches | lr_step  10600 | lr  0.000595 |acc  97.578%| ms/batch 298.70 | loss 0.0056851 
+| epoch  33 |    49/  319 batches | lr_step  10610 | lr  0.000595 |acc  97.930%| ms/batch 300.02 | loss 0.0052020 
+| epoch  33 |    59/  319 batches | lr_step  10620 | lr  0.000595 |acc  98.066%| ms/batch 283.35 | loss 0.0048599 
+| epoch  33 |    69/  319 batches | lr_step  10630 | lr  0.000594 |acc  97.754%| ms/batch 286.44 | loss 0.0053130 
+| epoch  33 |    79/  319 batches | lr_step  10640 | lr  0.000594 |acc  97.695%| ms/batch 289.63 | loss 0.0053975 
+| epoch  33 |    89/  319 batches | lr_step  10650 | lr  0.000594 |acc  97.500%| ms/batch 291.44 | loss 0.0057647 
+| epoch  33 |    99/  319 batches | lr_step  10660 | lr  0.000594 |acc  97.168%| ms/batch 300.68 | loss 0.0068924 
+| epoch  33 |   109/  319 batches | lr_step  10670 | lr  0.000593 |acc  97.773%| ms/batch 300.70 | loss 0.0050752 
+| epoch  33 |   119/  319 batches | lr_step  10680 | lr  0.000593 |acc  97.715%| ms/batch 302.69 | loss 0.0057201 
+| epoch  33 |   129/  319 batches | lr_step  10690 | lr  0.000593 |acc  97.676%| ms/batch 396.58 | loss 0.0056290 
+| epoch  33 |   139/  319 batches | lr_step  10700 | lr  0.000592 |acc  97.754%| ms/batch 375.84 | loss 0.0052159 
+| epoch  33 |   149/  319 batches | lr_step  10710 | lr  0.000592 |acc  97.812%| ms/batch 356.87 | loss 0.0056473 
+| epoch  33 |   159/  319 batches | lr_step  10720 | lr  0.000592 |acc  97.480%| ms/batch 326.12 | loss 0.0056520 
+| epoch  33 |   169/  319 batches | lr_step  10730 | lr  0.000592 |acc  98.223%| ms/batch 295.58 | loss 0.0053385 
+| epoch  33 |   179/  319 batches | lr_step  10740 | lr  0.000591 |acc  97.695%| ms/batch 295.01 | loss 0.0058104 
+| epoch  33 |   189/  319 batches | lr_step  10750 | lr  0.000591 |acc  97.246%| ms/batch 293.05 | loss 0.0061715 
+| epoch  33 |   199/  319 batches | lr_step  10760 | lr  0.000591 |acc  97.793%| ms/batch 327.78 | loss 0.0052596 
+| epoch  33 |   209/  319 batches | lr_step  10770 | lr  0.000591 |acc  97.793%| ms/batch 301.25 | loss 0.0055256 
+| epoch  33 |   219/  319 batches | lr_step  10780 | lr  0.000590 |acc  97.871%| ms/batch 284.74 | loss 0.0050028 
+| epoch  33 |   229/  319 batches | lr_step  10790 | lr  0.000590 |acc  97.676%| ms/batch 294.54 | loss 0.0057693 
+| epoch  33 |   239/  319 batches | lr_step  10800 | lr  0.000590 |acc  97.793%| ms/batch 296.51 | loss 0.0053928 
+| epoch  33 |   249/  319 batches | lr_step  10810 | lr  0.000589 |acc  97.773%| ms/batch 290.52 | loss 0.0054212 
+| epoch  33 |   259/  319 batches | lr_step  10820 | lr  0.000589 |acc  97.969%| ms/batch 293.83 | loss 0.0048539 
+| epoch  33 |   269/  319 batches | lr_step  10830 | lr  0.000589 |acc  98.008%| ms/batch 312.03 | loss 0.0049830 
+| epoch  33 |   279/  319 batches | lr_step  10840 | lr  0.000589 |acc  98.145%| ms/batch 302.61 | loss 0.0046038 
+| epoch  33 |   289/  319 batches | lr_step  10850 | lr  0.000588 |acc  97.891%| ms/batch 302.90 | loss 0.0054665 
+| epoch  33 |   299/  319 batches | lr_step  10860 | lr  0.000588 |acc  97.754%| ms/batch 299.34 | loss 0.0054047 
+| epoch  33 |   309/  319 batches | lr_step  10870 | lr  0.000588 |acc  98.086%| ms/batch 349.47 | loss 0.0049929 
+| epoch  33 |   319/  319 batches | lr_step  10880 | lr  0.000588 |acc  125.179%| ms/batch 284.55 | loss 0.0059516 
+Pred: tensor([ 6, 11,  0,  0,  0,  0]) and tensor([ 6, 11,  0,  0,  0,  0]), tensor([ 6, 11,  0,  0,  0,  0])
+Tar: tensor([[ 6, 11,  0,  0,  0,  0],
+        [ 6, 11,  0,  0,  0,  0],
+        [ 6, 11,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  33 | time: 101.20s | valid acc 97.621%| Best Model from Epoch 19 with 99.323%
+-----------------------------------------------------------------------------------------
+| epoch  34 |     9/  319 batches | lr_step  10890 | lr  0.000587 |acc  97.969%| ms/batch 298.80 | loss 0.0051733 
+| epoch  34 |    19/  319 batches | lr_step  10900 | lr  0.000587 |acc  98.047%| ms/batch 310.30 | loss 0.0045688 
+| epoch  34 |    29/  319 batches | lr_step  10910 | lr  0.000587 |acc  97.734%| ms/batch 319.98 | loss 0.0052629 
+| epoch  34 |    39/  319 batches | lr_step  10920 | lr  0.000586 |acc  98.086%| ms/batch 313.03 | loss 0.0049283 
+| epoch  34 |    49/  319 batches | lr_step  10930 | lr  0.000586 |acc  97.656%| ms/batch 297.50 | loss 0.0049482 
+| epoch  34 |    59/  319 batches | lr_step  10940 | lr  0.000586 |acc  97.637%| ms/batch 296.23 | loss 0.0062334 
+| epoch  34 |    69/  319 batches | lr_step  10950 | lr  0.000586 |acc  97.852%| ms/batch 291.03 | loss 0.0052462 
+| epoch  34 |    79/  319 batches | lr_step  10960 | lr  0.000585 |acc  97.578%| ms/batch 288.13 | loss 0.0051212 
+| epoch  34 |    89/  319 batches | lr_step  10970 | lr  0.000585 |acc  97.676%| ms/batch 301.12 | loss 0.0058343 
+| epoch  34 |    99/  319 batches | lr_step  10980 | lr  0.000585 |acc  97.598%| ms/batch 323.94 | loss 0.0058874 
+| epoch  34 |   109/  319 batches | lr_step  10990 | lr  0.000585 |acc  97.695%| ms/batch 319.74 | loss 0.0053076 
+| epoch  34 |   119/  319 batches | lr_step  11000 | lr  0.000584 |acc  97.676%| ms/batch 307.48 | loss 0.0050807 
+| epoch  34 |   129/  319 batches | lr_step  11010 | lr  0.000584 |acc  97.480%| ms/batch 294.11 | loss 0.0059762 
+| epoch  34 |   139/  319 batches | lr_step  11020 | lr  0.000584 |acc  97.773%| ms/batch 329.78 | loss 0.0051466 
+| epoch  34 |   149/  319 batches | lr_step  11030 | lr  0.000584 |acc  97.871%| ms/batch 288.83 | loss 0.0050994 
+| epoch  34 |   159/  319 batches | lr_step  11040 | lr  0.000583 |acc  97.637%| ms/batch 333.58 | loss 0.0058755 
+| epoch  34 |   169/  319 batches | lr_step  11050 | lr  0.000583 |acc  97.578%| ms/batch 318.73 | loss 0.0057175 
+| epoch  34 |   179/  319 batches | lr_step  11060 | lr  0.000583 |acc  97.930%| ms/batch 328.64 | loss 0.0055351 
+| epoch  34 |   189/  319 batches | lr_step  11070 | lr  0.000582 |acc  97.520%| ms/batch 326.59 | loss 0.0057077 
+| epoch  34 |   199/  319 batches | lr_step  11080 | lr  0.000582 |acc  97.930%| ms/batch 288.34 | loss 0.0052666 
+| epoch  34 |   209/  319 batches | lr_step  11090 | lr  0.000582 |acc  97.480%| ms/batch 291.62 | loss 0.0064254 
+| epoch  34 |   219/  319 batches | lr_step  11100 | lr  0.000582 |acc  97.520%| ms/batch 303.49 | loss 0.0055799 
+| epoch  34 |   229/  319 batches | lr_step  11110 | lr  0.000581 |acc  98.008%| ms/batch 288.23 | loss 0.0050663 
+| epoch  34 |   239/  319 batches | lr_step  11120 | lr  0.000581 |acc  97.695%| ms/batch 301.04 | loss 0.0053852 
+| epoch  34 |   249/  319 batches | lr_step  11130 | lr  0.000581 |acc  97.656%| ms/batch 304.92 | loss 0.0056902 
+| epoch  34 |   259/  319 batches | lr_step  11140 | lr  0.000581 |acc  97.695%| ms/batch 308.94 | loss 0.0056092 
+| epoch  34 |   269/  319 batches | lr_step  11150 | lr  0.000580 |acc  98.066%| ms/batch 301.79 | loss 0.0048189 
+| epoch  34 |   279/  319 batches | lr_step  11160 | lr  0.000580 |acc  97.832%| ms/batch 291.72 | loss 0.0047035 
+| epoch  34 |   289/  319 batches | lr_step  11170 | lr  0.000580 |acc  97.988%| ms/batch 285.54 | loss 0.0052722 
+| epoch  34 |   299/  319 batches | lr_step  11180 | lr  0.000580 |acc  97.812%| ms/batch 347.36 | loss 0.0054297 
+| epoch  34 |   309/  319 batches | lr_step  11190 | lr  0.000579 |acc  97.422%| ms/batch 298.70 | loss 0.0062106 
+| epoch  34 |   319/  319 batches | lr_step  11200 | lr  0.000579 |acc  125.077%| ms/batch 293.65 | loss 0.0059896 
+Pred: tensor([ 6,  7,  8,  9, 10,  0,  0]) and tensor([ 6, 11,  0,  0,  0,  0,  0]), tensor([ 6, 11,  0,  0,  0,  0,  0])
+Tar: tensor([[ 6,  7,  8,  9, 10,  0,  0],
+        [ 6, 11,  0,  0,  0,  0,  0],
+        [ 6, 11,  0,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  34 | time: 100.60s | valid acc 89.786%| Best Model from Epoch 19 with 99.323%
+-----------------------------------------------------------------------------------------
+Pred: tensor([ 6,  7,  8,  9, 10,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0]) and tensor([ 6,  7,  8,  9, 11,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0]), tensor([ 6, 11,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0])
+Tar: tensor([[ 6,  7,  8,  9, 10,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0],
+        [ 6,  7,  8,  9, 11,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0],
+        [ 6, 11,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0]])
+=========================================================================================
+| End of training | test loss 69.00 | test acc 99.50% | Best Model from Epoch 19
+=========================================================================================

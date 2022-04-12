@@ -1,0 +1,19 @@
+-----------------------------------------------------------------------------------------
+Parameter Settings:
+EIUES:                            0.25
+Ratio uncertain traces:           0.2
+
+Type:                             encoder_GREEDY
+No. warmup steps:                 12305
+LR factor                         0.38353 
+Embedding dimension:              64
+Dimension of feedforward network: 1024
+Number of transformer layers:     3
+Number of attentions heads:       8
+Dropout:                          0.404889
+Total number of epochs:           150
+-----------------------------------------------------------------------------------------
+Pred: tensor([ 7, 11,  8,  9, 10,  6,  0,  0]) and tensor([13, 14, 16, 15, 12,  0,  0,  0]), tensor([ 7, 11,  6,  8,  6,  9,  0,  0])
+Tar: tensor([[ 7, 11,  8,  9, 10,  6,  0,  0],
+        [16, 13, 14, 15, 12,  0,  0,  0],
+        [ 7, 11,  6,  6,  8,  9,  0,  0]])

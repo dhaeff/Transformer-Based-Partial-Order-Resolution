@@ -1,0 +1,61 @@
+
+141204
+9166
+9166
+0 ['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Payment'] (['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Payment'], 0.058256140052689726) ['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Payment']
+250 ['Create Fine', 'Payment'] (['Create Fine', 'Payment'], 0.2943896773462508) ['Create Fine', 'Payment']
+500 ['Create Fine', 'Payment'] (['Create Fine', 'Payment'], 0.2943896773462508) ['Create Fine', 'Payment']
+750 ['Create Fine', 'Payment'] (['Create Fine', 'Payment'], 0.2943896773462508) ['Create Fine', 'Payment']
+1000 ['Create Fine', 'Payment'] (['Create Fine', 'Payment'], 0.2943896773462508) ['Create Fine', 'Payment']
+1250 ['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Send for Credit Collection'] (['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Send for Credit Collection'], 0.3852723718874819) ['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Send for Credit Collection']
+1500 ['Create Fine', 'Payment'] (['Create Fine', 'Payment'], 0.2943896773462508) ['Create Fine', 'Payment']
+1750 ['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Send for Credit Collection'] (['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Send for Credit Collection'], 0.3852723718874819) ['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Send for Credit Collection']
+2000 ['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Send for Credit Collection'] (['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Send for Credit Collection'], 0.3852723718874819) ['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Send for Credit Collection']
+2250 ['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Send for Credit Collection'] (['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Send for Credit Collection'], 0.3852723718874819) ['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Send for Credit Collection']
+2500 ['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Send for Credit Collection'] (['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Send for Credit Collection'], 0.3852723718874819) ['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Send for Credit Collection']
+2750 ['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Payment'] (['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Payment'], 0.058256140052689726) ['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Payment']
+3000 ['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Insert Date Appeal to Prefecture', 'Add penalty', 'Send Appeal to Prefecture'] (['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Insert Date Appeal to Prefecture', 'Add penalty', 'Send Appeal to Prefecture'], 0.016401801648678507) ['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Insert Date Appeal to Prefecture', 'Add penalty', 'Send Appeal to Prefecture']
+3250 ['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Payment'] (['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Payment'], 0.058256140052689726) ['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Payment']
+3500 ['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Payment'] (['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Payment'], 0.058256140052689726) ['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Payment']
+3750 ['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Send for Credit Collection'] (['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Send for Credit Collection'], 0.3852723718874819) ['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Send for Credit Collection']
+4000 ['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Send for Credit Collection'] (['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Send for Credit Collection'], 0.3852723718874819) ['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Send for Credit Collection']
+4250 ['Create Fine', 'Payment'] (['Create Fine', 'Payment'], 0.2943896773462508) ['Create Fine', 'Payment']
+4500 ['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Insert Date Appeal to Prefecture', 'Send Appeal to Prefecture'] (['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Insert Date Appeal to Prefecture', 'Add penalty', 'Send Appeal to Prefecture'], 0.016401801648678507) ['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Insert Date Appeal to Prefecture', 'Send Appeal to Prefecture']
+4750 ['Create Fine', 'Payment'] (['Create Fine', 'Payment'], 0.2943896773462508) ['Create Fine', 'Payment']
+5000 ['Create Fine', 'Payment'] (['Create Fine', 'Payment'], 0.2943896773462508) ['Create Fine', 'Payment']
+5250 ['Create Fine', 'Payment'] (['Create Fine', 'Payment'], 0.2943896773462508) ['Create Fine', 'Payment']
+5500 ['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Payment', 'Add penalty', 'Payment'] (['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Payment', 'Add penalty', 'Payment'], 0.02212401914959916) ['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Payment', 'Add penalty', 'Payment']
+5750 ['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Insert Date Appeal to Prefecture', 'Add penalty', 'Send Appeal to Prefecture'] (['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Insert Date Appeal to Prefecture', 'Add penalty', 'Send Appeal to Prefecture'], 0.016401801648678507) ['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Insert Date Appeal to Prefecture', 'Add penalty', 'Send Appeal to Prefecture']
+6000 ['Create Fine', 'Payment'] (['Create Fine', 'Payment'], 0.2943896773462508) ['Create Fine', 'Payment']
+6250 ['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Payment'] (['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Payment'], 0.058256140052689726) ['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Payment']
+6500 ['Create Fine', 'Payment'] (['Create Fine', 'Payment'], 0.2943896773462508) ['Create Fine', 'Payment']
+6750 ['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Payment'] (['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Payment'], 0.058256140052689726) ['Create Fine', 'Send Fine', 'Insert Fine Notification', 'Add penalty', 'Payment']
+7000 ['Create Fine', 'Payment'] (['Create Fine', 'Payment'], 0.2943896773462508) ['Create Fine', 'Payment']
+7250 ['Create Fine', 'Payment'] (['Create Fine', 'Payment'], 0.2943896773462508) ['Create Fine', 'Payment']
+7500 ['Create Fine', 'Payment'] (['Create Fine', 'Payment'], 0.2943896773462508) ['Create Fine', 'Payment']
+7750 ['Create Fine', 'Payment'] (['Create Fine', 'Payment'], 0.2943896773462508) ['Create Fine', 'Payment']
+8000 ['Create Fine', 'Payment'] (['Create Fine', 'Payment'], 0.2943896773462508) ['Create Fine', 'Payment']
+8250 ['Create Fine', 'Payment'] (['Create Fine', 'Payment'], 0.2943896773462508) ['Create Fine', 'Payment']
+8500 ['Create Fine', 'Payment'] (['Create Fine', 'Payment'], 0.2943896773462508) ['Create Fine', 'Payment']
+8750 ['Create Fine', 'Payment'] (['Create Fine', 'Payment'], 0.2943896773462508) ['Create Fine', 'Payment']
+9000 ['Create Fine', 'Payment'] (['Create Fine', 'Payment'], 0.2943896773462508) ['Create Fine', 'Payment']
+
+Accuracy: 0.9857080514946541
+Running experiment on N = 2
+
+Accuracy: 0.9754527602007419
+
+
+
+0
+1000
+2000
+3000
+4000
+5000
+6000
+7000
+8000
+9000
+
+Accuracy: 0.9848352607462361

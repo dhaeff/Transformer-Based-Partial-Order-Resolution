@@ -1,0 +1,669 @@
+-----------------------------------------------------------------------------------------
+Parameter Settings:
+EIUES:                            0.25
+Ratio uncertain traces:           0.2
+
+Type:                             encoder_GREEDY
+No. warmup steps:                 4248.3597891466925
+LR factor                         0.818619156977416 
+Embedding dimension:              256
+Dimension of feedforward network: 1024
+Number of transformer layers:     3
+Number of attentions heads:       8
+Dropout:                          0.404889
+Total number of epochs:           150
+-----------------------------------------------------------------------------------------
+| epoch   0 |    24/  287 batches | lr_step  25 | lr  0.000005 |acc  0.000%| ms/batch 841.01 | loss 2.0123416 
+| epoch   0 |    49/  287 batches | lr_step  50 | lr  0.000009 |acc  0.000%| ms/batch 843.63 | loss 1.8763851 
+| epoch   0 |    74/  287 batches | lr_step  75 | lr  0.000014 |acc  0.000%| ms/batch 843.92 | loss 1.7195705 
+| epoch   0 |    99/  287 batches | lr_step  100 | lr  0.000018 |acc  0.000%| ms/batch 843.23 | loss 1.5981802 
+| epoch   0 |   124/  287 batches | lr_step  125 | lr  0.000023 |acc  0.000%| ms/batch 845.18 | loss 1.4698162 
+| epoch   0 |   149/  287 batches | lr_step  150 | lr  0.000028 |acc  0.000%| ms/batch 831.40 | loss 1.3335904 
+| epoch   0 |   174/  287 batches | lr_step  175 | lr  0.000032 |acc  0.000%| ms/batch 824.40 | loss 1.2547466 
+| epoch   0 |   199/  287 batches | lr_step  200 | lr  0.000037 |acc  0.000%| ms/batch 827.95 | loss 1.2130355 
+| epoch   0 |   224/  287 batches | lr_step  225 | lr  0.000042 |acc  0.000%| ms/batch 839.29 | loss 1.1831242 
+| epoch   0 |   249/  287 batches | lr_step  250 | lr  0.000046 |acc  0.000%| ms/batch 832.34 | loss 1.1612171 
+| epoch   0 |   274/  287 batches | lr_step  275 | lr  0.000051 |acc  0.000%| ms/batch 832.74 | loss 1.1358548 
+Pred: tensor([13, 15, 18, 16, 17, 19, 14,  0,  0,  0]) and tensor([13, 16, 17, 14, 15, 19, 14, 18,  0,  0]), tensor([20, 16, 15, 17, 17, 19,  0,  0,  0,  0])
+Tar: tensor([[13, 18, 15, 16, 17, 19, 14,  0,  0,  0],
+        [13, 16, 17, 14, 15, 19, 14, 18,  0,  0],
+        [20, 16, 15, 17, 17, 19,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch   0 | time: 247.51s | valid acc 47.887%| Best Model from Epoch 0 with  -inf%
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| end of epoch   0 | time: 247.51s | valid acc 47.887%| 
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| epoch   1 |    24/  287 batches | lr_step  313 | lr  0.000058 |acc  0.000%| ms/batch 834.45 | loss 1.1036042 
+| epoch   1 |    49/  287 batches | lr_step  338 | lr  0.000062 |acc  0.000%| ms/batch 836.38 | loss 1.0812996 
+| epoch   1 |    74/  287 batches | lr_step  363 | lr  0.000067 |acc  0.000%| ms/batch 835.83 | loss 1.0585524 
+| epoch   1 |    99/  287 batches | lr_step  388 | lr  0.000072 |acc  0.008%| ms/batch 833.05 | loss 1.0397151 
+| epoch   1 |   124/  287 batches | lr_step  413 | lr  0.000076 |acc  0.039%| ms/batch 835.20 | loss 1.0194891 
+| epoch   1 |   149/  287 batches | lr_step  438 | lr  0.000081 |acc  0.023%| ms/batch 837.03 | loss 1.0029722 
+| epoch   1 |   174/  287 batches | lr_step  463 | lr  0.000086 |acc  0.016%| ms/batch 834.37 | loss 0.9876792 
+| epoch   1 |   199/  287 batches | lr_step  488 | lr  0.000090 |acc  0.023%| ms/batch 834.49 | loss 0.9710663 
+| epoch   1 |   224/  287 batches | lr_step  513 | lr  0.000095 |acc  0.000%| ms/batch 838.20 | loss 0.9611569 
+| epoch   1 |   249/  287 batches | lr_step  538 | lr  0.000099 |acc  0.016%| ms/batch 834.98 | loss 0.9409320 
+| epoch   1 |   274/  287 batches | lr_step  563 | lr  0.000104 |acc  0.039%| ms/batch 834.22 | loss 0.9332370 
+Pred: tensor([ 6,  8, 12,  7,  9, 10,  0,  0,  0,  0]) and tensor([ 6,  7,  9,  8, 10, 11, 12,  0,  0,  0]), tensor([ 6,  7,  9, 10, 11, 12,  0,  0,  0,  0])
+Tar: tensor([[ 6,  8, 12,  7,  9, 10,  0,  0,  0,  0],
+        [ 6,  7,  9,  8, 10, 11, 12,  0,  0,  0],
+        [ 6,  7, 10,  9, 11, 12,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch   1 | time: 247.67s | valid acc 48.682%| Best Model from Epoch 0 with 47.887%
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| end of epoch   1 | time: 247.67s | valid acc 48.682%| 
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| epoch   2 |    24/  287 batches | lr_step  601 | lr  0.000111 |acc  0.062%| ms/batch 839.17 | loss 0.9164037 
+| epoch   2 |    49/  287 batches | lr_step  626 | lr  0.000116 |acc  0.039%| ms/batch 830.88 | loss 0.9031674 
+| epoch   2 |    74/  287 batches | lr_step  651 | lr  0.000120 |acc  0.086%| ms/batch 829.38 | loss 0.8911378 
+| epoch   2 |    99/  287 batches | lr_step  676 | lr  0.000125 |acc  0.141%| ms/batch 824.36 | loss 0.8763405 
+| epoch   2 |   124/  287 batches | lr_step  701 | lr  0.000130 |acc  0.141%| ms/batch 827.20 | loss 0.8622331 
+| epoch   2 |   149/  287 batches | lr_step  726 | lr  0.000134 |acc  0.180%| ms/batch 827.72 | loss 0.8347251 
+| epoch   2 |   174/  287 batches | lr_step  751 | lr  0.000139 |acc  0.250%| ms/batch 826.60 | loss 0.8132667 
+| epoch   2 |   199/  287 batches | lr_step  776 | lr  0.000143 |acc  0.484%| ms/batch 825.45 | loss 0.7827921 
+| epoch   2 |   224/  287 batches | lr_step  801 | lr  0.000148 |acc  0.609%| ms/batch 846.66 | loss 0.7581911 
+| epoch   2 |   249/  287 batches | lr_step  826 | lr  0.000153 |acc  1.008%| ms/batch 853.10 | loss 0.7252686 
+| epoch   2 |   274/  287 batches | lr_step  851 | lr  0.000157 |acc  1.406%| ms/batch 823.64 | loss 0.7022940 
+Pred: tensor([ 6,  8, 10,  7,  9, 12, 11,  0,  0]) and tensor([ 6,  7,  9, 10, 11, 12,  0,  0,  0]), tensor([13, 19, 16, 17, 15, 14, 20,  0,  0])
+Tar: tensor([[ 6,  8, 10,  7,  9, 11, 12,  0,  0],
+        [ 6,  7, 10,  9, 11, 12,  0,  0,  0],
+        [13, 19, 15, 16, 17, 14, 20,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch   2 | time: 246.16s | valid acc 50.472%| Best Model from Epoch 1 with 48.682%
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| end of epoch   2 | time: 246.16s | valid acc 50.472%| 
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| epoch   3 |    24/  287 batches | lr_step  889 | lr  0.000164 |acc  2.180%| ms/batch 826.93 | loss 0.6616785 
+| epoch   3 |    49/  287 batches | lr_step  914 | lr  0.000169 |acc  2.555%| ms/batch 827.92 | loss 0.6419766 
+| epoch   3 |    74/  287 batches | lr_step  939 | lr  0.000173 |acc  3.203%| ms/batch 823.91 | loss 0.6196734 
+| epoch   3 |    99/  287 batches | lr_step  964 | lr  0.000178 |acc  4.305%| ms/batch 820.41 | loss 0.5993371 
+| epoch   3 |   124/  287 batches | lr_step  989 | lr  0.000183 |acc  4.383%| ms/batch 821.87 | loss 0.5761204 
+| epoch   3 |   149/  287 batches | lr_step  1014 | lr  0.000187 |acc  5.688%| ms/batch 826.08 | loss 0.5587534 
+| epoch   3 |   174/  287 batches | lr_step  1039 | lr  0.000192 |acc  6.734%| ms/batch 824.22 | loss 0.5425085 
+| epoch   3 |   199/  287 batches | lr_step  1064 | lr  0.000197 |acc  7.680%| ms/batch 823.58 | loss 0.5234314 
+| epoch   3 |   224/  287 batches | lr_step  1089 | lr  0.000201 |acc  8.023%| ms/batch 825.06 | loss 0.5103302 
+| epoch   3 |   249/  287 batches | lr_step  1114 | lr  0.000206 |acc  9.312%| ms/batch 822.41 | loss 0.4920188 
+| epoch   3 |   274/  287 batches | lr_step  1139 | lr  0.000210 |acc  9.414%| ms/batch 827.14 | loss 0.4818022 
+Pred: tensor([13, 14, 16, 17, 15, 18, 19,  0,  0]) and tensor([ 6,  7,  8,  9, 10, 11,  8, 12,  0]), tensor([18, 16, 14, 15, 17, 13, 19, 16,  0])
+Tar: tensor([[13, 14, 15, 16, 17, 18, 19,  0,  0],
+        [ 6,  7,  8,  9, 10,  8, 11, 12,  0],
+        [18, 16, 14, 15, 17, 13, 19, 16,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch   3 | time: 243.93s | valid acc 48.831%| Best Model from Epoch 2 with 50.472%
+-----------------------------------------------------------------------------------------
+| epoch   4 |    24/  287 batches | lr_step  1177 | lr  0.000217 |acc  11.750%| ms/batch 824.32 | loss 0.4583262 
+| epoch   4 |    49/  287 batches | lr_step  1202 | lr  0.000222 |acc  12.523%| ms/batch 820.81 | loss 0.4438235 
+| epoch   4 |    74/  287 batches | lr_step  1227 | lr  0.000227 |acc  13.016%| ms/batch 821.17 | loss 0.4337365 
+| epoch   4 |    99/  287 batches | lr_step  1252 | lr  0.000231 |acc  13.305%| ms/batch 814.90 | loss 0.4257138 
+| epoch   4 |   124/  287 batches | lr_step  1277 | lr  0.000236 |acc  13.789%| ms/batch 814.51 | loss 0.4193071 
+| epoch   4 |   149/  287 batches | lr_step  1302 | lr  0.000241 |acc  14.727%| ms/batch 814.65 | loss 0.4089104 
+| epoch   4 |   174/  287 batches | lr_step  1327 | lr  0.000245 |acc  14.352%| ms/batch 822.33 | loss 0.4028225 
+| epoch   4 |   199/  287 batches | lr_step  1352 | lr  0.000250 |acc  15.141%| ms/batch 822.77 | loss 0.3966424 
+| epoch   4 |   224/  287 batches | lr_step  1377 | lr  0.000254 |acc  15.875%| ms/batch 820.78 | loss 0.3839362 
+| epoch   4 |   249/  287 batches | lr_step  1402 | lr  0.000259 |acc  16.266%| ms/batch 818.77 | loss 0.3802820 
+| epoch   4 |   274/  287 batches | lr_step  1427 | lr  0.000264 |acc  16.695%| ms/batch 815.83 | loss 0.3747044 
+Pred: tensor([13, 16, 17, 15, 19, 20, 13,  0,  0]) and tensor([ 6,  8,  7,  9, 12, 11, 10,  0,  0]), tensor([ 6,  8, 11,  7,  9, 10, 12,  0,  0])
+Tar: tensor([[13, 16, 17, 15, 19, 20, 13,  0,  0],
+        [ 6,  8,  7, 12,  9, 11, 10,  0,  0],
+        [ 6,  8, 11,  7,  9, 10, 12,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch   4 | time: 242.74s | valid acc 49.727%| Best Model from Epoch 2 with 50.472%
+-----------------------------------------------------------------------------------------
+| epoch   5 |    24/  287 batches | lr_step  1465 | lr  0.000271 |acc  17.898%| ms/batch 820.38 | loss 0.3658357 
+| epoch   5 |    49/  287 batches | lr_step  1490 | lr  0.000275 |acc  17.062%| ms/batch 819.83 | loss 0.3651476 
+| epoch   5 |    74/  287 batches | lr_step  1515 | lr  0.000280 |acc  17.953%| ms/batch 817.46 | loss 0.3562661 
+| epoch   5 |    99/  287 batches | lr_step  1540 | lr  0.000285 |acc  18.250%| ms/batch 819.73 | loss 0.3560462 
+| epoch   5 |   124/  287 batches | lr_step  1565 | lr  0.000289 |acc  18.328%| ms/batch 818.15 | loss 0.3481777 
+| epoch   5 |   149/  287 batches | lr_step  1590 | lr  0.000294 |acc  19.094%| ms/batch 815.18 | loss 0.3457442 
+| epoch   5 |   174/  287 batches | lr_step  1615 | lr  0.000298 |acc  19.000%| ms/batch 820.81 | loss 0.3416095 
+| epoch   5 |   199/  287 batches | lr_step  1640 | lr  0.000303 |acc  18.984%| ms/batch 819.85 | loss 0.3425713 
+| epoch   5 |   224/  287 batches | lr_step  1665 | lr  0.000308 |acc  18.742%| ms/batch 829.27 | loss 0.3407622 
+| epoch   5 |   249/  287 batches | lr_step  1690 | lr  0.000312 |acc  19.422%| ms/batch 1014.59 | loss 0.3370073 
+| epoch   5 |   274/  287 batches | lr_step  1715 | lr  0.000317 |acc  18.953%| ms/batch 866.33 | loss 0.3376106 
+Pred: tensor([13, 16, 17, 15, 18, 19,  0,  0,  0,  0,  0]) and tensor([13, 16, 14, 17, 15, 18, 19, 13,  0,  0,  0]), tensor([ 6,  8,  7,  7, 10,  9, 12,  8, 21,  0,  0])
+Tar: tensor([[13, 16, 17, 15, 18, 19,  0,  0,  0,  0,  0],
+        [13, 14, 16, 17, 15, 18, 19, 13,  0,  0,  0],
+        [ 6,  8,  7,  7, 10,  9, 12,  8, 21,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch   5 | time: 250.30s | valid acc 49.279%| Best Model from Epoch 2 with 50.472%
+-----------------------------------------------------------------------------------------
+| epoch   6 |    24/  287 batches | lr_step  1753 | lr  0.000324 |acc  19.711%| ms/batch 880.93 | loss 0.3342280 
+| epoch   6 |    49/  287 batches | lr_step  1778 | lr  0.000329 |acc  19.914%| ms/batch 907.48 | loss 0.3279159 
+| epoch   6 |    74/  287 batches | lr_step  1803 | lr  0.000333 |acc  19.898%| ms/batch 846.58 | loss 0.3294327 
+| epoch   6 |    99/  287 batches | lr_step  1828 | lr  0.000338 |acc  20.555%| ms/batch 896.13 | loss 0.3234449 
+| epoch   6 |   124/  287 batches | lr_step  1853 | lr  0.000342 |acc  19.922%| ms/batch 853.48 | loss 0.3274047 
+| epoch   6 |   149/  287 batches | lr_step  1878 | lr  0.000347 |acc  19.930%| ms/batch 869.76 | loss 0.3234974 
+| epoch   6 |   174/  287 batches | lr_step  1903 | lr  0.000352 |acc  21.102%| ms/batch 850.61 | loss 0.3179092 
+| epoch   6 |   199/  287 batches | lr_step  1928 | lr  0.000356 |acc  20.305%| ms/batch 862.83 | loss 0.3208025 
+| epoch   6 |   224/  287 batches | lr_step  1953 | lr  0.000361 |acc  20.789%| ms/batch 868.88 | loss 0.3156122 
+| epoch   6 |   249/  287 batches | lr_step  1978 | lr  0.000365 |acc  20.227%| ms/batch 840.27 | loss 0.3211210 
+| epoch   6 |   274/  287 batches | lr_step  2003 | lr  0.000370 |acc  20.867%| ms/batch 859.05 | loss 0.3140728 
+Pred: tensor([12,  7, 10,  9,  8, 11,  6,  0,  0,  0,  0]) and tensor([16, 15, 19, 20,  0,  0,  0,  0,  0,  0,  0]), tensor([ 7,  8,  9, 10, 11, 12,  0,  0,  0,  0,  0])
+Tar: tensor([[12,  7, 10,  9,  8, 11,  6,  0,  0,  0,  0],
+        [16, 15, 19, 20,  0,  0,  0,  0,  0,  0,  0],
+        [ 7,  8,  9, 10, 11, 12,  0,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch   6 | time: 257.16s | valid acc 52.213%| Best Model from Epoch 2 with 50.472%
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| end of epoch   6 | time: 257.16s | valid acc 52.213%| 
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| epoch   7 |    24/  287 batches | lr_step  2041 | lr  0.000377 |acc  20.945%| ms/batch 879.15 | loss 0.3132868 
+| epoch   7 |    49/  287 batches | lr_step  2066 | lr  0.000382 |acc  21.312%| ms/batch 867.59 | loss 0.3109141 
+| epoch   7 |    74/  287 batches | lr_step  2091 | lr  0.000386 |acc  20.898%| ms/batch 1041.62 | loss 0.3145363 
+| epoch   7 |    99/  287 batches | lr_step  2116 | lr  0.000391 |acc  21.062%| ms/batch 886.23 | loss 0.3117775 
+| epoch   7 |   124/  287 batches | lr_step  2141 | lr  0.000396 |acc  20.797%| ms/batch 865.29 | loss 0.3119043 
+| epoch   7 |   149/  287 batches | lr_step  2166 | lr  0.000400 |acc  22.203%| ms/batch 884.64 | loss 0.3072630 
+| epoch   7 |   174/  287 batches | lr_step  2191 | lr  0.000405 |acc  21.234%| ms/batch 847.30 | loss 0.3088388 
+| epoch   7 |   199/  287 batches | lr_step  2216 | lr  0.000409 |acc  21.594%| ms/batch 891.95 | loss 0.3097142 
+| epoch   7 |   224/  287 batches | lr_step  2241 | lr  0.000414 |acc  22.133%| ms/batch 918.27 | loss 0.3033006 
+| epoch   7 |   249/  287 batches | lr_step  2266 | lr  0.000419 |acc  21.609%| ms/batch 998.45 | loss 0.3066229 
+| epoch   7 |   274/  287 batches | lr_step  2291 | lr  0.000423 |acc  22.188%| ms/batch 919.78 | loss 0.3032520 
+Pred: tensor([ 6,  8, 10,  7, 11, 12,  0,  0,  0]) and tensor([ 6, 11,  8, 10,  9,  7, 12,  0,  0]), tensor([14, 19, 17, 16, 18, 15,  0,  0,  0])
+Tar: tensor([[ 6,  8, 10,  7, 11, 12,  0,  0,  0],
+        [ 6, 11,  8,  7, 10,  9, 12,  0,  0],
+        [14, 19, 17, 16, 18, 15,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch   7 | time: 274.75s | valid acc 50.870%| Best Model from Epoch 6 with 52.213%
+-----------------------------------------------------------------------------------------
+| epoch   8 |    24/  287 batches | lr_step  2329 | lr  0.000430 |acc  22.430%| ms/batch 943.66 | loss 0.3018814 
+| epoch   8 |    49/  287 batches | lr_step  2354 | lr  0.000435 |acc  21.477%| ms/batch 856.99 | loss 0.3044673 
+| epoch   8 |    74/  287 batches | lr_step  2379 | lr  0.000440 |acc  22.156%| ms/batch 847.14 | loss 0.3018375 
+| epoch   8 |    99/  287 batches | lr_step  2404 | lr  0.000444 |acc  22.109%| ms/batch 1011.07 | loss 0.3028236 
+| epoch   8 |   124/  287 batches | lr_step  2429 | lr  0.000449 |acc  22.234%| ms/batch 858.07 | loss 0.3012270 
+| epoch   8 |   149/  287 batches | lr_step  2454 | lr  0.000453 |acc  22.422%| ms/batch 874.72 | loss 0.2980806 
+| epoch   8 |   174/  287 batches | lr_step  2479 | lr  0.000458 |acc  22.438%| ms/batch 846.46 | loss 0.2988219 
+| epoch   8 |   199/  287 batches | lr_step  2504 | lr  0.000463 |acc  22.734%| ms/batch 884.84 | loss 0.2995754 
+| epoch   8 |   224/  287 batches | lr_step  2529 | lr  0.000467 |acc  23.062%| ms/batch 860.94 | loss 0.2940546 
+| epoch   8 |   249/  287 batches | lr_step  2554 | lr  0.000472 |acc  22.914%| ms/batch 969.92 | loss 0.3001831 
+| epoch   8 |   274/  287 batches | lr_step  2579 | lr  0.000477 |acc  22.641%| ms/batch 866.41 | loss 0.2958559 
+Pred: tensor([ 6,  8,  7,  9, 10,  8, 12, 21,  0]) and tensor([ 8,  7,  9, 10,  6, 11, 12,  0,  0]), tensor([ 6,  9,  8, 10,  7, 11, 12,  0,  0])
+Tar: tensor([[ 6,  8,  7,  9, 10,  8, 12, 21,  0],
+        [ 8,  7, 10,  9,  6, 11, 12,  0,  0],
+        [ 6,  9,  8, 10,  7, 12, 11,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch   8 | time: 264.08s | valid acc 54.202%| Best Model from Epoch 6 with 52.213%
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| end of epoch   8 | time: 264.08s | valid acc 54.202%| 
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| epoch   9 |    24/  287 batches | lr_step  2617 | lr  0.000484 |acc  23.148%| ms/batch 908.41 | loss 0.2939893 
+| epoch   9 |    49/  287 batches | lr_step  2642 | lr  0.000488 |acc  23.281%| ms/batch 873.15 | loss 0.2954689 
+| epoch   9 |    74/  287 batches | lr_step  2667 | lr  0.000493 |acc  22.711%| ms/batch 844.06 | loss 0.2954037 
+| epoch   9 |    99/  287 batches | lr_step  2692 | lr  0.000497 |acc  23.109%| ms/batch 852.88 | loss 0.2951593 
+| epoch   9 |   124/  287 batches | lr_step  2717 | lr  0.000502 |acc  22.711%| ms/batch 952.88 | loss 0.2945304 
+| epoch   9 |   149/  287 batches | lr_step  2742 | lr  0.000507 |acc  22.969%| ms/batch 871.91 | loss 0.2933580 
+| epoch   9 |   174/  287 batches | lr_step  2767 | lr  0.000511 |acc  23.164%| ms/batch 864.91 | loss 0.2890966 
+| epoch   9 |   199/  287 batches | lr_step  2792 | lr  0.000516 |acc  23.359%| ms/batch 874.04 | loss 0.2902470 
+| epoch   9 |   224/  287 batches | lr_step  2817 | lr  0.000520 |acc  23.914%| ms/batch 861.73 | loss 0.2894512 
+| epoch   9 |   249/  287 batches | lr_step  2842 | lr  0.000525 |acc  23.305%| ms/batch 852.62 | loss 0.2883584 
+| epoch   9 |   274/  287 batches | lr_step  2867 | lr  0.000530 |acc  22.609%| ms/batch 888.96 | loss 0.2922215 
+Pred: tensor([14, 16, 17, 17, 15, 18, 13, 19,  0,  0,  0,  0]) and tensor([13, 16, 14, 15, 17, 18, 19,  0,  0,  0,  0,  0]), tensor([13, 16, 14, 15, 17, 19, 18,  0,  0,  0,  0,  0])
+Tar: tensor([[14, 16, 17, 17, 15, 18, 13, 19,  0,  0,  0,  0],
+        [13, 16, 14, 15, 17, 18, 19,  0,  0,  0,  0,  0],
+        [13, 16, 14, 17, 15, 19, 18,  0,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch   9 | time: 259.60s | valid acc 51.716%| Best Model from Epoch 8 with 54.202%
+-----------------------------------------------------------------------------------------
+| epoch  10 |    24/  287 batches | lr_step  2905 | lr  0.000537 |acc  23.719%| ms/batch 843.54 | loss 0.2890154 
+| epoch  10 |    49/  287 batches | lr_step  2930 | lr  0.000541 |acc  23.328%| ms/batch 830.42 | loss 0.2890272 
+| epoch  10 |    74/  287 batches | lr_step  2955 | lr  0.000546 |acc  23.109%| ms/batch 846.86 | loss 0.2898803 
+| epoch  10 |    99/  287 batches | lr_step  2980 | lr  0.000551 |acc  23.758%| ms/batch 853.12 | loss 0.2868570 
+| epoch  10 |   124/  287 batches | lr_step  3005 | lr  0.000555 |acc  23.430%| ms/batch 941.26 | loss 0.2893883 
+| epoch  10 |   149/  287 batches | lr_step  3030 | lr  0.000560 |acc  23.930%| ms/batch 903.74 | loss 0.2842727 
+| epoch  10 |   174/  287 batches | lr_step  3055 | lr  0.000564 |acc  23.539%| ms/batch 895.14 | loss 0.2872236 
+| epoch  10 |   199/  287 batches | lr_step  3080 | lr  0.000569 |acc  23.359%| ms/batch 922.87 | loss 0.2853835 
+| epoch  10 |   224/  287 batches | lr_step  3105 | lr  0.000574 |acc  23.227%| ms/batch 887.59 | loss 0.2882055 
+| epoch  10 |   249/  287 batches | lr_step  3130 | lr  0.000578 |acc  23.789%| ms/batch 887.81 | loss 0.2875164 
+| epoch  10 |   274/  287 batches | lr_step  3155 | lr  0.000583 |acc  23.734%| ms/batch 937.61 | loss 0.2865453 
+Pred: tensor([ 6, 10,  7,  9,  8, 12, 11,  6,  0,  0]) and tensor([13, 14, 15, 16, 17, 18, 19, 15,  0,  0]), tensor([14, 17, 15, 18,  0,  0,  0,  0,  0,  0])
+Tar: tensor([[ 6, 10,  7,  9,  8, 11, 12,  6,  0,  0],
+        [13, 14, 15, 16, 17, 18, 19, 15,  0,  0],
+        [14, 17, 15, 18,  0,  0,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  10 | time: 262.86s | valid acc 50.820%| Best Model from Epoch 8 with 54.202%
+-----------------------------------------------------------------------------------------
+| epoch  11 |    24/  287 batches | lr_step  3193 | lr  0.000590 |acc  23.945%| ms/batch 863.05 | loss 0.2827878 
+| epoch  11 |    49/  287 batches | lr_step  3218 | lr  0.000595 |acc  24.227%| ms/batch 913.56 | loss 0.2834298 
+| epoch  11 |    74/  287 batches | lr_step  3243 | lr  0.000599 |acc  23.625%| ms/batch 886.19 | loss 0.2840835 
+| epoch  11 |    99/  287 batches | lr_step  3268 | lr  0.000604 |acc  23.500%| ms/batch 936.14 | loss 0.2837592 
+| epoch  11 |   124/  287 batches | lr_step  3293 | lr  0.000608 |acc  23.352%| ms/batch 870.39 | loss 0.2856754 
+| epoch  11 |   149/  287 batches | lr_step  3318 | lr  0.000613 |acc  24.234%| ms/batch 918.61 | loss 0.2813343 
+| epoch  11 |   174/  287 batches | lr_step  3343 | lr  0.000618 |acc  24.289%| ms/batch 811.63 | loss 0.2827119 
+| epoch  11 |   199/  287 batches | lr_step  3368 | lr  0.000622 |acc  23.992%| ms/batch 864.59 | loss 0.2839751 
+| epoch  11 |   224/  287 batches | lr_step  3393 | lr  0.000627 |acc  24.406%| ms/batch 861.69 | loss 0.2810883 
+| epoch  11 |   249/  287 batches | lr_step  3418 | lr  0.000632 |acc  24.992%| ms/batch 1004.16 | loss 0.2809707 
+| epoch  11 |   274/  287 batches | lr_step  3443 | lr  0.000636 |acc  24.461%| ms/batch 925.28 | loss 0.2804222 
+Pred: tensor([ 6,  7,  9,  8, 12, 11,  0,  0,  0,  0,  0]) and tensor([ 6,  9,  8, 10,  7, 12, 11,  0,  0,  0,  0]), tensor([13, 18, 16, 14, 17, 17, 15, 19, 15, 15,  0])
+Tar: tensor([[ 6,  7,  9,  8, 11, 12,  0,  0,  0,  0,  0],
+        [ 6,  9,  8, 10,  7, 11, 12,  0,  0,  0,  0],
+        [13, 18, 16, 17, 14, 17, 15, 19, 15, 15,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  11 | time: 265.56s | valid acc 52.760%| Best Model from Epoch 8 with 54.202%
+-----------------------------------------------------------------------------------------
+| epoch  12 |    24/  287 batches | lr_step  3481 | lr  0.000643 |acc  24.227%| ms/batch 834.41 | loss 0.2793087 
+| epoch  12 |    49/  287 batches | lr_step  3506 | lr  0.000648 |acc  24.281%| ms/batch 831.34 | loss 0.2800767 
+| epoch  12 |    74/  287 batches | lr_step  3531 | lr  0.000652 |acc  24.125%| ms/batch 835.93 | loss 0.2807466 
+| epoch  12 |    99/  287 batches | lr_step  3556 | lr  0.000657 |acc  24.398%| ms/batch 834.69 | loss 0.2808825 
+| epoch  12 |   124/  287 batches | lr_step  3581 | lr  0.000662 |acc  24.531%| ms/batch 834.65 | loss 0.2801568 
+| epoch  12 |   149/  287 batches | lr_step  3606 | lr  0.000666 |acc  24.484%| ms/batch 895.09 | loss 0.2784187 
+| epoch  12 |   174/  287 batches | lr_step  3631 | lr  0.000671 |acc  24.648%| ms/batch 826.31 | loss 0.2783898 
+| epoch  12 |   199/  287 batches | lr_step  3656 | lr  0.000676 |acc  24.773%| ms/batch 826.15 | loss 0.2779588 
+| epoch  12 |   224/  287 batches | lr_step  3681 | lr  0.000680 |acc  23.992%| ms/batch 857.56 | loss 0.2807056 
+| epoch  12 |   249/  287 batches | lr_step  3706 | lr  0.000685 |acc  24.422%| ms/batch 832.89 | loss 0.2805865 
+| epoch  12 |   274/  287 batches | lr_step  3731 | lr  0.000689 |acc  24.219%| ms/batch 815.74 | loss 0.2782234 
+Pred: tensor([19, 16, 14, 17, 15, 13, 18,  0,  0]) and tensor([ 7,  6, 10, 11, 12,  6,  6,  0,  0]), tensor([13, 14, 16, 17, 15, 18, 19, 16,  0])
+Tar: tensor([[19, 16, 14, 17, 15, 13, 18,  0,  0],
+        [ 6,  7, 10, 11, 12,  6,  6,  0,  0],
+        [13, 14, 15, 16, 17, 18, 19, 16,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  12 | time: 248.03s | valid acc 52.660%| Best Model from Epoch 8 with 54.202%
+-----------------------------------------------------------------------------------------
+| epoch  13 |    24/  287 batches | lr_step  3769 | lr  0.000696 |acc  24.422%| ms/batch 828.07 | loss 0.2789104 
+| epoch  13 |    49/  287 batches | lr_step  3794 | lr  0.000701 |acc  24.656%| ms/batch 822.70 | loss 0.2767425 
+| epoch  13 |    74/  287 batches | lr_step  3819 | lr  0.000706 |acc  24.828%| ms/batch 849.86 | loss 0.2805639 
+| epoch  13 |    99/  287 batches | lr_step  3844 | lr  0.000710 |acc  24.828%| ms/batch 861.62 | loss 0.2768421 
+| epoch  13 |   124/  287 batches | lr_step  3869 | lr  0.000715 |acc  24.914%| ms/batch 815.98 | loss 0.2734762 
+| epoch  13 |   149/  287 batches | lr_step  3894 | lr  0.000719 |acc  25.289%| ms/batch 837.77 | loss 0.2735010 
+| epoch  13 |   174/  287 batches | lr_step  3919 | lr  0.000724 |acc  24.375%| ms/batch 833.13 | loss 0.2780540 
+| epoch  13 |   199/  287 batches | lr_step  3944 | lr  0.000729 |acc  24.836%| ms/batch 841.11 | loss 0.2749747 
+| epoch  13 |   224/  287 batches | lr_step  3969 | lr  0.000733 |acc  24.062%| ms/batch 845.15 | loss 0.2787926 
+| epoch  13 |   249/  287 batches | lr_step  3994 | lr  0.000738 |acc  25.250%| ms/batch 839.40 | loss 0.2750702 
+| epoch  13 |   274/  287 batches | lr_step  4019 | lr  0.000743 |acc  25.578%| ms/batch 809.80 | loss 0.2746277 
+Pred: tensor([ 7,  9,  8, 10,  6, 12, 11,  9,  0,  0,  0,  0]) and tensor([18, 16, 17, 14, 19, 13,  0,  0,  0,  0,  0,  0]), tensor([13, 17, 14, 15, 18, 17, 19,  0,  0,  0,  0,  0])
+Tar: tensor([[ 7,  9,  8, 10,  6,  9, 11, 12,  0,  0,  0,  0],
+        [18, 16, 17, 14, 19, 13,  0,  0,  0,  0,  0,  0],
+        [13, 17, 14, 15, 17, 18, 19,  0,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  13 | time: 247.17s | valid acc 53.904%| Best Model from Epoch 8 with 54.202%
+-----------------------------------------------------------------------------------------
+| epoch  14 |    24/  287 batches | lr_step  4057 | lr  0.000750 |acc  25.305%| ms/batch 893.20 | loss 0.2728596 
+| epoch  14 |    49/  287 batches | lr_step  4082 | lr  0.000754 |acc  24.656%| ms/batch 813.94 | loss 0.2750600 
+| epoch  14 |    74/  287 batches | lr_step  4107 | lr  0.000759 |acc  24.867%| ms/batch 805.61 | loss 0.2730433 
+| epoch  14 |    99/  287 batches | lr_step  4132 | lr  0.000763 |acc  25.047%| ms/batch 803.22 | loss 0.2736762 
+| epoch  14 |   124/  287 batches | lr_step  4157 | lr  0.000768 |acc  25.359%| ms/batch 799.98 | loss 0.2724692 
+| epoch  14 |   149/  287 batches | lr_step  4182 | lr  0.000773 |acc  25.094%| ms/batch 805.97 | loss 0.2740774 
+| epoch  14 |   174/  287 batches | lr_step  4207 | lr  0.000777 |acc  25.180%| ms/batch 807.50 | loss 0.2720367 
+| epoch  14 |   199/  287 batches | lr_step  4232 | lr  0.000782 |acc  25.422%| ms/batch 803.27 | loss 0.2762081 
+| epoch  14 |   224/  287 batches | lr_step  4257 | lr  0.000784 |acc  25.266%| ms/batch 807.88 | loss 0.2728384 
+| epoch  14 |   249/  287 batches | lr_step  4282 | lr  0.000782 |acc  25.313%| ms/batch 802.67 | loss 0.2746508 
+| epoch  14 |   274/  287 batches | lr_step  4307 | lr  0.000780 |acc  24.891%| ms/batch 824.00 | loss 0.2756367 
+Pred: tensor([ 6,  9,  8, 10, 12, 21,  6,  0,  0,  0]) and tensor([ 6,  7,  9,  8, 10, 12, 11,  8,  0,  0]), tensor([16, 14, 17, 15, 13, 19, 18,  0,  0,  0])
+Tar: tensor([[ 6,  9,  8, 10, 12, 21,  6,  0,  0,  0],
+        [ 6,  7,  9,  8, 10, 11, 12,  8,  0,  0],
+        [16, 14, 17, 15, 13, 19, 18,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  14 | time: 241.29s | valid acc 52.611%| Best Model from Epoch 8 with 54.202%
+-----------------------------------------------------------------------------------------
+| epoch  15 |    24/  287 batches | lr_step  4345 | lr  0.000776 |acc  25.500%| ms/batch 803.82 | loss 0.2710125 
+| epoch  15 |    49/  287 batches | lr_step  4370 | lr  0.000774 |acc  25.281%| ms/batch 807.04 | loss 0.2705995 
+| epoch  15 |    74/  287 batches | lr_step  4395 | lr  0.000772 |acc  24.875%| ms/batch 807.49 | loss 0.2733968 
+| epoch  15 |    99/  287 batches | lr_step  4420 | lr  0.000770 |acc  25.078%| ms/batch 802.15 | loss 0.2730084 
+| epoch  15 |   124/  287 batches | lr_step  4445 | lr  0.000767 |acc  25.508%| ms/batch 805.00 | loss 0.2724063 
+| epoch  15 |   149/  287 batches | lr_step  4470 | lr  0.000765 |acc  25.523%| ms/batch 807.17 | loss 0.2700668 
+| epoch  15 |   174/  287 batches | lr_step  4495 | lr  0.000763 |acc  25.812%| ms/batch 802.13 | loss 0.2711274 
+| epoch  15 |   199/  287 batches | lr_step  4520 | lr  0.000761 |acc  25.797%| ms/batch 805.18 | loss 0.2698829 
+| epoch  15 |   224/  287 batches | lr_step  4545 | lr  0.000759 |acc  26.438%| ms/batch 810.32 | loss 0.2675821 
+| epoch  15 |   249/  287 batches | lr_step  4570 | lr  0.000757 |acc  25.352%| ms/batch 809.18 | loss 0.2684915 
+| epoch  15 |   274/  287 batches | lr_step  4595 | lr  0.000755 |acc  25.172%| ms/batch 808.08 | loss 0.2729638 
+Pred: tensor([ 8, 10,  7,  9,  6, 12, 21,  0,  0,  0,  0]) and tensor([13, 18, 14, 15, 17, 19, 16,  0,  0,  0,  0]), tensor([13, 14, 16, 15, 17, 19, 16,  0,  0,  0,  0])
+Tar: tensor([[ 8, 10,  7,  9,  6, 12, 21,  0,  0,  0,  0],
+        [13, 18, 14, 15, 17, 19, 16,  0,  0,  0,  0],
+        [13, 14, 16, 15, 17, 19, 16,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  15 | time: 238.92s | valid acc 54.699%| Best Model from Epoch 8 with 54.202%
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| end of epoch  15 | time: 238.92s | valid acc 54.699%| 
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| epoch  16 |    24/  287 batches | lr_step  4633 | lr  0.000752 |acc  25.297%| ms/batch 805.33 | loss 0.2705857 
+| epoch  16 |    49/  287 batches | lr_step  4658 | lr  0.000750 |acc  25.320%| ms/batch 802.58 | loss 0.2694377 
+| epoch  16 |    74/  287 batches | lr_step  4683 | lr  0.000748 |acc  25.336%| ms/batch 816.55 | loss 0.2696741 
+| epoch  16 |    99/  287 batches | lr_step  4708 | lr  0.000746 |acc  25.758%| ms/batch 805.02 | loss 0.2665186 
+| epoch  16 |   124/  287 batches | lr_step  4733 | lr  0.000744 |acc  26.320%| ms/batch 800.53 | loss 0.2680042 
+| epoch  16 |   149/  287 batches | lr_step  4758 | lr  0.000742 |acc  25.906%| ms/batch 804.93 | loss 0.2687961 
+| epoch  16 |   174/  287 batches | lr_step  4783 | lr  0.000740 |acc  25.875%| ms/batch 805.35 | loss 0.2651769 
+| epoch  16 |   199/  287 batches | lr_step  4808 | lr  0.000738 |acc  26.156%| ms/batch 800.79 | loss 0.2677855 
+| epoch  16 |   224/  287 batches | lr_step  4833 | lr  0.000736 |acc  26.312%| ms/batch 805.33 | loss 0.2662125 
+| epoch  16 |   249/  287 batches | lr_step  4858 | lr  0.000734 |acc  26.148%| ms/batch 803.50 | loss 0.2668470 
+| epoch  16 |   274/  287 batches | lr_step  4883 | lr  0.000732 |acc  26.266%| ms/batch 807.54 | loss 0.2644646 
+Pred: tensor([13, 18, 14, 15, 17, 16, 19,  0,  0,  0,  0]) and tensor([14, 19, 16, 17, 15, 13, 18,  0,  0,  0,  0]), tensor([ 6,  9,  8, 10, 11, 12,  6,  0,  0,  0,  0])
+Tar: tensor([[13, 18, 14, 15, 17, 16, 19,  0,  0,  0,  0],
+        [19, 14, 16, 15, 17, 13, 18,  0,  0,  0,  0],
+        [ 6,  9,  8, 10, 11, 12,  6,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  16 | time: 238.81s | valid acc 54.053%| Best Model from Epoch 15 with 54.699%
+-----------------------------------------------------------------------------------------
+| epoch  17 |    24/  287 batches | lr_step  4921 | lr  0.000729 |acc  25.328%| ms/batch 805.77 | loss 0.2671442 
+| epoch  17 |    49/  287 batches | lr_step  4946 | lr  0.000728 |acc  26.305%| ms/batch 806.50 | loss 0.2649903 
+| epoch  17 |    74/  287 batches | lr_step  4971 | lr  0.000726 |acc  26.508%| ms/batch 810.28 | loss 0.2658948 
+| epoch  17 |    99/  287 batches | lr_step  4996 | lr  0.000724 |acc  26.109%| ms/batch 808.68 | loss 0.2672597 
+| epoch  17 |   124/  287 batches | lr_step  5021 | lr  0.000722 |acc  26.242%| ms/batch 805.61 | loss 0.2646168 
+| epoch  17 |   149/  287 batches | lr_step  5046 | lr  0.000720 |acc  26.344%| ms/batch 808.22 | loss 0.2638698 
+| epoch  17 |   174/  287 batches | lr_step  5071 | lr  0.000718 |acc  26.594%| ms/batch 809.81 | loss 0.2634759 
+| epoch  17 |   199/  287 batches | lr_step  5096 | lr  0.000717 |acc  26.484%| ms/batch 804.89 | loss 0.2626970 
+| epoch  17 |   224/  287 batches | lr_step  5121 | lr  0.000715 |acc  26.312%| ms/batch 806.71 | loss 0.2640909 
+| epoch  17 |   249/  287 batches | lr_step  5146 | lr  0.000713 |acc  26.570%| ms/batch 806.31 | loss 0.2647648 
+| epoch  17 |   274/  287 batches | lr_step  5171 | lr  0.000711 |acc  25.859%| ms/batch 798.91 | loss 0.2650475 
+Pred: tensor([13, 16, 17, 14, 15, 19, 20,  0,  0]) and tensor([13, 16, 17, 18, 19,  0,  0,  0,  0]), tensor([14, 20, 15, 16, 17, 19,  0,  0,  0])
+Tar: tensor([[13, 16, 17, 15, 14, 19, 20,  0,  0],
+        [13, 16, 17, 18, 19,  0,  0,  0,  0],
+        [20, 14, 15, 16, 17, 19,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  17 | time: 238.94s | valid acc 52.909%| Best Model from Epoch 15 with 54.699%
+-----------------------------------------------------------------------------------------
+| epoch  18 |    24/  287 batches | lr_step  5209 | lr  0.000709 |acc  25.938%| ms/batch 809.00 | loss 0.2639800 
+| epoch  18 |    49/  287 batches | lr_step  5234 | lr  0.000707 |acc  26.875%| ms/batch 808.06 | loss 0.2593316 
+| epoch  18 |    74/  287 batches | lr_step  5259 | lr  0.000706 |acc  27.008%| ms/batch 798.34 | loss 0.2602500 
+| epoch  18 |    99/  287 batches | lr_step  5284 | lr  0.000704 |acc  26.328%| ms/batch 806.01 | loss 0.2655996 
+| epoch  18 |   124/  287 batches | lr_step  5309 | lr  0.000702 |acc  26.852%| ms/batch 801.44 | loss 0.2616551 
+| epoch  18 |   149/  287 batches | lr_step  5334 | lr  0.000701 |acc  25.508%| ms/batch 808.16 | loss 0.2648442 
+| epoch  18 |   174/  287 batches | lr_step  5359 | lr  0.000699 |acc  27.133%| ms/batch 802.79 | loss 0.2612555 
+| epoch  18 |   199/  287 batches | lr_step  5384 | lr  0.000697 |acc  26.805%| ms/batch 807.17 | loss 0.2607525 
+| epoch  18 |   224/  287 batches | lr_step  5409 | lr  0.000696 |acc  26.656%| ms/batch 801.93 | loss 0.2622333 
+| epoch  18 |   249/  287 batches | lr_step  5434 | lr  0.000694 |acc  27.078%| ms/batch 811.76 | loss 0.2600486 
+| epoch  18 |   274/  287 batches | lr_step  5459 | lr  0.000692 |acc  26.781%| ms/batch 803.30 | loss 0.2623139 
+Pred: tensor([ 6, 10,  7,  9,  8, 11, 10, 12,  0,  0,  0]) and tensor([ 6,  7, 10,  9, 11, 12,  0,  0,  0,  0,  0]), tensor([13, 16, 18, 14, 15, 17, 19,  0,  0,  0,  0])
+Tar: tensor([[ 6, 10,  7,  9,  8, 11, 10, 12,  0,  0,  0],
+        [ 6,  7, 10,  9, 11, 12,  0,  0,  0,  0,  0],
+        [13, 16, 18, 14, 15, 19, 17,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  18 | time: 238.89s | valid acc 56.091%| Best Model from Epoch 15 with 54.699%
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| end of epoch  18 | time: 238.89s | valid acc 56.091%| 
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| epoch  19 |    24/  287 batches | lr_step  5497 | lr  0.000690 |acc  26.992%| ms/batch 806.09 | loss 0.2584449 
+| epoch  19 |    49/  287 batches | lr_step  5522 | lr  0.000689 |acc  26.562%| ms/batch 802.31 | loss 0.2620853 
+| epoch  19 |    74/  287 batches | lr_step  5547 | lr  0.000687 |acc  27.430%| ms/batch 806.84 | loss 0.2588803 
+| epoch  19 |    99/  287 batches | lr_step  5572 | lr  0.000685 |acc  27.234%| ms/batch 800.40 | loss 0.2610916 
+| epoch  19 |   124/  287 batches | lr_step  5597 | lr  0.000684 |acc  27.750%| ms/batch 798.31 | loss 0.2589603 
+| epoch  19 |   149/  287 batches | lr_step  5622 | lr  0.000682 |acc  26.867%| ms/batch 804.81 | loss 0.2608592 
+| epoch  19 |   174/  287 batches | lr_step  5647 | lr  0.000681 |acc  27.148%| ms/batch 801.70 | loss 0.2586251 
+| epoch  19 |   199/  287 batches | lr_step  5672 | lr  0.000679 |acc  26.703%| ms/batch 803.50 | loss 0.2597384 
+| epoch  19 |   224/  287 batches | lr_step  5697 | lr  0.000678 |acc  27.391%| ms/batch 806.49 | loss 0.2575173 
+| epoch  19 |   249/  287 batches | lr_step  5722 | lr  0.000676 |acc  27.250%| ms/batch 799.39 | loss 0.2600570 
+| epoch  19 |   274/  287 batches | lr_step  5747 | lr  0.000675 |acc  26.656%| ms/batch 807.05 | loss 0.2615817 
+Pred: tensor([13, 16, 14, 15, 17, 14, 19,  0,  0]) and tensor([ 7,  9,  8, 10, 11, 12,  6,  6,  0]), tensor([ 8,  7,  9, 10,  6, 12, 11,  0,  0])
+Tar: tensor([[13, 16, 14, 15, 17, 14, 19,  0,  0],
+        [ 7,  9,  8, 10, 11, 12,  6,  6,  0],
+        [ 8,  7,  9, 10,  6, 11, 12,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  19 | time: 238.24s | valid acc 52.064%| Best Model from Epoch 18 with 56.091%
+-----------------------------------------------------------------------------------------
+| epoch  20 |    24/  287 batches | lr_step  5785 | lr  0.000673 |acc  26.750%| ms/batch 801.02 | loss 0.2615052 
+| epoch  20 |    49/  287 batches | lr_step  5810 | lr  0.000671 |acc  27.281%| ms/batch 800.51 | loss 0.2563588 
+| epoch  20 |    74/  287 batches | lr_step  5835 | lr  0.000670 |acc  26.844%| ms/batch 800.38 | loss 0.2599314 
+| epoch  20 |    99/  287 batches | lr_step  5860 | lr  0.000668 |acc  26.875%| ms/batch 802.74 | loss 0.2581592 
+| epoch  20 |   124/  287 batches | lr_step  5885 | lr  0.000667 |acc  27.945%| ms/batch 802.22 | loss 0.2571816 
+| epoch  20 |   149/  287 batches | lr_step  5910 | lr  0.000666 |acc  26.797%| ms/batch 800.92 | loss 0.2592084 
+| epoch  20 |   174/  287 batches | lr_step  5935 | lr  0.000664 |acc  27.062%| ms/batch 802.54 | loss 0.2580735 
+| epoch  20 |   199/  287 batches | lr_step  5960 | lr  0.000663 |acc  27.172%| ms/batch 800.64 | loss 0.2545927 
+| epoch  20 |   224/  287 batches | lr_step  5985 | lr  0.000661 |acc  27.602%| ms/batch 804.07 | loss 0.2570215 
+| epoch  20 |   249/  287 batches | lr_step  6010 | lr  0.000660 |acc  27.500%| ms/batch 803.95 | loss 0.2569104 
+| epoch  20 |   274/  287 batches | lr_step  6035 | lr  0.000659 |acc  27.969%| ms/batch 800.82 | loss 0.2554662 
+Pred: tensor([13, 17, 15, 16, 19,  0,  0,  0,  0,  0]) and tensor([17, 16, 14, 15, 13, 19, 20,  0,  0,  0]), tensor([ 6,  9,  8, 10, 11, 12,  0,  0,  0,  0])
+Tar: tensor([[13, 17, 15, 16, 19,  0,  0,  0,  0,  0],
+        [17, 16, 14, 15, 13, 19, 20,  0,  0,  0],
+        [ 6,  9,  8, 10, 11, 12,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  20 | time: 237.43s | valid acc 53.904%| Best Model from Epoch 18 with 56.091%
+-----------------------------------------------------------------------------------------
+| epoch  21 |    24/  287 batches | lr_step  6073 | lr  0.000657 |acc  27.234%| ms/batch 811.87 | loss 0.2563596 
+| epoch  21 |    49/  287 batches | lr_step  6098 | lr  0.000655 |acc  27.234%| ms/batch 803.82 | loss 0.2573651 
+| epoch  21 |    74/  287 batches | lr_step  6123 | lr  0.000654 |acc  27.227%| ms/batch 805.91 | loss 0.2571888 
+| epoch  21 |    99/  287 batches | lr_step  6148 | lr  0.000653 |acc  27.000%| ms/batch 802.43 | loss 0.2574546 
+| epoch  21 |   124/  287 batches | lr_step  6173 | lr  0.000651 |acc  27.398%| ms/batch 804.65 | loss 0.2561658 
+| epoch  21 |   149/  287 batches | lr_step  6198 | lr  0.000650 |acc  27.766%| ms/batch 804.56 | loss 0.2535896 
+| epoch  21 |   174/  287 batches | lr_step  6223 | lr  0.000649 |acc  27.570%| ms/batch 807.33 | loss 0.2556034 
+| epoch  21 |   199/  287 batches | lr_step  6248 | lr  0.000647 |acc  27.398%| ms/batch 802.25 | loss 0.2566957 
+| epoch  21 |   224/  287 batches | lr_step  6273 | lr  0.000646 |acc  28.172%| ms/batch 805.25 | loss 0.2530713 
+| epoch  21 |   249/  287 batches | lr_step  6298 | lr  0.000645 |acc  28.000%| ms/batch 806.17 | loss 0.2548531 
+| epoch  21 |   274/  287 batches | lr_step  6323 | lr  0.000643 |acc  27.742%| ms/batch 795.97 | loss 0.2569186 
+Pred: tensor([13, 14, 15, 16, 17, 19, 18,  0,  0,  0,  0,  0]) and tensor([13, 16, 14, 15, 17, 19, 20,  0,  0,  0,  0,  0]), tensor([13, 16, 14, 17, 15, 17, 19, 20,  0,  0,  0,  0])
+Tar: tensor([[13, 14, 15, 16, 17, 19, 18,  0,  0,  0,  0,  0],
+        [13, 16, 14, 15, 17, 19, 20,  0,  0,  0,  0,  0],
+        [13, 16, 14, 17, 15, 17, 19, 20,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  21 | time: 238.63s | valid acc 53.108%| Best Model from Epoch 18 with 56.091%
+-----------------------------------------------------------------------------------------
+| epoch  22 |    24/  287 batches | lr_step  6361 | lr  0.000642 |acc  27.359%| ms/batch 805.53 | loss 0.2536865 
+| epoch  22 |    49/  287 batches | lr_step  6386 | lr  0.000640 |acc  28.227%| ms/batch 805.37 | loss 0.2526658 
+| epoch  22 |    74/  287 batches | lr_step  6411 | lr  0.000639 |acc  27.383%| ms/batch 803.30 | loss 0.2549100 
+| epoch  22 |    99/  287 batches | lr_step  6436 | lr  0.000638 |acc  28.195%| ms/batch 805.53 | loss 0.2544559 
+| epoch  22 |   124/  287 batches | lr_step  6461 | lr  0.000637 |acc  28.133%| ms/batch 803.80 | loss 0.2517137 
+| epoch  22 |   149/  287 batches | lr_step  6486 | lr  0.000635 |acc  27.391%| ms/batch 807.32 | loss 0.2568911 
+| epoch  22 |   174/  287 batches | lr_step  6511 | lr  0.000634 |acc  27.211%| ms/batch 805.73 | loss 0.2574626 
+| epoch  22 |   199/  287 batches | lr_step  6536 | lr  0.000633 |acc  27.266%| ms/batch 800.08 | loss 0.2550967 
+| epoch  22 |   224/  287 batches | lr_step  6561 | lr  0.000632 |acc  28.156%| ms/batch 812.69 | loss 0.2520480 
+| epoch  22 |   249/  287 batches | lr_step  6586 | lr  0.000630 |acc  27.883%| ms/batch 801.12 | loss 0.2516819 
+| epoch  22 |   274/  287 batches | lr_step  6611 | lr  0.000629 |acc  27.711%| ms/batch 803.05 | loss 0.2542115 
+Pred: tensor([ 6,  7,  8,  9, 12, 11,  0,  0,  0]) and tensor([13, 16, 17, 14, 18, 19,  0,  0,  0]), tensor([ 6,  7,  9, 12, 10,  8, 21,  0,  0])
+Tar: tensor([[ 6,  7,  8,  9, 12, 11,  0,  0,  0],
+        [13, 16, 17, 14, 19, 18,  0,  0,  0],
+        [ 6,  7,  9, 12, 10,  8, 21,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  22 | time: 238.63s | valid acc 52.909%| Best Model from Epoch 18 with 56.091%
+-----------------------------------------------------------------------------------------
+| epoch  23 |    24/  287 batches | lr_step  6649 | lr  0.000627 |acc  28.547%| ms/batch 801.71 | loss 0.2502979 
+| epoch  23 |    49/  287 batches | lr_step  6674 | lr  0.000626 |acc  27.227%| ms/batch 798.96 | loss 0.2528076 
+| epoch  23 |    74/  287 batches | lr_step  6699 | lr  0.000625 |acc  28.211%| ms/batch 802.42 | loss 0.2527095 
+| epoch  23 |    99/  287 batches | lr_step  6724 | lr  0.000624 |acc  27.922%| ms/batch 802.77 | loss 0.2543335 
+| epoch  23 |   124/  287 batches | lr_step  6749 | lr  0.000623 |acc  27.656%| ms/batch 807.36 | loss 0.2541453 
+| epoch  23 |   149/  287 batches | lr_step  6774 | lr  0.000622 |acc  28.172%| ms/batch 806.00 | loss 0.2533047 
+| epoch  23 |   174/  287 batches | lr_step  6799 | lr  0.000620 |acc  28.094%| ms/batch 804.37 | loss 0.2544974 
+| epoch  23 |   199/  287 batches | lr_step  6824 | lr  0.000619 |acc  27.055%| ms/batch 800.79 | loss 0.2539698 
+| epoch  23 |   224/  287 batches | lr_step  6849 | lr  0.000618 |acc  27.492%| ms/batch 809.06 | loss 0.2535923 
+| epoch  23 |   249/  287 batches | lr_step  6874 | lr  0.000617 |acc  28.953%| ms/batch 805.74 | loss 0.2473971 
+| epoch  23 |   274/  287 batches | lr_step  6899 | lr  0.000616 |acc  28.070%| ms/batch 803.82 | loss 0.2490994 
+Pred: tensor([ 6,  9,  8, 10, 11, 12,  9,  0,  0]) and tensor([13, 16, 14, 17, 15, 19, 14, 20,  0]), tensor([ 6,  7,  8,  9, 10,  7, 12, 21,  6])
+Tar: tensor([[ 6,  9,  8, 10, 12, 11,  9,  0,  0],
+        [13, 16, 14, 17, 15, 19, 14, 20,  0],
+        [ 6,  7,  9,  8, 10,  7, 12, 21,  6]])
+-----------------------------------------------------------------------------------------
+| end of epoch  23 | time: 238.06s | valid acc 54.252%| Best Model from Epoch 18 with 56.091%
+-----------------------------------------------------------------------------------------
+| epoch  24 |    24/  287 batches | lr_step  6937 | lr  0.000614 |acc  28.617%| ms/batch 806.90 | loss 0.2500760 
+| epoch  24 |    49/  287 batches | lr_step  6962 | lr  0.000613 |acc  28.258%| ms/batch 803.84 | loss 0.2501409 
+| epoch  24 |    74/  287 batches | lr_step  6987 | lr  0.000612 |acc  28.023%| ms/batch 809.74 | loss 0.2528233 
+| epoch  24 |    99/  287 batches | lr_step  7012 | lr  0.000611 |acc  27.961%| ms/batch 808.22 | loss 0.2500224 
+| epoch  24 |   124/  287 batches | lr_step  7037 | lr  0.000610 |acc  29.242%| ms/batch 803.94 | loss 0.2470401 
+| epoch  24 |   149/  287 batches | lr_step  7062 | lr  0.000609 |acc  27.984%| ms/batch 803.31 | loss 0.2529788 
+| epoch  24 |   174/  287 batches | lr_step  7087 | lr  0.000608 |acc  27.578%| ms/batch 807.94 | loss 0.2535973 
+| epoch  24 |   199/  287 batches | lr_step  7112 | lr  0.000607 |acc  28.023%| ms/batch 802.49 | loss 0.2516693 
+| epoch  24 |   224/  287 batches | lr_step  7137 | lr  0.000606 |acc  28.266%| ms/batch 806.03 | loss 0.2515385 
+| epoch  24 |   249/  287 batches | lr_step  7162 | lr  0.000605 |acc  27.953%| ms/batch 806.92 | loss 0.2495596 
+| epoch  24 |   274/  287 batches | lr_step  7187 | lr  0.000604 |acc  28.000%| ms/batch 803.74 | loss 0.2488563 
+Pred: tensor([ 6,  8, 10,  7,  9, 12, 21,  0,  0,  0]) and tensor([12,  8,  7, 10,  9,  6,  0,  0,  0,  0]), tensor([ 6,  8,  7,  9, 12, 11, 10,  0,  0,  0])
+Tar: tensor([[ 6,  8, 10,  7,  9, 12, 21,  0,  0,  0],
+        [12,  7,  8, 10,  9,  6,  0,  0,  0,  0],
+        [ 6,  8,  7, 12,  9, 11, 10,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  24 | time: 238.59s | valid acc 54.699%| Best Model from Epoch 18 with 56.091%
+-----------------------------------------------------------------------------------------
+| epoch  25 |    24/  287 batches | lr_step  7225 | lr  0.000602 |acc  28.789%| ms/batch 805.35 | loss 0.2497832 
+| epoch  25 |    49/  287 batches | lr_step  7250 | lr  0.000601 |acc  29.047%| ms/batch 800.62 | loss 0.2466928 
+| epoch  25 |    74/  287 batches | lr_step  7275 | lr  0.000600 |acc  28.062%| ms/batch 801.42 | loss 0.2500890 
+| epoch  25 |    99/  287 batches | lr_step  7300 | lr  0.000599 |acc  27.945%| ms/batch 836.95 | loss 0.2495842 
+| epoch  25 |   124/  287 batches | lr_step  7325 | lr  0.000598 |acc  28.086%| ms/batch 803.05 | loss 0.2511221 
+| epoch  25 |   149/  287 batches | lr_step  7350 | lr  0.000597 |acc  28.422%| ms/batch 804.18 | loss 0.2517198 
+| epoch  25 |   174/  287 batches | lr_step  7375 | lr  0.000596 |acc  28.781%| ms/batch 805.96 | loss 0.2490184 
+| epoch  25 |   199/  287 batches | lr_step  7400 | lr  0.000595 |acc  27.953%| ms/batch 802.28 | loss 0.2518337 
+| epoch  25 |   224/  287 batches | lr_step  7425 | lr  0.000594 |acc  28.563%| ms/batch 805.79 | loss 0.2499748 
+| epoch  25 |   249/  287 batches | lr_step  7450 | lr  0.000593 |acc  29.141%| ms/batch 802.66 | loss 0.2467212 
+| epoch  25 |   274/  287 batches | lr_step  7475 | lr  0.000592 |acc  28.125%| ms/batch 795.87 | loss 0.2486244 
+Pred: tensor([13, 14, 16, 17, 15, 19, 18,  0,  0]) and tensor([13, 16, 14, 15, 17, 18, 15,  0,  0]), tensor([ 6,  8,  7,  9, 10, 12, 21,  9,  0])
+Tar: tensor([[13, 14, 15, 16, 17, 19, 18,  0,  0],
+        [13, 14, 16, 15, 17, 18, 15,  0,  0],
+        [ 6,  7,  8,  9, 10,  9, 12, 21,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  25 | time: 238.65s | valid acc 52.859%| Best Model from Epoch 18 with 56.091%
+-----------------------------------------------------------------------------------------
+| epoch  26 |    24/  287 batches | lr_step  7513 | lr  0.000590 |acc  28.289%| ms/batch 807.16 | loss 0.2484877 
+| epoch  26 |    49/  287 batches | lr_step  7538 | lr  0.000589 |acc  28.523%| ms/batch 805.68 | loss 0.2522305 
+| epoch  26 |    74/  287 batches | lr_step  7563 | lr  0.000588 |acc  27.633%| ms/batch 799.67 | loss 0.2500699 
+| epoch  26 |    99/  287 batches | lr_step  7588 | lr  0.000587 |acc  29.500%| ms/batch 802.44 | loss 0.2476169 
+| epoch  26 |   124/  287 batches | lr_step  7613 | lr  0.000586 |acc  28.789%| ms/batch 801.82 | loss 0.2472420 
+| epoch  26 |   149/  287 batches | lr_step  7638 | lr  0.000585 |acc  28.875%| ms/batch 802.30 | loss 0.2487714 
+| epoch  26 |   174/  287 batches | lr_step  7663 | lr  0.000584 |acc  28.539%| ms/batch 805.13 | loss 0.2474145 
+| epoch  26 |   199/  287 batches | lr_step  7688 | lr  0.000584 |acc  29.172%| ms/batch 798.55 | loss 0.2436453 
+| epoch  26 |   224/  287 batches | lr_step  7713 | lr  0.000583 |acc  28.883%| ms/batch 800.30 | loss 0.2469751 
+| epoch  26 |   249/  287 batches | lr_step  7738 | lr  0.000582 |acc  29.422%| ms/batch 803.03 | loss 0.2441735 
+| epoch  26 |   274/  287 batches | lr_step  7763 | lr  0.000581 |acc  28.578%| ms/batch 803.42 | loss 0.2499698 
+Pred: tensor([13, 14, 15, 16, 17, 18, 19,  0,  0,  0]) and tensor([14, 15, 17, 13, 19, 18, 15,  0,  0,  0]), tensor([13, 14, 16, 17, 18, 19, 13,  0,  0,  0])
+Tar: tensor([[13, 14, 16, 15, 17, 18, 19,  0,  0,  0],
+        [14, 15, 17, 13, 19, 18, 15,  0,  0,  0],
+        [13, 16, 14, 17, 18, 19, 13,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  26 | time: 238.03s | valid acc 54.401%| Best Model from Epoch 18 with 56.091%
+-----------------------------------------------------------------------------------------
+| epoch  27 |    24/  287 batches | lr_step  7801 | lr  0.000579 |acc  29.445%| ms/batch 809.36 | loss 0.2465408 
+| epoch  27 |    49/  287 batches | lr_step  7826 | lr  0.000578 |acc  28.375%| ms/batch 802.76 | loss 0.2478956 
+| epoch  27 |    74/  287 batches | lr_step  7851 | lr  0.000577 |acc  28.969%| ms/batch 805.76 | loss 0.2486783 
+| epoch  27 |    99/  287 batches | lr_step  7876 | lr  0.000577 |acc  28.445%| ms/batch 803.54 | loss 0.2467182 
+| epoch  27 |   124/  287 batches | lr_step  7901 | lr  0.000576 |acc  28.758%| ms/batch 802.42 | loss 0.2453480 
+| epoch  27 |   149/  287 batches | lr_step  7926 | lr  0.000575 |acc  29.734%| ms/batch 805.26 | loss 0.2437302 
+| epoch  27 |   174/  287 batches | lr_step  7951 | lr  0.000574 |acc  30.055%| ms/batch 806.24 | loss 0.2448406 
+| epoch  27 |   199/  287 batches | lr_step  7976 | lr  0.000573 |acc  29.180%| ms/batch 799.40 | loss 0.2489979 
+| epoch  27 |   224/  287 batches | lr_step  8001 | lr  0.000572 |acc  28.820%| ms/batch 805.97 | loss 0.2475521 
+| epoch  27 |   249/  287 batches | lr_step  8026 | lr  0.000571 |acc  28.680%| ms/batch 803.18 | loss 0.2478329 
+| epoch  27 |   274/  287 batches | lr_step  8051 | lr  0.000570 |acc  28.781%| ms/batch 805.67 | loss 0.2451503 
+Pred: tensor([ 6,  8, 10,  7,  9, 12, 11,  0,  0,  0]) and tensor([17, 16, 14, 15, 13, 18, 19,  0,  0,  0]), tensor([13, 16, 17, 14, 15, 19,  0,  0,  0,  0])
+Tar: tensor([[ 6,  8, 10,  7,  9, 12, 11,  0,  0,  0],
+        [17, 16, 19, 18, 15, 13, 14,  0,  0,  0],
+        [13, 16, 17, 14, 15, 19,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  27 | time: 238.42s | valid acc 54.152%| Best Model from Epoch 18 with 56.091%
+-----------------------------------------------------------------------------------------
+| epoch  28 |    24/  287 batches | lr_step  8089 | lr  0.000569 |acc  28.656%| ms/batch 832.66 | loss 0.2453365 
+| epoch  28 |    49/  287 batches | lr_step  8114 | lr  0.000568 |acc  28.930%| ms/batch 820.42 | loss 0.2466605 
+| epoch  28 |    74/  287 batches | lr_step  8139 | lr  0.000567 |acc  28.477%| ms/batch 801.30 | loss 0.2487062 
+| epoch  28 |    99/  287 batches | lr_step  8164 | lr  0.000566 |acc  29.461%| ms/batch 795.39 | loss 0.2466125 
+| epoch  28 |   124/  287 batches | lr_step  8189 | lr  0.000565 |acc  29.188%| ms/batch 800.26 | loss 0.2463094 
+| epoch  28 |   149/  287 batches | lr_step  8214 | lr  0.000565 |acc  29.258%| ms/batch 807.19 | loss 0.2466539 
+| epoch  28 |   174/  287 batches | lr_step  8239 | lr  0.000564 |acc  29.531%| ms/batch 801.32 | loss 0.2444505 
+| epoch  28 |   199/  287 batches | lr_step  8264 | lr  0.000563 |acc  29.141%| ms/batch 855.67 | loss 0.2447462 
+| epoch  28 |   224/  287 batches | lr_step  8289 | lr  0.000562 |acc  29.547%| ms/batch 909.31 | loss 0.2443079 
+| epoch  28 |   249/  287 batches | lr_step  8314 | lr  0.000561 |acc  29.188%| ms/batch 802.26 | loss 0.2477901 
+| epoch  28 |   274/  287 batches | lr_step  8339 | lr  0.000560 |acc  28.828%| ms/batch 798.83 | loss 0.2463992 
+Pred: tensor([ 6,  7,  8,  9, 10, 12, 11,  0,  0,  0]) and tensor([ 6,  8, 10,  7,  9,  8, 11, 12,  0,  0]), tensor([13, 14, 16, 17, 19,  0,  0,  0,  0,  0])
+Tar: tensor([[ 6,  7,  8,  9, 10, 12, 11,  0,  0,  0],
+        [ 6,  8, 10,  7,  9, 11,  8, 12,  0,  0],
+        [13, 14, 16, 17, 19,  0,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  28 | time: 242.73s | valid acc 54.102%| Best Model from Epoch 18 with 56.091%
+-----------------------------------------------------------------------------------------
+| epoch  29 |    24/  287 batches | lr_step  8377 | lr  0.000559 |acc  28.844%| ms/batch 824.47 | loss 0.2460422 
+| epoch  29 |    49/  287 batches | lr_step  8402 | lr  0.000558 |acc  29.617%| ms/batch 867.03 | loss 0.2429230 
+| epoch  29 |    74/  287 batches | lr_step  8427 | lr  0.000557 |acc  29.477%| ms/batch 886.26 | loss 0.2439344 
+| epoch  29 |    99/  287 batches | lr_step  8452 | lr  0.000557 |acc  29.008%| ms/batch 979.97 | loss 0.2439868 
+| epoch  29 |   124/  287 batches | lr_step  8477 | lr  0.000556 |acc  29.766%| ms/batch 875.80 | loss 0.2431576 
+| epoch  29 |   149/  287 batches | lr_step  8502 | lr  0.000555 |acc  29.266%| ms/batch 835.59 | loss 0.2422048 
+| epoch  29 |   174/  287 batches | lr_step  8527 | lr  0.000554 |acc  29.141%| ms/batch 830.26 | loss 0.2460491 
+| epoch  29 |   199/  287 batches | lr_step  8552 | lr  0.000553 |acc  29.500%| ms/batch 820.85 | loss 0.2434507 
+| epoch  29 |   224/  287 batches | lr_step  8577 | lr  0.000552 |acc  29.281%| ms/batch 820.45 | loss 0.2460508 
+| epoch  29 |   249/  287 batches | lr_step  8602 | lr  0.000552 |acc  29.547%| ms/batch 815.90 | loss 0.2430375 
+| epoch  29 |   274/  287 batches | lr_step  8627 | lr  0.000551 |acc  28.406%| ms/batch 827.07 | loss 0.2455878 
+Pred: tensor([13, 14, 15, 16, 17, 18, 19,  0,  0,  0]) and tensor([ 6,  7,  9,  8, 10, 11, 12,  6,  0,  0]), tensor([ 9, 10,  6,  6,  7,  0,  0,  0,  0,  0])
+Tar: tensor([[13, 14, 15, 16, 17, 18, 19,  0,  0,  0],
+        [ 6,  7,  9,  8, 10, 11, 12,  6,  0,  0],
+        [ 9, 10,  6,  6,  7,  0,  0,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  29 | time: 252.02s | valid acc 54.252%| Best Model from Epoch 18 with 56.091%
+-----------------------------------------------------------------------------------------
+| epoch  30 |    24/  287 batches | lr_step  8665 | lr  0.000550 |acc  29.516%| ms/batch 816.38 | loss 0.2407040 
+| epoch  30 |    49/  287 batches | lr_step  8690 | lr  0.000549 |acc  29.211%| ms/batch 808.28 | loss 0.2437517 
+| epoch  30 |    74/  287 batches | lr_step  8715 | lr  0.000548 |acc  29.516%| ms/batch 819.61 | loss 0.2431833 
+| epoch  30 |    99/  287 batches | lr_step  8740 | lr  0.000547 |acc  29.250%| ms/batch 825.31 | loss 0.2431698 
+| epoch  30 |   124/  287 batches | lr_step  8765 | lr  0.000546 |acc  29.180%| ms/batch 809.28 | loss 0.2451054 
+| epoch  30 |   149/  287 batches | lr_step  8790 | lr  0.000546 |acc  29.203%| ms/batch 819.29 | loss 0.2448617 
+| epoch  30 |   174/  287 batches | lr_step  8815 | lr  0.000545 |acc  29.305%| ms/batch 822.84 | loss 0.2400866 
+| epoch  30 |   199/  287 batches | lr_step  8840 | lr  0.000544 |acc  28.641%| ms/batch 820.25 | loss 0.2458016 
+| epoch  30 |   224/  287 batches | lr_step  8865 | lr  0.000543 |acc  29.953%| ms/batch 817.97 | loss 0.2431519 
+| epoch  30 |   249/  287 batches | lr_step  8890 | lr  0.000543 |acc  29.969%| ms/batch 805.25 | loss 0.2416572 
+| epoch  30 |   274/  287 batches | lr_step  8915 | lr  0.000542 |acc  29.945%| ms/batch 815.06 | loss 0.2427653 
+Pred: tensor([13, 18, 14, 15, 16, 17, 19,  0,  0,  0]) and tensor([ 6,  7,  9,  9,  8, 10, 12, 11,  7,  8]), tensor([13, 16, 17, 14, 15, 17, 19, 20,  0,  0])
+Tar: tensor([[13, 18, 14, 16, 15, 17, 19,  0,  0,  0],
+        [ 6,  7,  9,  9,  8, 10, 12, 11,  8,  7],
+        [13, 16, 17, 14, 15, 17, 19, 20,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  30 | time: 242.03s | valid acc 54.998%| Best Model from Epoch 18 with 56.091%
+-----------------------------------------------------------------------------------------
+| epoch  31 |    24/  287 batches | lr_step  8953 | lr  0.000541 |acc  29.375%| ms/batch 902.22 | loss 0.2439187 
+| epoch  31 |    49/  287 batches | lr_step  8978 | lr  0.000540 |acc  29.312%| ms/batch 843.27 | loss 0.2435781 
+| epoch  31 |    74/  287 batches | lr_step  9003 | lr  0.000539 |acc  30.414%| ms/batch 827.23 | loss 0.2406248 
+| epoch  31 |    99/  287 batches | lr_step  9028 | lr  0.000538 |acc  29.883%| ms/batch 828.87 | loss 0.2422789 
+| epoch  31 |   124/  287 batches | lr_step  9053 | lr  0.000538 |acc  29.281%| ms/batch 825.04 | loss 0.2431475 
+| epoch  31 |   149/  287 batches | lr_step  9078 | lr  0.000537 |acc  29.219%| ms/batch 827.23 | loss 0.2407084 
+| epoch  31 |   174/  287 batches | lr_step  9103 | lr  0.000536 |acc  29.727%| ms/batch 821.68 | loss 0.2422247 
+| epoch  31 |   199/  287 batches | lr_step  9128 | lr  0.000536 |acc  29.344%| ms/batch 861.82 | loss 0.2422506 
+| epoch  31 |   224/  287 batches | lr_step  9153 | lr  0.000535 |acc  29.742%| ms/batch 883.87 | loss 0.2406346 
+| epoch  31 |   249/  287 batches | lr_step  9178 | lr  0.000534 |acc  29.938%| ms/batch 835.69 | loss 0.2406292 
+| epoch  31 |   274/  287 batches | lr_step  9203 | lr  0.000533 |acc  29.273%| ms/batch 820.09 | loss 0.2429576 
+Pred: tensor([15, 16, 17, 14, 13, 19, 18, 15,  0,  0]) and tensor([20, 16, 17, 15, 14, 19, 13,  0,  0,  0]), tensor([13, 14, 16, 17, 15, 18, 19,  0,  0,  0])
+Tar: tensor([[15, 16, 17, 14, 13, 19, 18, 15,  0,  0],
+        [20, 16, 15, 17, 14, 19, 13,  0,  0,  0],
+        [13, 14, 15, 16, 17, 18, 19,  0,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  31 | time: 249.20s | valid acc 54.301%| Best Model from Epoch 18 with 56.091%
+-----------------------------------------------------------------------------------------
+| epoch  32 |    24/  287 batches | lr_step  9241 | lr  0.000532 |acc  29.258%| ms/batch 815.90 | loss 0.2423034 
+| epoch  32 |    49/  287 batches | lr_step  9266 | lr  0.000532 |acc  28.828%| ms/batch 815.62 | loss 0.2441930 
+| epoch  32 |    74/  287 batches | lr_step  9291 | lr  0.000531 |acc  29.742%| ms/batch 881.96 | loss 0.2427912 
+| epoch  32 |    99/  287 batches | lr_step  9316 | lr  0.000530 |acc  30.836%| ms/batch 857.52 | loss 0.2395318 
+| epoch  32 |   124/  287 batches | lr_step  9341 | lr  0.000529 |acc  28.914%| ms/batch 857.63 | loss 0.2440075 
+| epoch  32 |   149/  287 batches | lr_step  9366 | lr  0.000529 |acc  31.016%| ms/batch 832.97 | loss 0.2388850 
+| epoch  32 |   174/  287 batches | lr_step  9391 | lr  0.000528 |acc  29.336%| ms/batch 843.07 | loss 0.2406490 
+| epoch  32 |   199/  287 batches | lr_step  9416 | lr  0.000527 |acc  29.516%| ms/batch 813.55 | loss 0.2410428 
+| epoch  32 |   224/  287 batches | lr_step  9441 | lr  0.000527 |acc  29.539%| ms/batch 910.61 | loss 0.2402641 
+| epoch  32 |   249/  287 batches | lr_step  9466 | lr  0.000526 |acc  30.406%| ms/batch 886.91 | loss 0.2394011 
+| epoch  32 |   274/  287 batches | lr_step  9491 | lr  0.000525 |acc  29.742%| ms/batch 828.94 | loss 0.2421437 
+Pred: tensor([13, 16, 17, 15, 14, 19, 20,  0,  0,  0]) and tensor([13, 14, 15, 16, 17, 14, 19, 20,  0,  0]), tensor([13, 14, 16, 17, 15, 18, 19, 17,  0,  0])
+Tar: tensor([[13, 16, 17, 15, 14, 19, 20,  0,  0,  0],
+        [13, 16, 14, 15, 17, 14, 19, 20,  0,  0],
+        [13, 14, 16, 17, 15, 18, 17, 19,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  32 | time: 252.66s | valid acc 54.102%| Best Model from Epoch 18 with 56.091%
+-----------------------------------------------------------------------------------------
+| epoch  33 |    24/  287 batches | lr_step  9529 | lr  0.000524 |acc  29.961%| ms/batch 848.09 | loss 0.2387291 
+| epoch  33 |    49/  287 batches | lr_step  9554 | lr  0.000523 |acc  29.875%| ms/batch 831.86 | loss 0.2397545 
+| epoch  33 |    74/  287 batches | lr_step  9579 | lr  0.000523 |acc  29.664%| ms/batch 824.36 | loss 0.2416365 
+| epoch  33 |    99/  287 batches | lr_step  9604 | lr  0.000522 |acc  29.641%| ms/batch 817.34 | loss 0.2403994 
+| epoch  33 |   124/  287 batches | lr_step  9629 | lr  0.000521 |acc  29.594%| ms/batch 812.67 | loss 0.2418869 
+| epoch  33 |   149/  287 batches | lr_step  9654 | lr  0.000521 |acc  29.852%| ms/batch 814.86 | loss 0.2401098 
+| epoch  33 |   174/  287 batches | lr_step  9679 | lr  0.000520 |acc  30.102%| ms/batch 845.70 | loss 0.2410078 
+| epoch  33 |   199/  287 batches | lr_step  9704 | lr  0.000519 |acc  30.117%| ms/batch 873.79 | loss 0.2404280 
+| epoch  33 |   224/  287 batches | lr_step  9729 | lr  0.000519 |acc  29.734%| ms/batch 823.36 | loss 0.2405904 
+| epoch  33 |   249/  287 batches | lr_step  9754 | lr  0.000518 |acc  29.758%| ms/batch 820.17 | loss 0.2397925 
+| epoch  33 |   274/  287 batches | lr_step  9779 | lr  0.000517 |acc  29.992%| ms/batch 825.79 | loss 0.2399141 
+Pred: tensor([ 8, 10,  7,  9, 12, 11,  0,  0,  0,  0]) and tensor([ 6,  8,  8,  7,  9, 12, 11,  6,  0,  0]), tensor([ 6,  7,  8, 10, 12, 11,  9,  6,  0,  0])
+Tar: tensor([[ 8,  7, 10,  9, 11, 12,  0,  0,  0,  0],
+        [ 6,  8,  8,  7,  9, 12, 11,  6,  0,  0],
+        [ 6,  7, 12,  8, 10, 11,  9,  6,  0,  0]])
+-----------------------------------------------------------------------------------------
+| end of epoch  33 | time: 246.52s | valid acc 52.511%| Best Model from Epoch 18 with 56.091%
+-----------------------------------------------------------------------------------------
+Pred: tensor([13, 14, 16, 15, 17, 15, 20,  0,  0,  0,  0]) and tensor([13, 16, 17, 14, 15, 19, 18, 17,  0,  0,  0]), tensor([13, 14, 18, 16, 17, 15, 19,  0,  0,  0,  0])
+Tar: tensor([[13, 14, 15, 16, 17, 15, 20,  0,  0,  0,  0],
+        [13, 16, 17, 14, 15, 19, 18, 17,  0,  0,  0],
+        [13, 14, 18, 16, 17, 15, 19,  0,  0,  0,  0]])
+=========================================================================================
+| End of training | test loss 69.00 | test acc 53.18% | Best Model from Epoch 18
+=========================================================================================

@@ -1,0 +1,15 @@
+-----------------------------------------------------------------------------------------
+Parameter Settings:
+EIUES:                            0.25
+Ratio uncertain traces:           0.2
+
+Type:                             encoder_GREEDY
+No. warmup steps:                 12305
+LR factor                         0.38353 
+Embedding dimension:              64
+Dimension of feedforward network: 1024
+Number of transformer layers:     3
+Number of attentions heads:       8
+Dropout:                          0.404889
+Total number of epochs:           150
+-----------------------------------------------------------------------------------------
