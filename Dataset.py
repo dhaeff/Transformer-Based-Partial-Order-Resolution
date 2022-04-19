@@ -14,10 +14,6 @@ from torch.utils.data import (
 import util
 from Vocabulary import Vocabulary
 
-#REBUILD_DATA = True
-FILE_NAME = '1561989897100_0_50'
-EIUES = 0.25
-UNCERTAINTY_TRACES = 0.4
 
 
 
@@ -25,9 +21,12 @@ def build_traces(fileName, path, REBUILD_DATA):
     voc = Vocabulary(path)
     traces = voc.tokenizer(fileName, path, REBUILD_DATA)
     return traces, voc
+
+
 def build_vocabulary(traces, voc):
     voc.build_vocabulary(traces)
     return voc
+
 
 
 class Dataset(Dataset):
@@ -36,22 +35,13 @@ class Dataset(Dataset):
         self.input = self.vocab.numericalize(input)
         self.target = self.vocab.numericalize(target)
         self.uncertain_subtraces = uncertain_subtraces
-        """     
-        self.num_traces = self.vocab.numericalize(self.traces)
-        self.uncertainty, self.certain_traces, self.uncertain_traces = util.create_uncertainty(self.num_traces, UNCERTAINTY_TRACES, EIUES)
-        self.train_input, self.train_target = util.negative_sampling_ctraces(self.certain_traces, 2)
-        self.randomized_uncertain_traces = util.randomize_uncertain_events(self.uncertain_traces, self.uncertainty)
-        """
-        a = 0
-    #TODO
+
     def __len__(self):
         return len(self.input)
 
     def __getitem__(self, index):
         input = self.input[index]
-        #num_input = self.vocab.numericalize(input)
         target = self.target[index]
-        #num_target = self.vocab.numericalize(target)
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         if self.uncertain_subtraces is None:
             return torch.tensor(input).to(device), torch.tensor(target).to(device)
@@ -101,19 +91,3 @@ def get_loader(
     )
     return loader, dataset
 
-def main():
-    traces, vocab = build_vocabulary(FILE_NAME)
-    uncertainty, certain_traces, uncertain_traces = util.create_uncertainty(traces,UNCERTAINTY_TRACES, EIUES)
-    input, target = util.negative_sampling_ctraces(certain_traces, 2)
-    training_dataloader, training_dataset = get_loader(vocab, input, target)
-
-    for idx, (input,target) in enumerate(training_dataloader):
-        print(input.shape)
-        print(target.shape)
-
-if __name__ == "__main__":
-    main()
-
-#dataset = Dataset()
-
-pass

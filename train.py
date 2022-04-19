@@ -1,6 +1,7 @@
 import copy
 import time
 import torch
+from spacy.util import load_model
 from torch import nn, Tensor
 import math
 import Dataset
@@ -21,8 +22,12 @@ from CustomLR import CustomLRAdamOptimizer
 
 
 
-def train_transformer(transformer: nn. Module, train_dataloader, label_smoothing, criterion, optimizer, epoch, log_interval, num_batches, vocab_size) -> None:
 
+
+def train_transformer(transformer: nn. Module, train_dataloader, label_smoothing, criterion, optimizer, epoch, log_interval, num_batches, vocab_size) -> None:
+    '''
+    Standard training loop for the training phase of the proposed model.
+    '''
     transformer.train()  # turn on train mode
     total_loss = 0.
     total_correct_predictions = 0.
@@ -33,8 +38,6 @@ def train_transformer(transformer: nn. Module, train_dataloader, label_smoothing
         src_seq = input[:,:-1]
         targets = target[:, 1:]
         batch_size = src_seq.size(0)
-        #tgt_mask = TransformerEncoderModel.generate_square_subsequent_mask(len(tgt_in_seq[0])).to(device)
-        #tgt_pad_mask = (tgt_in_seq == 0)
         src_pad_mask = (src_seq == 0)
         output = transformer(src_seq, None, src_pad_mask)
         output = F.log_softmax(output, dim=-1)
@@ -60,24 +63,25 @@ def train_transformer(transformer: nn. Module, train_dataloader, label_smoothing
             print(f'| epoch {epoch:3d} | {idx:5d}/{num_batches:5d} batches | '
                   f'lr_step  {lr_step_no} | lr {lr: 2.6f} |acc {curr_acc: 5.3f}%| ms/batch {ms_per_batch:5.2f} | '
                   f'loss {cur_loss:5.7f} ')
-            #print(f"Pred: {predictions[0]}")
-            #print(f"Tar: {targets[0]}")
             total_loss = 0
             total_correct_predictions = 0
             start_time = time.time()
 
 
+
 def greedy_encoding(transformer, input, uncertain_subtraces, vocab):
+    '''
+    The Decoding algorithmn proposed in the Thesis.
+    It is used in the evaluation to obtain the predictions of the most probable resolutions per Batch.
+    '''
     device = next(transformer.parameters()).device
     max_len_out = input.shape[1]
     uncertain_subtraces_per_trace = torch.from_numpy(np.asarray([len(x[1]) for x in uncertain_subtraces])).to(device)
     input = torch.repeat_interleave(input, uncertain_subtraces_per_trace, dim = 0)
     index_uncertainty = torch.from_numpy(np.asarray([x for y in uncertain_subtraces for x in y[0]]))
-    #index_uncertainty = list(x[0] for x in uncertain_subtraces)
     original_index_uncertainty = index_uncertainty
     check = uncertain_subtraces
     uncertain_subtraces = vocab.numericalize([x for y in uncertain_subtraces for x in y[1]])
-    #uncertain_subtraces = vocab.numericalize(np.concatenate(x[1]) for x in uncertain_subtraces)
     length_uncertainty = [len(x) for x in uncertain_subtraces ]
     max_length_uncertainty = max(length_uncertainty)
 
@@ -90,25 +94,23 @@ def greedy_encoding(transformer, input, uncertain_subtraces, vocab):
         pad_mask = (input==0).to(device)
         output = transformer(input, None, pad_mask)
         output = F.log_softmax(output, dim=-1)
+        # Masks all tokens that are not in the uncertain subtraces that the next token is predicted from to ensure the prediction is picked from the viable options
         mask = util.create_res_mask(uncertain_subtraces, len(vocab))
         mask = torch.permute(mask,(1,0))
         mask = mask.reshape(-1,1,len(vocab))
-        output2 = output
-        #mask.to(device)
         output = output.masked_fill_((~mask).to(device), float('-inf'))
         most_probable_last_tokens = torch.argmax(output, dim=-1).to(device)
-        most_probable_last_tokens2 = most_probable_last_tokens
         pos_pred = index_uncertainty.reshape(-1,1).long()
-        #if first_iter:
         pos_pred = torch.add(pos_pred, -1).to(device)
         pos_pred[pos_pred >= max_len_out] = max_len_out-1
         most_probable_last_tokens = torch.gather(most_probable_last_tokens, 1, pos_pred).cpu().numpy()
 
-        #Prepare data for next iteration
+        # Prepare data for next iteration
 
-        #insert prediction in input traces (one the first iteration the token of the aggregated uncertain trace ist removed)
+        # insert prediction in input traces (one the first iteration the token of the aggregated uncertain trace ist removed)
         input,first_iter, index_uncertainty = util.insert_predictions(input, index_uncertainty, most_probable_last_tokens, uncertain_subtraces, first_iter)
-        #update remaining uncertain events
+
+        # update remaining uncertain events
         for id, trace in  enumerate(uncertain_subtraces):
             if most_probable_last_tokens[id][0] in trace:
                 trace.remove(most_probable_last_tokens[id][0])
@@ -123,7 +125,12 @@ def greedy_encoding(transformer, input, uncertain_subtraces, vocab):
     return output.to(device)
 
 
+
 def evaluate_transformer(transformer, val_dataloader, vocab, vocab_size, criterion,  val_dataset):
+    '''
+    Evaluation Loop for the proposed Model.
+    The validation (or test input) is evaluated on the trained model.
+    '''
     transformer.eval()  # turn on evaluation mode
     total_loss = 0.
     total_correct_predictions = 0.
@@ -134,21 +141,17 @@ def evaluate_transformer(transformer, val_dataloader, vocab, vocab_size, criteri
             src_seq = input[:, :]
             batch_size = src_seq.size(0)
             pad_mask = (input == 0)
-            #output2 = transformer(input, None, pad_mask)
-            #output2 = F.log_softmax(output, dim=-1)
-
-            #output2 = output2.view(-1, vocab_size).max(1).indices.view(target.shape)
-            #output_flat = output.view(-1, vocab_size)
-            #total_loss += batch_size * criterion(output_flat, target.reshape(-1)).item()
-            #predictions = output.view(-1, vocab_size).max(1).indices
-
             output = greedy_encoding(transformer, input, uncertain_subtraces, vocab)
             output = output[:, :-1]
             total_correct_predictions += torch.sum((output== target).all(dim=1))
-            #total_do_nothing = torch.sum((input == target).all(dim=1))
         print(f"Pred: {output[0]} and {output[1]}, {output[2]}")
         print(f"Tar: {target[0:3]}")
-        return 69, (total_correct_predictions / (len(val_dataset) - 1)) * 100
+        return None, (total_correct_predictions / (len(val_dataset) - 1)) * 100
+
+
+
+'''
+Training and evaluation of an earlier approach to training
 
 
 def train_encoder(model: nn.Module, log_interval, train_dataloader, vocab_size, criterion, optimizer, scheduler, epoch, bptt, num_batches) -> None:
@@ -222,9 +225,14 @@ def evaluate_encoder(model: nn.Module, val_dataloader, val_dataset, vocab_size, 
             total_correct_predictions += torch.sum((predictions.view(target.shape) == target).all(dim=1))
             total_do_nothing = torch.sum((input == target).all(dim=1))
     return (total_loss / (len(val_dataset) - 1)) , (total_correct_predictions / (len(val_dataset) - 1))*100
+'''
+
 
 
 def save_checkpoint(model,optimizer, epoch):
+    '''
+    Saves checkpoint of the model that can be resumed.
+    '''
 
     checkpoint= {
         "epoch": epoch,
@@ -236,55 +244,49 @@ def save_checkpoint(model,optimizer, epoch):
 
 def encoder_pipeline():
 
+    '''
+    The pipline for the training as well as validation an testing of the proposed approach.
+
+    '''
+
+
     'Train Data'
     if(real_world_dataset):
-        #uncertainty, certain_traces, uncertain_traces = util.parse_csv(FILE_NAME, data_path, REBUILD_DATA)
+        'For real world event logs the data just has to be read in as the uncertainty already exists.'
         uncertainty, certain_traces, uncertain_traces = util.parse_xes(FILE_NAME, data_path, REBUILD_DATA)
         traces = np.concatenate((certain_traces, uncertain_traces), axis = 0)
         vocab_raw = Vocabulary(data_path)
     else:
+        'Uncertainty of the event log is created for the synthetic data collections or read from files if REBUILD_DATA is false.'
         traces, vocab_raw = build_traces(FILE_NAME, data_path, REBUILD_DATA)
         uncertainty, certain_traces, uncertain_traces = util.create_uncertainty(data_path, REBUILD_DATA, traces,
                                                                             UNCERTAINTY_TRACES, EIUES)
+
+    'Nested List of all uncertain subtraces. Indexes mazch with indexes of uncertain traces.'
+    _, _, uncertain_subtraces = util.uncertain_traces_with_tokens(uncertain_traces, uncertainty, False)
+
     vocab_raw = build_vocabulary(traces, vocab_raw)
+
+    'Some Stats of the current Dataset'
     max_trace_length = max(len(l) for l in traces)
     num_events = sum(len(l) for l in traces)
     avg_t_length = sum(len(l) for l in traces) / len(traces)
     places = vocab_raw.act_to_index.__len__() - 5
     variants = np.unique(traces)
-    'randomize order of uncertain events'
-    if with_startend:
-        # randomized = util.randomize_uncertain_events(data_path, REBUILD_DATA,uncertain_traces, uncertainty)
-        _, _, uncertain_subtraces = util.uncertain_traces_with_tokens(
-            uncertain_traces, uncertainty, training_with_samples)
-        #uncertain_traces_randomized, uncertain_traces, uncertain_subtraces = util.uncertain_traces_with_tokens(
-            #uncertain_traces, uncertainty, training_with_samples)
-    else:
-        uncertain_traces_randomized = util.randomize_uncertain_events(data_path, REBUILD_DATA, uncertain_traces,
-                                                                      uncertainty)
-
     events_in_uncertain = sum( [len(a[0]) for a in uncertain_subtraces])
+
     'Test/Val/ Train Split'
     train_data = certain_traces
-    if with_startend and training_with_samples:
-        train_input, train_target = util.negative_sampling_with_tokens(certain_traces, 10, uncertain_subtraces,
-                                                                       uncertain_traces_randomized)
-        vocab = build_vocabulary(train_input + uncertain_traces_randomized, vocab_raw)
-    elif not training_with_samples:
-        #util.add_sot(train_data)
-        uncertain_traces_randomized, uncertain_traces, positions_uncertainty = util.masked_uncertain_traces(uncertainty, uncertain_traces)
-        train_data, train_target = util.masked_negative_sampling(train_data)
-        #train_target = train_data.copy()
-        train_input = np.concatenate((train_data, uncertain_traces_randomized), axis = 0)
-        train_target = np.concatenate((train_target, uncertain_traces_randomized), axis = 0)
-        vocab = copy.deepcopy(vocab_raw)
-        build_vocabulary(train_input, vocab)
-        uncertain_subtraces = [tuple((pos, uncertain_subtraces[id])) for id, pos in enumerate(positions_uncertainty)]
-        #uncertain_subtraces = util.add_position_uncertain_tokens(uncertain_traces_randomized, vocab_raw,
-                                                                # uncertain_subtraces)
-    else:
-        vocab = build_vocabulary(traces, vocab_raw)
-        train_input, train_target = util.negative_sampling_ctraces(train_data, 2)
+
+    'The proposed making mechanism for the uncertain trcaes is applied'
+    uncertain_traces_randomized, uncertain_traces, positions_uncertainty = util.masked_uncertain_traces(uncertainty, uncertain_traces)
+    train_data, train_target = util.masked_sampling(train_data)
+    train_input = np.concatenate((train_data, uncertain_traces_randomized), axis = 0)
+    train_target = np.concatenate((train_target, uncertain_traces_randomized), axis = 0)
+    vocab = copy.deepcopy(vocab_raw)
+    build_vocabulary(train_input, vocab)
+    uncertain_subtraces = [tuple((pos, uncertain_subtraces[id])) for id, pos in enumerate(positions_uncertainty)]
+
     train_dataloader, train_dataset = get_loader(vocab, train_input, train_target)
 
     uncertain_traces_all = list(zip(uncertain_traces_randomized, uncertain_traces, uncertain_subtraces))
@@ -296,59 +298,44 @@ def encoder_pipeline():
 
     val_input, val_target, val_uncertain_subtraces = zip(*val_data)
     test_input, test_target, test_uncertain_subtraces = zip(*test_data)
-    if training_with_samples:
-        val_dataloader, val_dataset = get_loader(vocab, val_input, val_target, batch_size=128)
-        test_dataloader, test_dataset = get_loader(vocab, test_input, test_target)
-    else:
-        val_dataloader, val_dataset = get_loader(vocab, val_input, val_target, uncertain_subtraces = val_uncertain_subtraces, batch_size=128)
-        test_dataloader, test_dataset = get_loader(vocab, test_input, test_target, uncertain_subtraces = test_uncertain_subtraces)
 
-    for x in range(10):
+    val_dataloader, val_dataset = get_loader(vocab, val_input, val_target, uncertain_subtraces = val_uncertain_subtraces, batch_size=128)
+    test_dataloader, test_dataset = get_loader(vocab, test_input, test_target, uncertain_subtraces = test_uncertain_subtraces)
+
+    for x in range(num_searches):
 
         if (log):
             sys.stdout = Logger(log_path, type, terminal)
-            # sys.stdout.terminal = sys.stdout
 
-        'Variables for Model'
         t = 1000 * time.time()  # current time in milliseconds
         np.random.seed(int(t) % 2 ** 32)
         bptt = train_dataloader.batch_size
 
         vocab_size = len(vocab)  # size of vocabulary
-        emsize = 64#random.choice([64,128,256])  # embedding dimension
-        d_hid = 1024#random.choice([1024,2048])  # dimension of the feedforward network model in nn.TransformerEncoder
-        nlayers = random.choice(list(range(1,4)))  # number of nn.TransformerEncoderLayer in nn.TransformerEncoder
-        nhead =  8#random.choice([4,8,16]) # number of heads in nn.MultiheadAttention
-        dropout = 0.404889#random.uniform(0.1, 0.35)  # dropout probability
-        model = TransformerEncoderModel(vocab_size, emsize, nhead, d_hid, nlayers, dropout).to(device)
-        #checkpoint = torch.load("Experiments_Final/1561989897100_0_50_EIUES_ 25.00_UT_ 20.00/03_29_130753_encoder_GREEDY_82/best_model.pt")
-        #model.load_state_dict(checkpoint["model_state"])
-        if training_with_samples:
-            criterion = nn.CrossEntropyLoss()
-            lr = 0.000151766558  # random.uniform(0.000005, 0.0008) # learning rate
-            optimizer = torch.optim.Adam(model.parameters(), lr=lr)
-            scheduler = torch.optim.lr_scheduler.StepLR(optimizer, 2, gamma=0.97)
-        else:
-            criterion = nn.KLDivLoss(reduction='batchmean')
 
-            # Makes smooth target distributions as opposed to conventional one-hot distributions
-            # My feeling is that this is a really dummy and arbitrary heuristic but time will tell.
-            label_smoothing = LabelSmoothingDistribution(0.1, vocab.act_to_index["<PAD>"],
-                                                         vocab_size, device)
-            warmup_steps =random.uniform(4000, 8000)
-            factor = random.uniform(0.1,0.5)
-            # Check out playground.py for an intuitive visualization of how the LR changes with time/training steps, easy stuff.
-            optimizer = CustomLRAdamOptimizer(
-                Adam(model.parameters(), betas=(0.9, 0.98), eps=1e-9),
-                emsize,
-                num_of_warmup_steps = warmup_steps,
-                factor = factor
-            )
-        #optimizer.optimizer.load_state_dict(checkpoint["optimizer"])
-        #optimizer.current_step_number = checkpoint["step"]
-        epochs = 150
+        model = TransformerEncoderModel(vocab_size, emsize, nhead, d_hid, nlayers, dropout).to(device)
+
+        if load_model:
+            checkpoint = torch.load(path_to_model, map_location=device)
+            model.load_state_dict(checkpoint["model_state"])
+            model.to(device)
+        criterion = nn.KLDivLoss(reduction='batchmean')
+
+        # Makes smooth target distributions as opposed to conventional one-hot distributions
+        label_smoothing = LabelSmoothingDistribution(0.1, vocab.act_to_index["<PAD>"],
+                                                     vocab_size, device)
+        optimizer = CustomLRAdamOptimizer(
+            Adam(model.parameters(), betas=(0.9, 0.98), eps=1e-9),
+            emsize,
+            num_of_warmup_steps = warmup_steps,
+            factor = lr_factor
+        )
+        if load_model:
+            optimizer.optimizer.load_state_dict(checkpoint["optimizer"])
+            optimizer.current_step_number = checkpoint["step"]
+
         num_batches = len(train_input) // bptt
-        log_interval = 25
+
         print('-' * 89)
         print(f'Parameter Settings:')
         print(f'EIUES:                            {EIUES}')
@@ -356,37 +343,31 @@ def encoder_pipeline():
         print()
         print(f'Type:                             {type}')
         print(f'No. warmup steps:                 {warmup_steps}')
-        print(f'LR factor                         {factor} ')
+        print(f'LR factor                         {lr_factor} ')
         print(f'Embedding dimension:              {emsize}')
         print(f'Dimension of feedforward network: {d_hid}')
         print(f'Number of transformer layers:     {nlayers}')
         print(f'Number of attentions heads:       {nhead}')
         print(f'Dropout:                          {dropout}')
-        #print(f'Starting lr:                      {lr}')
         print(f'Total number of epochs:           {epochs}')
         print('-' * 89)
         best_val_acc = float('-inf')
         best_epoch = 0
-        best_model = None
 
-        # best_val_acc = float('-inf')
         best_model = None
-        curr_epoch = 0#checkpoint["epoch"]
+        if load_model:
+            curr_epoch = checkpoint["epoch"]
+        else:
+            curr_epoch = 0
         for epoch in range(curr_epoch, epochs + 1):
             epoch_start_time = time.time()
-            if training_with_samples:
-                train_encoder(model, log_interval, train_dataloader, vocab_size, criterion, optimizer, scheduler, epoch, bptt, num_batches)
-                val_loss, val_acc = evaluate_encoder(model, val_dataloader, val_dataset, vocab_size, criterion)
-            else:
-                #evaluate_transformer(model, val_dataloader, vocab, vocab_size, criterion)
 
-                train_transformer(model, train_dataloader, label_smoothing, criterion, optimizer, epoch, log_interval, num_batches, vocab_size)
-                if epoch % 1  == 0:
-                    if epoch == 50:
-                        pause = 1
-                    val_loss, val_acc = evaluate_transformer(model, val_dataloader, vocab, vocab_size, criterion, val_dataset)
-                
-            # val_ppl = math.exp(val_loss)
+            'Loop over epochs. Save the model if the validation loss is the best'
+            train_transformer(model, train_dataloader, label_smoothing, criterion, optimizer, epoch, log_interval, num_batches, vocab_size)
+            if epoch % 1  == 0:
+
+                val_loss, val_acc = evaluate_transformer(model, val_dataloader, vocab, vocab_size, criterion, val_dataset)
+
             elapsed = time.time() - epoch_start_time
 
             if epoch % 1 == 0:
@@ -406,19 +387,15 @@ def encoder_pipeline():
                     print('-' * 89)
                     best_model = copy.deepcopy(model)
                     save_checkpoint(model, optimizer, epoch)
-                    #torch.save(model.state_dict(), f'{sys.stdout.path}best_model.pt')
-                #optimizer.step()
-            if epoch - best_epoch >= 15:
-                break
-        ######################################################################
-        # Evaluate the best model on the test dataset
-        # -------------------------------------------
-        #best_model = copy.deepcopy(model)
-        #torch.save(best_model.state_dict(), f'{sys.stdout.path}best_model.pt')
+
+            if early_stopping > 0:
+                if epoch - best_epoch >= early_stopping:
+                    break
+
+        '''Evaluate the best model on the test dataset'''
 
         best_model = copy.deepcopy(model)
         test_loss, test_acc = evaluate_transformer(best_model, test_dataloader, vocab, vocab_size, criterion, test_dataset)
-        test_ppl = math.exp(test_loss)
         print('=' * 89)
         print(f'| End of training | test loss {test_loss:5.2f} | '
               f'test acc {test_acc:5.2f}% | Best Model from Epoch {best_epoch}')
@@ -430,30 +407,53 @@ def encoder_pipeline():
         shutil.move(f'{sys.stdout.path}', f'{sys.stdout.path[:-1]}_{int(test_acc)}/')
         sys.stdout = terminal
 ######################################################################
-# Loop over epochs. Save the model if the validation loss is the best
-# we've seen so far. Adjust the learning rate after each epoch.
+
+
 if __name__ == '__main__':
     terminal = sys.stdout
 
-    with_startend = True
     'Variables for Data Preprocessing'
+    '''
+    Set REBUILD_DATA True only if you are using a new uncertainty setting for a synthtic collection or 
+    you are using a dataset you havent used before.
+    Otherwise the previous randomly generated uncertainty distribution will be overwritten and created from scratch.
+    '''
     REBUILD_DATA =  False
-    real_world_dataset = True
-    FILE_NAME = 'BPI_2014'
-    #FILE_NAME = '1561989897100_0_50'
-    #FILE_NAME = '1561989906741-490_100'
-    #FILE_NAME = '1561989897859-21_50'
-    #FILE_NAME = '1561989897286_2_0'
-    #FILE_NAME = "Road_Traffic_Fine_Management_Process"
+
+    '''
+    Set True if using a real world dataset
+    If it is a csv file the parse function call in line 256 has to be changes to parse_csv
+    '''
+    real_world_dataset = False
+
+    'File to load or suffix of the name of the folder of the stored data'
+    FILE_NAME = '1561989897859-21_50'
+
+    'can be set to the type of model'
     type = "encoder_GREEDY"
-    training_with_samples = False
-    EIUES = 0.25
-    UNCERTAINTY_TRACES = 0.20
+
+    '''
+    EIUES = Events in uncertain event sets
+    Set to desired value if rebuilding data otherwise to value that the dataset you want to load has
+    '''
+    EIUES = 0.3
+
+    '''
+    Ratio of uncertain traces
+    Set to desired value if rebuilding data otherwise to value that the dataset you want to load has
+    '''
+    UNCERTAINTY_TRACES = 0.995
+
+
     if(real_world_dataset):
+        'These are only set to 0 to avoid confusion the real values have to be determined from the datasets.'
         EIUES = 0
         UNCERTAINTY_TRACES = 0
 
+    'Only set false if you dont want a log file to be created'
     log = True
+
+
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     'Make rep. to store training data according to params'
@@ -461,6 +461,52 @@ if __name__ == '__main__':
     if not os.path.exists(data_path):
         os.makedirs(data_path)
     log_path = f"{FILE_NAME}_EIUES_{EIUES * 100: 5.2f}_UT_{UNCERTAINTY_TRACES * 100: 5.2f}"
+
+    'Total number of epochs'
+    epochs = 150
+
+    'Sets how often accuracy scores are printed during training for training data'
+    log_interval = 25
+
+    'Set True if you want to do a hyperparameter search and adjust settings for the search accordingly below'
+    search_hyperparam = True
+
+
+    'Set True if you want to load an already existing model and set its path below'
+    load_model = False
+    if load_model:
+        '''
+        The hyperparameters have to be set to the same values as in the according Log.log file.
+        The Log.log file is stored in the same folder as the best_model.
+        
+        NOTE: Some checkpoints dont yet have the attribute step 
+        if you encounter this set the value manually in line 335
+        to the lr_step value the model had after its best epoch
+        this value can also be found in the Log.log file
+        '''
+        path_to_model = 'Experiments_Final/1561989897859-21_50_EIUES_ 30.00_UT_ 99.50/03_26_160454_encoder_GREEDY_65/best_model.pt'
+
+    if search_hyperparam:
+        num_searches = 15 #number of random hyperparameter settings that will be trained
+        early_stopping = 15 #number of epoach after which the training will stop if accuracy doesn't improve
+        emsize = random.choice([64,128,256])  # embedding dimension
+        d_hid = random.choice([1024,2048])  # dimension of the feedforward network model in nn.TransformerEncoder
+        nlayers = random.choice(list(range(1,4)))  # number of nn.TransformerEncoderLayer in nn.TransformerEncoder
+        nhead =  random.choice([4,8,16]) # number of heads in nn.MultiheadAttention
+        dropout = random.uniform(0.1, 0.35)  # dropout probability
+        warmup_steps =random.uniform(4000, 8000) #warmup steps of learning rate scheduler
+        lr_factor = random.uniform(0.1,0.5) # factor applied to lr
+    else:
+        num_searches = 1
+        early_stopping = 15
+        emsize = 64   # embedding dimensio
+        d_hid = 1024   # dimension of the feedforward network model in nn.TransformerEncoder
+        nlayers = 1 # number of nn.TransformerEncoderLayer in nn.TransformerEncoder
+        nhead = 4  # number of heads in nn.MultiheadAttention
+        dropout = 0.622 #dropout rate
+        warmup_steps = 8313 #number of warmup steps (learing rate)
+        lr_factor = 0.79 # factor applied to lr
+
     encoder_pipeline()
 
 

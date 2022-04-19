@@ -10,8 +10,11 @@ from pm4py.objects.log.util import dataframe_utils
 from pm4py.objects.conversion.log import converter as log_converter
 import pm4py
 import pandas as pd
-
+import re
+from tqdm import tqdm
+from lxml import etree
 def parse_csv(file_name, data_path, REBUILD_DATA):
+    'Parse and save "real-world" csv event log'
     if(REBUILD_DATA):
         event_log = pd.read_csv('./input/' + file_name +'.csv', sep=";")
         event_log.drop("IncidentActivity_Number", axis=1)
@@ -47,6 +50,7 @@ def parse_csv(file_name, data_path, REBUILD_DATA):
 
         return index_to_uncertainty ,certain_traces, uncertain_traces
 def parse_xes(file_name, data_path, REBUILD_DATA):
+    'Parse and save "real-world" xes event log'
     if(REBUILD_DATA):
         event_log = xes_importer.apply('./input/' + file_name +'.xes')
         #event_log = pm4py.filter_case_size(event_log, 1, 25)
@@ -79,6 +83,7 @@ def parse_xes(file_name, data_path, REBUILD_DATA):
 
 
 def load_synthetic_collection(filename):
+    'Loads the traces from synthetic logs'
     texts = []
     no = 0
     tree = etree.parse('input/'+filename)
@@ -108,7 +113,9 @@ def load_synthetic_collection(filename):
             #if(no == 19999):
                 #return texts
     return texts
+
 def create_uncertainty(data_path, REBUILD_DATA, traces, uncertainty_traces, eiues):
+    'Uncertainty is randomly created according to the input ratio of uncertain traces and events in uncertain event sets'
     if REBUILD_DATA:
         index_to_uncertainty = []
         certain_traces = []
@@ -149,67 +156,14 @@ def create_uncertainty(data_path, REBUILD_DATA, traces, uncertainty_traces, eiue
 
 
 
-def negative_sampling_ctraces(certain_traces, max_length_uncertainty):
-    input = []
-    target = []
-    certain_traces_tuple = [tuple(i) for i in np.unique(certain_traces)]
-    for trace in certain_traces:
-        all_perm = permutations(trace)
-        filtered_perm = all_perm
-        for id, i in enumerate(trace):
-            if(id <= max_length_uncertainty -2):
-                perm_filter = trace[:(max_length_uncertainty)]
-            elif(id+max_length_uncertainty-1 == len(trace)):
-                perm_filter = trace[id-(max_length_uncertainty-1):]
-            else:
-                perm_filter = trace[id-(max_length_uncertainty-1):(id+(max_length_uncertainty))]
-            filtered_perm = [i for i in filtered_perm if i[id] in perm_filter]
-        #filtered_perm = [i for i in filtered_perm if (i not in certain_traces_tuple) or (i is trace)]
-        input.append(filtered_perm)
-    target = [certain_traces[id] for id, sublist in enumerate(input) for item in sublist]
-    input = [item for sublist in input for item in sublist]
-    return input, target
 
-def negative_sampling_with_tokens(certain_traces, max_length_uncertainty, uncertain_subtraces, uncertain_traces_rand):
-
-    input = []
-    target = []
-    uncertain_traces_rand = [[y for y in x if y != "<PAD>"] for x in uncertain_traces_rand]
-    uncertain_traces_rand = set(tuple(x) for x in uncertain_traces_rand)
-    shapes = get_sampling_shapes(certain_traces)
-    #shapes = rec_shapes(certain_traces, 4, pre = [], pre_check = False, inserts = [])
-    for trace in certain_traces:
-        trace_len = min(len(trace),15)
-        for shape in shapes[trace_len]:
-            counter = 0
-            sample = trace.copy()
-            for pos in reversed(shape):
-                if((counter % 2) == 0):
-                    sample.insert(pos,"<EOS>")
-                    end_id = pos
-                    counter += 1
-                else:
-                    sample.insert(pos-1, "<SOS>")
-                    start_id = pos
-                    sample[start_id:end_id+1] = sorted(sample[start_id:end_id+1])
-                    sample[start_id:end_id + 1] = ["".join(sample[start_id:end_id+1])]
-                    counter += 1
-            if(not set(sample).isdisjoint(uncertain_subtraces)):
-                input.append(sample)
-                target.append(trace.copy())
-        input.append(trace.copy())
-        target.append(trace.copy())
-    pad_traces(input, target)
-    input = tuple(tuple(x) for x in input)
-    target = tuple(tuple(x) for x in target)
-    ziped = set(zip(input, target))
-    input, target = zip(*list(ziped))
-    input = [list(x) for x in input]
-    target = [list(x) for x in target]
-    return input, target
 
 
 def get_sampling_shapes(certain_traces, thresh):
+    '''
+    Get all shapes for all of the occuring length.
+
+    '''
     shapes = {}
     min_trace_length = len(min(certain_traces, key=len))
     max_trace_length = min(len(max(certain_traces, key=len)), thresh)
@@ -222,16 +176,16 @@ def get_sampling_shapes(certain_traces, thresh):
         shapes[i] = tmp.copy()
     return shapes
 
-def masked_negative_sampling(certain_traces):
+def masked_sampling(certain_traces):
+    'Implementation of the Sampling method described in the repored'
     input = []
     target = []
-    #certain_traces = add_sot(certain_traces)
     thresh = 15
     shapes = get_sampling_shapes(certain_traces, thresh)
 
     for trace in certain_traces:
         if len(trace) >= thresh:
-            if True:#trace not in input:
+            if True:
                 input.append(trace.copy())
                 target.append(trace.copy())
             continue
@@ -248,17 +202,21 @@ def masked_negative_sampling(certain_traces):
             if sample not in input:
                 input.append(sample)
                 target.append(trace.copy())
-        if True:#trace not in input:
+        if True:
             input.append(trace.copy())
             target.append(trace.copy())
 
-    #pad_traces(input, target)
     add_sot(input)
     add_sot(target)
     return input, target
 
 
 def masked_uncertain_traces(uncertainty, uncertain_traces):
+    '''
+    Proposed masking mechanism for uncertain traces.
+    Masks the uncertain parts of a trace ans returns the masked trace, the original trace and
+    the positions where the uncertainty starts
+    '''
     output = []
     positions_uncertainty = []
     for id,uncertain_trace in enumerate(uncertainty):
@@ -279,46 +237,15 @@ def masked_uncertain_traces(uncertainty, uncertain_traces):
     return output, uncertain_traces, positions_uncertainty
 
 
-"""
-def masked_uncertain_traces(uncertain_traces, uncertainty):
-    masked_traces = []
-
-    for id, unc_trace in enumerate uncertain_traces:
-
-        for idx, event in enumerate(unc_trace):
-            if idx in uncertainty:
-                transformed_trace[-1].append(event)
-            else:
-                transformed_trace.append([event])
-
-"""
 def powerset(iterable):
     "powerset([1,2,3]) --> () (1,) (2,) (3,) (1,2) (1,3) (2,3) (1,2,3)"
     s = list(iterable)
     return chain.from_iterable(combinations(s, r) for r in range(len(s)+1))
 
-def mean_mask(input):
-    log_mask = []
-    curr_mask = []
-    check_uncertain_subtrace = False
-    for trace in input:
-        trace_mask = []
-        for id, activity in enumerate(trace):
-            if activity == "<EOS>":
-                check_uncertain_subtrace = False
-                trace_mask.append(curr_mask)
-                curr_mask = []
-            if check_uncertain_subtrace:
-                curr_mask.append(id)
-            if activity == "<SOS>":
-                check_uncertain_subtrace = True
-                trace_mask.append([id])
-            if not check_uncertain_subtrace:
-                trace_mask.append([id])
-        log_mask.append(trace_mask)
-    return log_mask
+
 
 def create_res_mask(uncertain_subtraces, len_vocab):
+    'Masks all tokens that are not in the uncertain subtraces that the next token is predicted from to ensure the prediction is picked from the viable options'
     output =[]
     for trace in uncertain_subtraces:
         curr = torch.zeros(len_vocab, dtype=torch.bool)
@@ -326,27 +253,21 @@ def create_res_mask(uncertain_subtraces, len_vocab):
         output.append(curr.reshape(-1,1))
     return torch.permute(torch.cat(output, dim = 1), (0,1))
 
+
 def insert_predictions(input, index_uncertainty, most_probable_last_token, uncertain_subtraces, first_iter):
+    'Inserts current predicted tokens while greedy decoding'
     output_traces = []
     for id, trace in enumerate(list(input)):
         updated_trace = trace.tolist()
-        #if first_iter:
         if(len(uncertain_subtraces[id]) > 0):
             updated_trace[index_uncertainty[id]] = most_probable_last_token[id][0]
-        '''
-        else:
-            if most_probable_last_token[id][0] == 0:
-                updated_trace.append(0)
-            else:
-                updated_trace = np.insert(updated_trace, index_uncertainty[id]+1, most_probable_last_token[id][0])
-                '''
         updated_trace = torch.from_numpy(np.asarray(updated_trace))
         output_traces.append(updated_trace)
-    #if not first_iter:
     index_uncertainty = torch.add(index_uncertainty, 1)
     return torch.cat(output_traces).reshape(-1, updated_trace.shape[0]), False, index_uncertainty
 
 def combine_predictions(input, original_index_uncertainty, uncertain_subtraces_per_trace, length_uncertainty, max_len_out):
+    'Combines the predictions of all subtraces of a distinct uncertain traces to form the final predicted resolution of the greedy decoding'
     curr_idx = 0
     output = []
     for x in uncertain_subtraces_per_trace:
@@ -377,25 +298,14 @@ def combine_predictions(input, original_index_uncertainty, uncertain_subtraces_p
 def end_subtrace(curr_idx, length_uncertainty, original_index_uncertainty):
     return original_index_uncertainty[curr_idx] + length_uncertainty[curr_idx]
 
-
-def rec_shapes(trace, max_length_uncertainty, pre = [], pre_check = False, inserts = []):
-    for length in range(2,max_length_uncertainty+1):
-        for i in range(0,len(trace)-length+1):
-            if pre_check:
-                pre = [item for item in pre if item not in trace]
-                pre_check = False
-            pre += [trace[i], trace[i+length-1]]
-            inserts.append(pre.copy())
-            if len(trace) == length:
-                pre_check = True
-                return inserts, pre_check
-            else:
-                inserts, pre_check = rec_shapes(trace[(i+length):], length, pre)
-
-    return inserts, True
-
-
 def uncertain_traces_with_tokens(uncertain_traces, uncertainty, training_with_samples):
+    '''
+    For the proposed approach this function is only used to obtain the uncertain subtraces per uncertain trace.
+
+    This function was created for another approach not used in the report to add identifying Tokens before and after every subtrace.
+    It also created "joined activity" tokens meaning the uncertain subtraces wre replaced with a token representing the activities in the
+    subtraces -> for a uncertain subtrace <a,b,c> as well as <b,c,a> the token <abc> would be inserted
+    '''
     input = []
     target = []
     uncertain_subtraces = []
@@ -469,6 +379,7 @@ def uncertain_traces_with_tokens(uncertain_traces, uncertainty, training_with_sa
 
 
 def pad_traces(input, target):
+    'Adds padding to input and target traces'
     for id, sample in enumerate(target):
         if (len(input[id]) > len(sample)):
             target[id].extend(["<PAD>"] * (len(input[id]) - len(sample)))
@@ -477,10 +388,69 @@ def pad_traces(input, target):
             input[id].extend(["<PAD>"] * (len(target[id]) - len(sample)))
 
 
+def add_sot(train_data):
+    """
+    Add Start of Trace and End of Trace Tokens
+    """
+    for trace in train_data:
+        trace.insert(0, "<SOT>")
+        trace.append("<EOT>")
+
+
+
+'''
+Functions used for the approache the experimantal study was conducted on. 
+These were created while developing the final approach (not used in the Experimental Study)
+'''
+
+
+def mean_mask(input):
+    log_mask = []
+    curr_mask = []
+    check_uncertain_subtrace = False
+    for trace in input:
+        trace_mask = []
+        for id, activity in enumerate(trace):
+            if activity == "<EOS>":
+                check_uncertain_subtrace = False
+                trace_mask.append(curr_mask)
+                curr_mask = []
+            if check_uncertain_subtrace:
+                curr_mask.append(id)
+            if activity == "<SOS>":
+                check_uncertain_subtrace = True
+                trace_mask.append([id])
+            if not check_uncertain_subtrace:
+                trace_mask.append([id])
+        log_mask.append(trace_mask)
+    return log_mask
+
+
 def join_activities(end_id, start_id, trace_with_tokens, uncertain_subtrace):
+    '''created "joined activity" tokens meaning the uncertain subtraces wre replaced with a token representing the activities in the
+    subtraces -> for a uncertain subtrace <a,b,c> as well as <b,c,a> the token <abc> would be inserted'''
     uncertain_subtrace.append(trace_with_tokens[(start_id-1):end_id])
     trace_with_tokens[(start_id-1):end_id] = sorted(trace_with_tokens[(start_id-1):end_id])
     trace_with_tokens[(start_id-1):end_id] = ["".join(trace_with_tokens[(start_id-1):end_id])]
+
+
+def rec_shapes(trace, max_length_uncertainty, pre = [], pre_check = False, inserts = []):
+    'Recursive approach to obtaining the shapes for sampling'
+    for length in range(2,max_length_uncertainty+1):
+        for i in range(0,len(trace)-length+1):
+            if pre_check:
+                pre = [item for item in pre if item not in trace]
+                pre_check = False
+            pre += [trace[i], trace[i+length-1]]
+            inserts.append(pre.copy())
+            if len(trace) == length:
+                pre_check = True
+                return inserts, pre_check
+            else:
+                inserts, pre_check = rec_shapes(trace[(i+length):], length, pre)
+
+    return inserts, True
+
 
 def add_position_uncertain_tokens(uncertain_traces_randomized, vocab_raw, uncertain_subtrace):
     pos_trace = []
@@ -488,6 +458,7 @@ def add_position_uncertain_tokens(uncertain_traces_randomized, vocab_raw, uncert
         positions = [id for id,act in enumerate(trace) if act not in vocab_raw.act_to_index]
         pos_trace.append(tuple((positions, uncertain_subtrace[id])))
     return pos_trace
+
 
 def randomize_uncertain_events(data_path, REBUILD_DATA, uncertain_traces, uncertainty):
     if REBUILD_DATA:
@@ -508,12 +479,60 @@ def randomize_uncertain_events(data_path, REBUILD_DATA, uncertain_traces, uncert
         return np.load(f'{data_path}/randomized_uncertain_traces.npy', allow_pickle=True)
 
 
-def add_sot(train_data):
-    """
-    Add Start of Trace and End of Trace Tokens
-    :param train_data:
-    :return:
-    """
-    for trace in train_data:
-        trace.insert(0, "<SOT>")
-        trace.append("<EOT>")
+def negative_sampling_ctraces(certain_traces, max_length_uncertainty):
+    input = []
+    target = []
+    certain_traces_tuple = [tuple(i) for i in np.unique(certain_traces)]
+    for trace in certain_traces:
+        all_perm = permutations(trace)
+        filtered_perm = all_perm
+        for id, i in enumerate(trace):
+            if(id <= max_length_uncertainty -2):
+                perm_filter = trace[:(max_length_uncertainty)]
+            elif(id+max_length_uncertainty-1 == len(trace)):
+                perm_filter = trace[id-(max_length_uncertainty-1):]
+            else:
+                perm_filter = trace[id-(max_length_uncertainty-1):(id+(max_length_uncertainty))]
+            filtered_perm = [i for i in filtered_perm if i[id] in perm_filter]
+        #filtered_perm = [i for i in filtered_perm if (i not in certain_traces_tuple) or (i is trace)]
+        input.append(filtered_perm)
+    target = [certain_traces[id] for id, sublist in enumerate(input) for item in sublist]
+    input = [item for sublist in input for item in sublist]
+    return input, target
+
+def negative_sampling_with_tokens(certain_traces, max_length_uncertainty, uncertain_subtraces, uncertain_traces_rand):
+
+    input = []
+    target = []
+    uncertain_traces_rand = [[y for y in x if y != "<PAD>"] for x in uncertain_traces_rand]
+    uncertain_traces_rand = set(tuple(x) for x in uncertain_traces_rand)
+    shapes = get_sampling_shapes(certain_traces)
+    for trace in certain_traces:
+        trace_len = min(len(trace),15)
+        for shape in shapes[trace_len]:
+            counter = 0
+            sample = trace.copy()
+            for pos in reversed(shape):
+                if((counter % 2) == 0):
+                    sample.insert(pos,"<EOS>")
+                    end_id = pos
+                    counter += 1
+                else:
+                    sample.insert(pos-1, "<SOS>")
+                    start_id = pos
+                    sample[start_id:end_id+1] = sorted(sample[start_id:end_id+1])
+                    sample[start_id:end_id + 1] = ["".join(sample[start_id:end_id+1])]
+                    counter += 1
+            if(not set(sample).isdisjoint(uncertain_subtraces)):
+                input.append(sample)
+                target.append(trace.copy())
+        input.append(trace.copy())
+        target.append(trace.copy())
+    pad_traces(input, target)
+    input = tuple(tuple(x) for x in input)
+    target = tuple(tuple(x) for x in target)
+    ziped = set(zip(input, target))
+    input, target = zip(*list(ziped))
+    input = [list(x) for x in input]
+    target = [list(x) for x in target]
+    return input, target
