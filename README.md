@@ -4,7 +4,7 @@ install by executing
 
 ```conda env update --file environment.yaml```
 
-The relevant parameters for running experiments and reproducing the results can be set in the main function of ```python train.py ```.
+The relevant parameters for running experiments and reproducing the results can be set in the ```__main__``` function of ```train.py ```.
 There also the details on the different setting will be found.
 
 The Traffic fine management file was too large to upload. It can be found through the provided doi:
