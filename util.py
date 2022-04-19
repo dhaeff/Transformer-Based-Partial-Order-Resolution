@@ -399,7 +399,7 @@ def add_sot(train_data):
 
 
 '''
-Functions used for the approache the experimantal study was conducted on. 
+Functions not used for the approach the experimantal study was conducted on. 
 These were created while developing the final approach (not used in the Experimental Study)
 '''
 
