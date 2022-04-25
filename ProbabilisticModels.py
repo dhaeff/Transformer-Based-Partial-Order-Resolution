@@ -17,7 +17,7 @@ with_startend = True
 'Variables for Data Preprocessing'
 REBUILD_DATA = False # Leave at False
 '''
-These Models use the numpy files as input that are created when executing the transformer model. 
+These Models use the numpy files, certain_traces.npy, uncertain_traces.npy and index_to_uncertainty.npy, as input that are created when executing the transformer model. 
 Once these files exists the probabilistic models can be executed by setting FILE_NAME to the name
 of the dataset file and EIVES and UNCERTAINTY_TRACES to the right values (0.0 for real world event logs).
 '''
