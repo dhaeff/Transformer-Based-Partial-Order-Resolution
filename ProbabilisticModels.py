@@ -15,7 +15,12 @@ import math
 terminal = sys.stdout
 with_startend = True
 'Variables for Data Preprocessing'
-REBUILD_DATA = False
+REBUILD_DATA = False # Leave at False
+'''
+These Models use the numpy files as input that are created when executing the transformer model. 
+Once these files exists the probabilistic models can be executed by setting FILE_NAME to the name
+of the dataset file and EIVES and UNCERTAINTY_TRACES to the right values (0.0 for real world event logs).
+'''
 #FILE_NAME = '1561989897286_2_0'
 #FILE_NAME = '1561989897100_0_50'
 FILE_NAME = 'BPI_2014'
