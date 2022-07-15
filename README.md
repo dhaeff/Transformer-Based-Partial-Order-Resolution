@@ -2,11 +2,11 @@
 
 install by creating new environment with
 
-```conda env create -f environment.yaml```
+```conda env create -f environment.yml```
 
 or updating existing one with
 
-```conda env update --file environment.yaml```
+```conda env update --file environment.yml```
 
 The relevant parameters for running experiments and reproducing the results can be set in the ```__main__``` function of ```train.py ```.
 There also the details on the different setting will be found and it can be used to train and evaluate the Transformer-Based Partial Order Resolution model.
