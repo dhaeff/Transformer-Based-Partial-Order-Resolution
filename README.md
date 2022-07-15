@@ -1,6 +1,10 @@
 # Transformer-Based-Partial-Order-Resolution
 
-install by executing 
+install by creating new environment with
+
+```conda env create -f environment.yaml```
+
+or updating existing one with
 
 ```conda env update --file environment.yaml```
 
